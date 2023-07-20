@@ -46,6 +46,10 @@ namespace KTV_management_system
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.skinContextMenuStrip1 = new CCWin.SkinControl.SkinContextMenuStrip();
+            this.添加ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.修改ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.skinPanel4 = new CCWin.SkinControl.SkinPanel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.skinLabel3 = new CCWin.SkinControl.SkinLabel();
@@ -65,19 +69,15 @@ namespace KTV_management_system
             this.Column25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.skinContextMenuStrip1 = new CCWin.SkinControl.SkinContextMenuStrip();
             this.skinContextMenuStrip2 = new CCWin.SkinControl.SkinContextMenuStrip();
-            this.添加ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.修改ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.添加ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.修改ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.删除ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.skinPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.skinDataGridView4)).BeginInit();
+            this.skinContextMenuStrip1.SuspendLayout();
             this.skinPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.skinDataGridView5)).BeginInit();
-            this.skinContextMenuStrip1.SuspendLayout();
             this.skinContextMenuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -228,6 +228,58 @@ namespace KTV_management_system
             this.Column15.Name = "Column15";
             this.Column15.ReadOnly = true;
             // 
+            // skinContextMenuStrip1
+            // 
+            this.skinContextMenuStrip1.Arrow = System.Drawing.Color.Black;
+            this.skinContextMenuStrip1.Back = System.Drawing.Color.White;
+            this.skinContextMenuStrip1.BackRadius = 4;
+            this.skinContextMenuStrip1.Base = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(200)))), ((int)(((byte)(254)))));
+            this.skinContextMenuStrip1.DropDownImageSeparator = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
+            this.skinContextMenuStrip1.Fore = System.Drawing.Color.Black;
+            this.skinContextMenuStrip1.HoverFore = System.Drawing.Color.White;
+            this.skinContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.skinContextMenuStrip1.ItemAnamorphosis = true;
+            this.skinContextMenuStrip1.ItemBorder = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinContextMenuStrip1.ItemBorderShow = true;
+            this.skinContextMenuStrip1.ItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinContextMenuStrip1.ItemPressed = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinContextMenuStrip1.ItemRadius = 4;
+            this.skinContextMenuStrip1.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinContextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.添加ToolStripMenuItem,
+            this.修改ToolStripMenuItem,
+            this.删除ToolStripMenuItem});
+            this.skinContextMenuStrip1.ItemSplitter = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinContextMenuStrip1.Name = "skinContextMenuStrip1";
+            this.skinContextMenuStrip1.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinContextMenuStrip1.Size = new System.Drawing.Size(109, 76);
+            this.skinContextMenuStrip1.SkinAllColor = true;
+            this.skinContextMenuStrip1.TitleAnamorphosis = true;
+            this.skinContextMenuStrip1.TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(228)))), ((int)(((byte)(236)))));
+            this.skinContextMenuStrip1.TitleRadius = 4;
+            this.skinContextMenuStrip1.TitleRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            // 
+            // 添加ToolStripMenuItem
+            // 
+            this.添加ToolStripMenuItem.Name = "添加ToolStripMenuItem";
+            this.添加ToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
+            this.添加ToolStripMenuItem.Text = "添加";
+            this.添加ToolStripMenuItem.Click += new System.EventHandler(this.添加ToolStripMenuItem_Click);
+            // 
+            // 修改ToolStripMenuItem
+            // 
+            this.修改ToolStripMenuItem.Name = "修改ToolStripMenuItem";
+            this.修改ToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
+            this.修改ToolStripMenuItem.Text = "修改";
+            this.修改ToolStripMenuItem.Click += new System.EventHandler(this.修改ToolStripMenuItem_Click);
+            // 
+            // 删除ToolStripMenuItem
+            // 
+            this.删除ToolStripMenuItem.Name = "删除ToolStripMenuItem";
+            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
+            this.删除ToolStripMenuItem.Text = "删除";
+            this.删除ToolStripMenuItem.Click += new System.EventHandler(this.删除ToolStripMenuItem_Click);
+            // 
             // skinPanel4
             // 
             this.skinPanel4.BackColor = System.Drawing.Color.Transparent;
@@ -306,6 +358,7 @@ namespace KTV_management_system
             this.skinButton15.TabIndex = 6;
             this.skinButton15.Text = "删除";
             this.skinButton15.UseVisualStyleBackColor = false;
+            this.skinButton15.Click += new System.EventHandler(this.skinButton15_Click);
             // 
             // skinButton16
             // 
@@ -381,6 +434,7 @@ namespace KTV_management_system
             this.skinDataGridView5.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.skinDataGridView5.HeadFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinDataGridView5.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
+            this.skinDataGridView5.LineNumber = false;
             this.skinDataGridView5.Location = new System.Drawing.Point(3, 54);
             this.skinDataGridView5.Name = "skinDataGridView5";
             this.skinDataGridView5.ReadOnly = true;
@@ -491,37 +545,6 @@ namespace KTV_management_system
             this.Column1.ReadOnly = true;
             this.Column1.Visible = false;
             // 
-            // skinContextMenuStrip1
-            // 
-            this.skinContextMenuStrip1.Arrow = System.Drawing.Color.Black;
-            this.skinContextMenuStrip1.Back = System.Drawing.Color.White;
-            this.skinContextMenuStrip1.BackRadius = 4;
-            this.skinContextMenuStrip1.Base = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(200)))), ((int)(((byte)(254)))));
-            this.skinContextMenuStrip1.DropDownImageSeparator = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
-            this.skinContextMenuStrip1.Fore = System.Drawing.Color.Black;
-            this.skinContextMenuStrip1.HoverFore = System.Drawing.Color.White;
-            this.skinContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.skinContextMenuStrip1.ItemAnamorphosis = true;
-            this.skinContextMenuStrip1.ItemBorder = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
-            this.skinContextMenuStrip1.ItemBorderShow = true;
-            this.skinContextMenuStrip1.ItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
-            this.skinContextMenuStrip1.ItemPressed = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
-            this.skinContextMenuStrip1.ItemRadius = 4;
-            this.skinContextMenuStrip1.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinContextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.添加ToolStripMenuItem,
-            this.修改ToolStripMenuItem,
-            this.删除ToolStripMenuItem});
-            this.skinContextMenuStrip1.ItemSplitter = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
-            this.skinContextMenuStrip1.Name = "skinContextMenuStrip1";
-            this.skinContextMenuStrip1.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinContextMenuStrip1.Size = new System.Drawing.Size(109, 76);
-            this.skinContextMenuStrip1.SkinAllColor = true;
-            this.skinContextMenuStrip1.TitleAnamorphosis = true;
-            this.skinContextMenuStrip1.TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(228)))), ((int)(((byte)(236)))));
-            this.skinContextMenuStrip1.TitleRadius = 4;
-            this.skinContextMenuStrip1.TitleRadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            // 
             // skinContextMenuStrip2
             // 
             this.skinContextMenuStrip2.Arrow = System.Drawing.Color.Black;
@@ -553,44 +576,26 @@ namespace KTV_management_system
             this.skinContextMenuStrip2.TitleRadius = 4;
             this.skinContextMenuStrip2.TitleRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             // 
-            // 添加ToolStripMenuItem
-            // 
-            this.添加ToolStripMenuItem.Name = "添加ToolStripMenuItem";
-            this.添加ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.添加ToolStripMenuItem.Text = "添加";
-            this.添加ToolStripMenuItem.Click += new System.EventHandler(this.添加ToolStripMenuItem_Click);
-            // 
-            // 修改ToolStripMenuItem
-            // 
-            this.修改ToolStripMenuItem.Name = "修改ToolStripMenuItem";
-            this.修改ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.修改ToolStripMenuItem.Text = "修改";
-            this.修改ToolStripMenuItem.Click += new System.EventHandler(this.修改ToolStripMenuItem_Click);
-            // 
-            // 删除ToolStripMenuItem
-            // 
-            this.删除ToolStripMenuItem.Name = "删除ToolStripMenuItem";
-            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.删除ToolStripMenuItem.Text = "删除";
-            this.删除ToolStripMenuItem.Click += new System.EventHandler(this.删除ToolStripMenuItem_Click);
-            // 
             // 添加ToolStripMenuItem1
             // 
             this.添加ToolStripMenuItem1.Name = "添加ToolStripMenuItem1";
             this.添加ToolStripMenuItem1.Size = new System.Drawing.Size(108, 24);
             this.添加ToolStripMenuItem1.Text = "添加";
+            this.添加ToolStripMenuItem1.Click += new System.EventHandler(this.添加ToolStripMenuItem1_Click);
             // 
             // 修改ToolStripMenuItem1
             // 
             this.修改ToolStripMenuItem1.Name = "修改ToolStripMenuItem1";
             this.修改ToolStripMenuItem1.Size = new System.Drawing.Size(108, 24);
             this.修改ToolStripMenuItem1.Text = "修改";
+            this.修改ToolStripMenuItem1.Click += new System.EventHandler(this.修改ToolStripMenuItem1_Click);
             // 
             // 删除ToolStripMenuItem1
             // 
             this.删除ToolStripMenuItem1.Name = "删除ToolStripMenuItem1";
             this.删除ToolStripMenuItem1.Size = new System.Drawing.Size(108, 24);
             this.删除ToolStripMenuItem1.Text = "删除";
+            this.删除ToolStripMenuItem1.Click += new System.EventHandler(this.删除ToolStripMenuItem1_Click);
             // 
             // Item_merchandise
             // 
@@ -606,10 +611,10 @@ namespace KTV_management_system
             this.Load += new System.EventHandler(this.Item_merchandise_Load);
             this.skinPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.skinDataGridView4)).EndInit();
+            this.skinContextMenuStrip1.ResumeLayout(false);
             this.skinPanel4.ResumeLayout(false);
             this.skinPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.skinDataGridView5)).EndInit();
-            this.skinContextMenuStrip1.ResumeLayout(false);
             this.skinContextMenuStrip2.ResumeLayout(false);
             this.ResumeLayout(false);
 

@@ -128,16 +128,19 @@ namespace KTV_management_system
 
         //---------------------------------------------------------------------
 
-        private void skinButton17_Click(object sender, EventArgs e)
+        private void insert_commodity()
         {
             Add_commodity add_Commodity = new Add_commodity();
             add_Commodity.ShowDialog();
+
+            commodity_flushed();
         }
 
-        private void skinButton16_Click(object sender, EventArgs e)
+        private void revise_rcommodity()
         {
             revise_commodity revise = new revise_commodity();
 
+            revise.commodityID = skinDataGridView5.Rows[skinDataGridView5.CurrentCell.RowIndex].Cells["Column16"].Value.ToString();
             revise.commodityClass = skinDataGridView5.Rows[skinDataGridView5.CurrentCell.RowIndex].Cells["Column21"].Value.ToString();
             revise.commodityName = skinDataGridView5.Rows[skinDataGridView5.CurrentCell.RowIndex].Cells["Column17"].Value.ToString();
             revise.commodityPinyin = skinDataGridView5.Rows[skinDataGridView5.CurrentCell.RowIndex].Cells["Column1"].Value.ToString();
@@ -149,8 +152,59 @@ namespace KTV_management_system
             revise.exchange = skinDataGridView5.Rows[skinDataGridView5.CurrentCell.RowIndex].Cells["Column25"].Value.ToString();
             revise.Integral = skinDataGridView5.Rows[skinDataGridView5.CurrentCell.RowIndex].Cells["Column26"].Value.ToString();
 
-            MessageBox.Show(skinDataGridView5.Rows[skinDataGridView5.CurrentCell.RowIndex].Cells["Column25"].Value.ToString());
             revise.ShowDialog();
+
+            commodity_flushed();
+
+
+        }
+
+        private void delete_commodity()
+        {
+            try
+            {
+
+                if (MessageBox.Show("该操作不可恢复，是否要删除？", "系统提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    DbHelper.executeNonQuery($"delete from [dbo].[Commodity] where [project_ID] = '{skinDataGridView5.Rows[skinDataGridView5.CurrentCell.RowIndex].Cells["Column16"].Value}'");
+                    commodity_flushed();
+                }
+
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.Message, "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void skinButton17_Click(object sender, EventArgs e)
+        {
+            insert_commodity();
+        }
+
+        private void skinButton16_Click(object sender, EventArgs e)
+        {
+            revise_rcommodity();
+        }
+
+        private void skinButton15_Click(object sender, EventArgs e)
+        {
+            delete_commodity();
+        }
+
+        private void 添加ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            insert_commodity();
+        }
+
+        private void 修改ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            revise_rcommodity();
+        }
+
+        private void 删除ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            delete_commodity();
         }
     }
 }
