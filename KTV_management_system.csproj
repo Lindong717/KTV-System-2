@@ -176,6 +176,12 @@
     <Compile Include="System_settings.Designer.cs">
       <DependentUpon>System_settings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Waiter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Waiter.Designer.cs">
+      <DependentUpon>Waiter.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Add_a_private_room_type.resx">
       <DependentUpon>Add_a_private_room_type.cs</DependentUpon>
     </EmbeddedResource>
@@ -235,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="System_settings.resx">
       <DependentUpon>System_settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Waiter.resx">
+      <DependentUpon>Waiter.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

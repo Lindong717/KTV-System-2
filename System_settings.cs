@@ -18,8 +18,6 @@ namespace KTV_management_system
     /// </summary>
     public partial class System_settings : Skin_Mac
     {
-        
-
         public System_settings()
         {
             InitializeComponent();
@@ -29,6 +27,7 @@ namespace KTV_management_system
         {
             OpenForm(new Private_room_settings(), metroTabPage1);
             OpenForm(new Item_merchandise(), metroTabPage2);
+            OpenForm(new Waiter(), metroTabPage3);
             OpenForm(new Membership_Settings(), metroTabPage4);
         }
 

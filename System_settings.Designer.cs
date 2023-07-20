@@ -33,11 +33,9 @@ namespace KTV_management_system
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
-            this.skinPanel5 = new CCWin.SkinControl.SkinPanel();
             this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage6 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabControl1.SuspendLayout();
-            this.metroTabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroTabControl1
@@ -50,7 +48,7 @@ namespace KTV_management_system
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.Location = new System.Drawing.Point(4, 32);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 2;
             this.metroTabControl1.Size = new System.Drawing.Size(890, 552);
             this.metroTabControl1.TabIndex = 0;
             this.metroTabControl1.UseSelectable = true;
@@ -85,7 +83,6 @@ namespace KTV_management_system
             // 
             // metroTabPage3
             // 
-            this.metroTabPage3.Controls.Add(this.skinPanel5);
             this.metroTabPage3.HorizontalScrollbarBarColor = true;
             this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.HorizontalScrollbarSize = 10;
@@ -97,19 +94,6 @@ namespace KTV_management_system
             this.metroTabPage3.VerticalScrollbarBarColor = true;
             this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.VerticalScrollbarSize = 10;
-            // 
-            // skinPanel5
-            // 
-            this.skinPanel5.BackColor = System.Drawing.Color.Transparent;
-            this.skinPanel5.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinPanel5.DownBack = null;
-            this.skinPanel5.Location = new System.Drawing.Point(0, 0);
-            this.skinPanel5.MouseBack = null;
-            this.skinPanel5.Name = "skinPanel5";
-            this.skinPanel5.NormlBack = null;
-            this.skinPanel5.Size = new System.Drawing.Size(882, 510);
-            this.skinPanel5.TabIndex = 2;
             // 
             // metroTabPage4
             // 
@@ -152,7 +136,6 @@ namespace KTV_management_system
             this.Text = "系统设置";
             this.Load += new System.EventHandler(this.System_settings_Load);
             this.metroTabControl1.ResumeLayout(false);
-            this.metroTabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -165,6 +148,5 @@ namespace KTV_management_system
         private MetroFramework.Controls.MetroTabPage metroTabPage3;
         private MetroFramework.Controls.MetroTabPage metroTabPage4;
         private MetroFramework.Controls.MetroTabPage metroTabPage6;
-        private CCWin.SkinControl.SkinPanel skinPanel5;
     }
 }
