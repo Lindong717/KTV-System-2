@@ -72,9 +72,6 @@ namespace KTV_management_system
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
@@ -200,6 +197,7 @@ namespace KTV_management_system
             this.进店时间 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.已用时间 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.备注 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.skinLabel7 = new CCWin.SkinControl.SkinLabel();
             this.skinMenuStrip1.SuspendLayout();
             this.skinToolStrip1.SuspendLayout();
             this.skinPanel1.SuspendLayout();
@@ -299,66 +297,66 @@ namespace KTV_management_system
             // 
             this.客户开单ToolStripMenuItem.Name = "客户开单ToolStripMenuItem";
             this.客户开单ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.G)));
-            this.客户开单ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.客户开单ToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.客户开单ToolStripMenuItem.Text = "客户开单";
             // 
             // 吧台销售ToolStripMenuItem
             // 
             this.吧台销售ToolStripMenuItem.Name = "吧台销售ToolStripMenuItem";
             this.吧台销售ToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F7;
-            this.吧台销售ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.吧台销售ToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.吧台销售ToolStripMenuItem.Text = "吧台销售";
             // 
             // 更换包间ToolStripMenuItem
             // 
             this.更换包间ToolStripMenuItem.Name = "更换包间ToolStripMenuItem";
             this.更换包间ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.A)));
-            this.更换包间ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.更换包间ToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.更换包间ToolStripMenuItem.Text = "更换包间";
             // 
             // 修改登记ToolStripMenuItem
             // 
             this.修改登记ToolStripMenuItem.Name = "修改登记ToolStripMenuItem";
             this.修改登记ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.I)));
-            this.修改登记ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.修改登记ToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.修改登记ToolStripMenuItem.Text = "修改登记";
             // 
             // 包间状态ToolStripMenuItem
             // 
             this.包间状态ToolStripMenuItem.Name = "包间状态ToolStripMenuItem";
             this.包间状态ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Z)));
-            this.包间状态ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.包间状态ToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.包间状态ToolStripMenuItem.Text = "包间状态";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(207, 6);
             // 
             // 预订管理ToolStripMenuItem
             // 
             this.预订管理ToolStripMenuItem.Name = "预订管理ToolStripMenuItem";
             this.预订管理ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.T)));
-            this.预订管理ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.预订管理ToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.预订管理ToolStripMenuItem.Text = "预订管理";
             // 
             // 电子提示ToolStripMenuItem
             // 
             this.电子提示ToolStripMenuItem.Name = "电子提示ToolStripMenuItem";
             this.电子提示ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.L)));
-            this.电子提示ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.电子提示ToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.电子提示ToolStripMenuItem.Text = "电子提示";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(207, 6);
             // 
             // 退出系统ToolStripMenuItem
             // 
             this.退出系统ToolStripMenuItem.Name = "退出系统ToolStripMenuItem";
             this.退出系统ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.退出系统ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.退出系统ToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.退出系统ToolStripMenuItem.Text = "退出系统";
             this.退出系统ToolStripMenuItem.Click += new System.EventHandler(this.退出系统ToolStripMenuItem_Click);
             // 
@@ -588,16 +586,13 @@ namespace KTV_management_system
             this.toolStripButton4,
             this.toolStripButton5,
             this.toolStripButton6,
-            this.toolStripButton7,
-            this.toolStripButton8,
-            this.toolStripButton9,
             this.toolStripButton10,
             this.toolStripButton11,
             this.toolStripButton12});
             this.skinToolStrip1.Location = new System.Drawing.Point(0, 28);
             this.skinToolStrip1.Name = "skinToolStrip1";
             this.skinToolStrip1.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinToolStrip1.Size = new System.Drawing.Size(906, 47);
+            this.skinToolStrip1.Size = new System.Drawing.Size(726, 47);
             this.skinToolStrip1.SkinAllColor = true;
             this.skinToolStrip1.TabIndex = 1;
             this.skinToolStrip1.Text = "skinToolStrip1";
@@ -660,33 +655,6 @@ namespace KTV_management_system
             this.toolStripButton6.Size = new System.Drawing.Size(88, 44);
             this.toolStripButton6.Text = "服务生管理";
             this.toolStripButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // toolStripButton7
-            // 
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(73, 44);
-            this.toolStripButton7.Text = "营业查询";
-            this.toolStripButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // toolStripButton8
-            // 
-            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
-            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton8.Name = "toolStripButton8";
-            this.toolStripButton8.Size = new System.Drawing.Size(73, 44);
-            this.toolStripButton8.Text = "商品管理";
-            this.toolStripButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // toolStripButton9
-            // 
-            this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
-            this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton9.Name = "toolStripButton9";
-            this.toolStripButton9.Size = new System.Drawing.Size(73, 44);
-            this.toolStripButton9.Text = "财务管理";
-            this.toolStripButton9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripButton10
             // 
@@ -751,7 +719,7 @@ namespace KTV_management_system
             this.skinCaptionPanel1.Location = new System.Drawing.Point(0, 0);
             this.skinCaptionPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.skinCaptionPanel1.Name = "skinCaptionPanel1";
-            this.skinCaptionPanel1.Size = new System.Drawing.Size(230, 678);
+            this.skinCaptionPanel1.Size = new System.Drawing.Size(230, 684);
             this.skinCaptionPanel1.TabIndex = 5;
             this.skinCaptionPanel1.Text = "Time";
             // 
@@ -827,6 +795,7 @@ namespace KTV_management_system
             // skinCaptionPanel3
             // 
             this.skinCaptionPanel3.CaptionFont = new System.Drawing.Font("Microsoft YaHei UI", 9F);
+            this.skinCaptionPanel3.Controls.Add(this.skinLabel7);
             this.skinCaptionPanel3.Controls.Add(this.skinLabel8);
             this.skinCaptionPanel3.Controls.Add(this.skinLabel9);
             this.skinCaptionPanel3.Controls.Add(this.skinLabel10);
@@ -1157,7 +1126,7 @@ namespace KTV_management_system
             this.skinPanel5.MouseBack = null;
             this.skinPanel5.Name = "skinPanel5";
             this.skinPanel5.NormlBack = null;
-            this.skinPanel5.Size = new System.Drawing.Size(236, 839);
+            this.skinPanel5.Size = new System.Drawing.Size(236, 845);
             this.skinPanel5.TabIndex = 6;
             // 
             // skinPanel6
@@ -1174,7 +1143,7 @@ namespace KTV_management_system
             this.skinPanel6.MouseBack = null;
             this.skinPanel6.Name = "skinPanel6";
             this.skinPanel6.NormlBack = null;
-            this.skinPanel6.Size = new System.Drawing.Size(232, 680);
+            this.skinPanel6.Size = new System.Drawing.Size(232, 686);
             this.skinPanel6.TabIndex = 7;
             // 
             // skinCaptionPanel4
@@ -1184,7 +1153,7 @@ namespace KTV_management_system
             this.skinCaptionPanel4.Controls.Add(this.skinTextBox1);
             this.skinCaptionPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.skinCaptionPanel4.Image = ((System.Drawing.Image)(resources.GetObject("skinCaptionPanel4.Image")));
-            this.skinCaptionPanel4.Location = new System.Drawing.Point(0, 680);
+            this.skinCaptionPanel4.Location = new System.Drawing.Point(0, 686);
             this.skinCaptionPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.skinCaptionPanel4.Name = "skinCaptionPanel4";
             this.skinCaptionPanel4.Size = new System.Drawing.Size(232, 155);
@@ -1243,7 +1212,7 @@ namespace KTV_management_system
             this.skinCaptionPanel5.Location = new System.Drawing.Point(0, 0);
             this.skinCaptionPanel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.skinCaptionPanel5.Name = "skinCaptionPanel5";
-            this.skinCaptionPanel5.Size = new System.Drawing.Size(32, 839);
+            this.skinCaptionPanel5.Size = new System.Drawing.Size(32, 845);
             this.skinCaptionPanel5.TabIndex = 7;
             this.skinCaptionPanel5.Text = "Time";
             this.skinCaptionPanel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1271,7 +1240,7 @@ namespace KTV_management_system
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(128, 28);
+            this.toolStripLabel1.Size = new System.Drawing.Size(128, 22);
             this.toolStripLabel1.Text = "KTV娱乐管理系统";
             // 
             // toolStrip1
@@ -1288,43 +1257,43 @@ namespace KTV_management_system
             this.toolStripSeparator7,
             this.toolStripLabel7});
             this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.toolStrip1.Location = new System.Drawing.Point(4, 965);
+            this.toolStrip1.Location = new System.Drawing.Point(4, 971);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1037, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(1037, 25);
             this.toolStrip1.TabIndex = 7;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripLabel5
             // 
             this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(203, 28);
+            this.toolStripLabel5.Size = new System.Drawing.Size(203, 22);
             this.toolStripLabel5.Text = "当前界面：KTV娱乐管理系统";
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripLabel6
             // 
             this.toolStripLabel6.Name = "toolStripLabel6";
-            this.toolStripLabel6.Size = new System.Drawing.Size(99, 28);
+            this.toolStripLabel6.Size = new System.Drawing.Size(99, 22);
             this.toolStripLabel6.Text = "部门：无部门";
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripLabel7
             // 
             this.toolStripLabel7.Name = "toolStripLabel7";
-            this.toolStripLabel7.Size = new System.Drawing.Size(159, 28);
+            this.toolStripLabel7.Size = new System.Drawing.Size(159, 22);
             this.toolStripLabel7.Text = "当前操作员：Lindong";
             // 
             // skinPanel3
@@ -1344,7 +1313,7 @@ namespace KTV_management_system
             this.skinPanel3.MouseBack = null;
             this.skinPanel3.Name = "skinPanel3";
             this.skinPanel3.NormlBack = null;
-            this.skinPanel3.Size = new System.Drawing.Size(1037, 843);
+            this.skinPanel3.Size = new System.Drawing.Size(1037, 849);
             this.skinPanel3.TabIndex = 8;
             // 
             // skinCaptionPanel6
@@ -1355,7 +1324,7 @@ namespace KTV_management_system
             this.skinCaptionPanel6.Location = new System.Drawing.Point(268, 688);
             this.skinCaptionPanel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.skinCaptionPanel6.Name = "skinCaptionPanel6";
-            this.skinCaptionPanel6.Size = new System.Drawing.Size(765, 151);
+            this.skinCaptionPanel6.Size = new System.Drawing.Size(765, 157);
             this.skinCaptionPanel6.TabIndex = 9;
             this.skinCaptionPanel6.Text = "skinCaptionPanel6";
             // 
@@ -1378,7 +1347,7 @@ namespace KTV_management_system
             this.skinListView2.Location = new System.Drawing.Point(2, 24);
             this.skinListView2.Name = "skinListView2";
             this.skinListView2.OwnerDraw = true;
-            this.skinListView2.Size = new System.Drawing.Size(761, 125);
+            this.skinListView2.Size = new System.Drawing.Size(761, 131);
             this.skinListView2.TabIndex = 0;
             this.skinListView2.UseCompatibleStateImageBehavior = false;
             this.skinListView2.View = System.Windows.Forms.View.Details;
@@ -1445,7 +1414,7 @@ namespace KTV_management_system
             this.skinPanel8.MouseBack = null;
             this.skinPanel8.Name = "skinPanel8";
             this.skinPanel8.NormlBack = null;
-            this.skinPanel8.Size = new System.Drawing.Size(765, 657);
+            this.skinPanel8.Size = new System.Drawing.Size(765, 661);
             this.skinPanel8.TabIndex = 4;
             // 
             // skinPanel9
@@ -1459,7 +1428,7 @@ namespace KTV_management_system
             this.skinPanel9.MouseBack = null;
             this.skinPanel9.Name = "skinPanel9";
             this.skinPanel9.NormlBack = null;
-            this.skinPanel9.Size = new System.Drawing.Size(765, 625);
+            this.skinPanel9.Size = new System.Drawing.Size(765, 629);
             this.skinPanel9.TabIndex = 4;
             // 
             // skinListView1
@@ -1485,7 +1454,7 @@ namespace KTV_management_system
             this.skinListView1.OwnerDraw = true;
             this.skinListView1.RowBackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(180)))), ((int)(((byte)(200)))));
             this.skinListView1.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(180)))), ((int)(((byte)(200)))));
-            this.skinListView1.Size = new System.Drawing.Size(765, 625);
+            this.skinListView1.Size = new System.Drawing.Size(765, 629);
             this.skinListView1.SmallImageList = this.imageMin;
             this.skinListView1.TabIndex = 3;
             this.skinListView1.UseCompatibleStateImageBehavior = false;
@@ -1725,10 +1694,10 @@ namespace KTV_management_system
             this.toolStripComboBox1,
             this.toolStripLabel4,
             this.toolStripButton15});
-            this.skinToolStrip2.Location = new System.Drawing.Point(0, 657);
+            this.skinToolStrip2.Location = new System.Drawing.Point(0, 661);
             this.skinToolStrip2.Name = "skinToolStrip2";
             this.skinToolStrip2.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinToolStrip2.Size = new System.Drawing.Size(765, 31);
+            this.skinToolStrip2.Size = new System.Drawing.Size(765, 27);
             this.skinToolStrip2.SkinAllColor = true;
             this.skinToolStrip2.TabIndex = 3;
             this.skinToolStrip2.Text = "skinToolStrip2";
@@ -1743,14 +1712,14 @@ namespace KTV_management_system
             this.toolStripButton13.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton13.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton13.Name = "toolStripButton13";
-            this.toolStripButton13.Size = new System.Drawing.Size(89, 28);
+            this.toolStripButton13.Size = new System.Drawing.Size(89, 24);
             this.toolStripButton13.Text = "显示全部";
             this.toolStripButton13.Click += new System.EventHandler(this.toolStripButton13_Click);
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(49, 28);
+            this.toolStripLabel2.Size = new System.Drawing.Size(49, 24);
             this.toolStripLabel2.Text = "          ";
             // 
             // toolStripButton14
@@ -1762,7 +1731,7 @@ namespace KTV_management_system
             this.toolStripButton14.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton14.Image")));
             this.toolStripButton14.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton14.Name = "toolStripButton14";
-            this.toolStripButton14.Size = new System.Drawing.Size(108, 28);
+            this.toolStripButton14.Size = new System.Drawing.Size(108, 24);
             this.toolStripButton14.Text = "过滤状态";
             // 
             // 显示停用ToolStripMenuItem
@@ -1789,7 +1758,7 @@ namespace KTV_management_system
             // toolStripLabel3
             // 
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(49, 28);
+            this.toolStripLabel3.Size = new System.Drawing.Size(49, 24);
             this.toolStripLabel3.Text = "          ";
             // 
             // toolStripComboBox1
@@ -1801,7 +1770,7 @@ namespace KTV_management_system
             this.大图标ToolStripMenuItem});
             this.toolStripComboBox1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripComboBox1.Image")));
             this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(108, 28);
+            this.toolStripComboBox1.Size = new System.Drawing.Size(108, 24);
             this.toolStripComboBox1.Text = "查看方式";
             // 
             // 列表ToolStripMenuItem
@@ -1835,7 +1804,7 @@ namespace KTV_management_system
             // toolStripLabel4
             // 
             this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(49, 28);
+            this.toolStripLabel4.Size = new System.Drawing.Size(49, 24);
             this.toolStripLabel4.Text = "          ";
             // 
             // toolStripButton15
@@ -1843,7 +1812,7 @@ namespace KTV_management_system
             this.toolStripButton15.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton15.Image")));
             this.toolStripButton15.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton15.Name = "toolStripButton15";
-            this.toolStripButton15.Size = new System.Drawing.Size(93, 28);
+            this.toolStripButton15.Size = new System.Drawing.Size(93, 24);
             this.toolStripButton15.Text = "刷新显示";
             this.toolStripButton15.Click += new System.EventHandler(this.toolStripButton15_Click);
             // 
@@ -2006,6 +1975,18 @@ namespace KTV_management_system
             this.备注.Text = "备注";
             this.备注.Width = 159;
             // 
+            // skinLabel7
+            // 
+            this.skinLabel7.AutoSize = true;
+            this.skinLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel7.BorderColor = System.Drawing.Color.White;
+            this.skinLabel7.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel7.Location = new System.Drawing.Point(109, 38);
+            this.skinLabel7.Name = "skinLabel7";
+            this.skinLabel7.Size = new System.Drawing.Size(85, 20);
+            this.skinLabel7.TabIndex = 5;
+            this.skinLabel7.Text = "skinLabel7";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -2103,9 +2084,6 @@ namespace KTV_management_system
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
-        private System.Windows.Forms.ToolStripButton toolStripButton7;
-        private System.Windows.Forms.ToolStripButton toolStripButton8;
-        private System.Windows.Forms.ToolStripButton toolStripButton9;
         private System.Windows.Forms.ToolStripButton toolStripButton10;
         private System.Windows.Forms.ToolStripButton toolStripButton11;
         private System.Windows.Forms.ToolStripButton toolStripButton12;
@@ -2231,6 +2209,7 @@ namespace KTV_management_system
         private System.Windows.Forms.ColumnHeader columnHeader31;
         private System.Windows.Forms.ColumnHeader columnHeader32;
         private System.Windows.Forms.ToolStripMenuItem Tool;
+        private CCWin.SkinControl.SkinLabel skinLabel7;
     }
 }
 
