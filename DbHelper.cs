@@ -150,38 +150,32 @@ namespace KTV_management_system
             skinComboBox.DataSource = dataTable;
         }
 
-        /*
-         public static void Added_dynamically(MetroTabControl metroTabControl,SkinContextMenuStrip skinContextMenuStrip,ImageList imageListMin, ImageList imageListMax, string sql)
+        public static void Tree(SkinTreeView treeView, string root)
         {
-            DataTable dataTable = getDataTable(sql);
+            DataTable dataTable = getDataTable(root);
 
             foreach (DataRow dataRow in dataTable.Rows)
             {
-                TabPage tabPage = new TabPage(dataRow[0].ToString());
-                metroTabControl.TabPages.Add(tabPage);
+                TreeNode treeNode1 = new TreeNode(dataRow[1].ToString());
+                treeView.Nodes.Add(treeNode1);
 
-                SkinListView skinListView = new SkinListView();
+                DataTable dataTable2 = getDataTable($"select [project_ID],[Name],[Preset_unit_price] from [dbo].[Commodity] where [category_ID] = '{dataRow[0]}'");
+                foreach (DataRow dataRow2 in dataTable2.Rows)
+                {
+                    TreeNode treeNode = new TreeNode
+                    {
+                        Tag = dataRow2[0],
+                        Text = $"{dataRow2[1]}  ￥{dataRow2[2]}",
+                        ImageIndex = 0,
+                        SelectedImageIndex = 1
+                    };
 
-                skinListView.Columns.Add("包间号");
-                skinListView.Columns.Add("状态");
-                skinListView.Columns.Add("消费金额");
-                skinListView.Columns.Add("进店时间");
-                skinListView.Columns.Add("已用时间");
-                skinListView.Columns.Add("备注");
-
-                skinListView.Dock = DockStyle.Fill;
-                skinListView.HideSelection = false;
-                skinListView.HeaderStyle = ColumnHeaderStyle.Nonclickable;
-                skinListView.View = View.Details;
-                skinListView.GridLines = true;
-                skinListView.FullRowSelect = true;
-                skinListView.ContextMenuStrip = skinContextMenuStrip;
-                skinListView.SmallImageList = imageListMin;
-                skinListView.LargeImageList = imageListMax;
-
-                tabPage.Controls.Add(skinListView);
+                    treeNode1.ImageIndex = 0;
+                    treeNode1.SelectedImageIndex = 1;
+                    treeNode1.Nodes.Add(treeNode);
+                }
             }
+
         }
-         */
     }
 }

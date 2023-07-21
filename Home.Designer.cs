@@ -83,6 +83,10 @@ namespace KTV_management_system
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.skinPanel4 = new CCWin.SkinControl.SkinPanel();
             this.skinCaptionPanel3 = new CCWin.SkinControl.SkinCaptionPanel();
+            this.skinLabel16 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel15 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel14 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel13 = new CCWin.SkinControl.SkinLabel();
             this.skinLabel7 = new CCWin.SkinControl.SkinLabel();
             this.skinLabel8 = new CCWin.SkinControl.SkinLabel();
             this.skinLabel9 = new CCWin.SkinControl.SkinLabel();
@@ -198,10 +202,6 @@ namespace KTV_management_system
             this.进店时间 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.已用时间 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.备注 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.skinLabel13 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel14 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel15 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel16 = new CCWin.SkinControl.SkinLabel();
             this.skinMenuStrip1.SuspendLayout();
             this.skinToolStrip1.SuspendLayout();
             this.skinPanel1.SuspendLayout();
@@ -818,6 +818,50 @@ namespace KTV_management_system
             this.skinCaptionPanel3.Size = new System.Drawing.Size(203, 222);
             this.skinCaptionPanel3.TabIndex = 6;
             this.skinCaptionPanel3.Text = "包间总状态";
+            // 
+            // skinLabel16
+            // 
+            this.skinLabel16.AutoSize = true;
+            this.skinLabel16.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel16.BorderColor = System.Drawing.Color.White;
+            this.skinLabel16.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel16.Location = new System.Drawing.Point(106, 190);
+            this.skinLabel16.Name = "skinLabel16";
+            this.skinLabel16.Size = new System.Drawing.Size(0, 20);
+            this.skinLabel16.TabIndex = 9;
+            // 
+            // skinLabel15
+            // 
+            this.skinLabel15.AutoSize = true;
+            this.skinLabel15.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel15.BorderColor = System.Drawing.Color.White;
+            this.skinLabel15.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel15.Location = new System.Drawing.Point(106, 152);
+            this.skinLabel15.Name = "skinLabel15";
+            this.skinLabel15.Size = new System.Drawing.Size(0, 20);
+            this.skinLabel15.TabIndex = 8;
+            // 
+            // skinLabel14
+            // 
+            this.skinLabel14.AutoSize = true;
+            this.skinLabel14.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel14.BorderColor = System.Drawing.Color.White;
+            this.skinLabel14.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel14.Location = new System.Drawing.Point(106, 114);
+            this.skinLabel14.Name = "skinLabel14";
+            this.skinLabel14.Size = new System.Drawing.Size(0, 20);
+            this.skinLabel14.TabIndex = 7;
+            // 
+            // skinLabel13
+            // 
+            this.skinLabel13.AutoSize = true;
+            this.skinLabel13.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel13.BorderColor = System.Drawing.Color.White;
+            this.skinLabel13.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel13.Location = new System.Drawing.Point(106, 76);
+            this.skinLabel13.Name = "skinLabel13";
+            this.skinLabel13.Size = new System.Drawing.Size(0, 20);
+            this.skinLabel13.TabIndex = 6;
             // 
             // skinLabel7
             // 
@@ -1555,90 +1599,90 @@ namespace KTV_management_system
             // 宾客结账ToolStripMenuItem
             // 
             this.宾客结账ToolStripMenuItem.Name = "宾客结账ToolStripMenuItem";
-            this.宾客结账ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.宾客结账ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
             this.宾客结账ToolStripMenuItem.Text = "宾客结账";
             // 
             // 增加消费ToolStripMenuItem
             // 
             this.增加消费ToolStripMenuItem.Name = "增加消费ToolStripMenuItem";
-            this.增加消费ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.增加消费ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
             this.增加消费ToolStripMenuItem.Text = "增加消费";
             // 
             // 兑换商品ToolStripMenuItem
             // 
             this.兑换商品ToolStripMenuItem.Name = "兑换商品ToolStripMenuItem";
-            this.兑换商品ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.兑换商品ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
             this.兑换商品ToolStripMenuItem.Text = "兑换商品";
             // 
             // 顾客开单ToolStripMenuItem
             // 
             this.顾客开单ToolStripMenuItem.Name = "顾客开单ToolStripMenuItem";
-            this.顾客开单ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.顾客开单ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
             this.顾客开单ToolStripMenuItem.Text = "顾客开单";
             this.顾客开单ToolStripMenuItem.Click += new System.EventHandler(this.顾客开单ToolStripMenuItem_Click);
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(207, 6);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(135, 6);
             // 
             // 修改登记ToolStripMenuItem1
             // 
             this.修改登记ToolStripMenuItem1.Name = "修改登记ToolStripMenuItem1";
-            this.修改登记ToolStripMenuItem1.Size = new System.Drawing.Size(210, 24);
+            this.修改登记ToolStripMenuItem1.Size = new System.Drawing.Size(138, 24);
             this.修改登记ToolStripMenuItem1.Text = "修改登记";
             // 
             // 更换包间ToolStripMenuItem1
             // 
             this.更换包间ToolStripMenuItem1.Name = "更换包间ToolStripMenuItem1";
-            this.更换包间ToolStripMenuItem1.Size = new System.Drawing.Size(210, 24);
+            this.更换包间ToolStripMenuItem1.Size = new System.Drawing.Size(138, 24);
             this.更换包间ToolStripMenuItem1.Text = "更换包间";
             // 
             // 包间状态ToolStripMenuItem1
             // 
             this.包间状态ToolStripMenuItem1.Name = "包间状态ToolStripMenuItem1";
-            this.包间状态ToolStripMenuItem1.Size = new System.Drawing.Size(210, 24);
+            this.包间状态ToolStripMenuItem1.Size = new System.Drawing.Size(138, 24);
             this.包间状态ToolStripMenuItem1.Text = "包间状态";
             this.包间状态ToolStripMenuItem1.Click += new System.EventHandler(this.包间状态ToolStripMenuItem1_Click);
             // 
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(207, 6);
+            this.toolStripSeparator9.Size = new System.Drawing.Size(135, 6);
             // 
             // 合并账单ToolStripMenuItem1
             // 
             this.合并账单ToolStripMenuItem1.Name = "合并账单ToolStripMenuItem1";
-            this.合并账单ToolStripMenuItem1.Size = new System.Drawing.Size(210, 24);
+            this.合并账单ToolStripMenuItem1.Size = new System.Drawing.Size(138, 24);
             this.合并账单ToolStripMenuItem1.Text = "合并账单";
             // 
             // 分拆账单ToolStripMenuItem
             // 
             this.分拆账单ToolStripMenuItem.Name = "分拆账单ToolStripMenuItem";
-            this.分拆账单ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.分拆账单ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
             this.分拆账单ToolStripMenuItem.Text = "分拆账单";
             // 
             // toolStripSeparator10
             // 
             this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(207, 6);
+            this.toolStripSeparator10.Size = new System.Drawing.Size(135, 6);
             // 
             // 宾客预订ToolStripMenuItem
             // 
             this.宾客预订ToolStripMenuItem.Name = "宾客预订ToolStripMenuItem";
-            this.宾客预订ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.宾客预订ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
             this.宾客预订ToolStripMenuItem.Text = "宾客预订";
             // 
             // 分拆结账ToolStripMenuItem
             // 
             this.分拆结账ToolStripMenuItem.Name = "分拆结账ToolStripMenuItem";
-            this.分拆结账ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.分拆结账ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
             this.分拆结账ToolStripMenuItem.Text = "分拆结账";
             // 
             // Tool
             // 
             this.Tool.Name = "Tool";
-            this.Tool.Size = new System.Drawing.Size(210, 24);
+            this.Tool.Size = new System.Drawing.Size(138, 24);
             this.Tool.Text = "预订信息";
             // 
             // Large_icons
@@ -1998,50 +2042,6 @@ namespace KTV_management_system
             this.备注.DisplayIndex = 5;
             this.备注.Text = "备注";
             this.备注.Width = 159;
-            // 
-            // skinLabel13
-            // 
-            this.skinLabel13.AutoSize = true;
-            this.skinLabel13.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel13.BorderColor = System.Drawing.Color.White;
-            this.skinLabel13.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel13.Location = new System.Drawing.Point(106, 76);
-            this.skinLabel13.Name = "skinLabel13";
-            this.skinLabel13.Size = new System.Drawing.Size(0, 20);
-            this.skinLabel13.TabIndex = 6;
-            // 
-            // skinLabel14
-            // 
-            this.skinLabel14.AutoSize = true;
-            this.skinLabel14.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel14.BorderColor = System.Drawing.Color.White;
-            this.skinLabel14.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel14.Location = new System.Drawing.Point(106, 114);
-            this.skinLabel14.Name = "skinLabel14";
-            this.skinLabel14.Size = new System.Drawing.Size(0, 20);
-            this.skinLabel14.TabIndex = 7;
-            // 
-            // skinLabel15
-            // 
-            this.skinLabel15.AutoSize = true;
-            this.skinLabel15.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel15.BorderColor = System.Drawing.Color.White;
-            this.skinLabel15.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel15.Location = new System.Drawing.Point(106, 152);
-            this.skinLabel15.Name = "skinLabel15";
-            this.skinLabel15.Size = new System.Drawing.Size(0, 20);
-            this.skinLabel15.TabIndex = 8;
-            // 
-            // skinLabel16
-            // 
-            this.skinLabel16.AutoSize = true;
-            this.skinLabel16.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel16.BorderColor = System.Drawing.Color.White;
-            this.skinLabel16.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel16.Location = new System.Drawing.Point(106, 190);
-            this.skinLabel16.Name = "skinLabel16";
-            this.skinLabel16.Size = new System.Drawing.Size(0, 20);
-            this.skinLabel16.TabIndex = 9;
             // 
             // Home
             // 
