@@ -99,6 +99,12 @@
     <Compile Include="Batch.Designer.cs">
       <DependentUpon>Batch.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer_billing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer_billing.Designer.cs">
+      <DependentUpon>Customer_billing.cs</DependentUpon>
+    </Compile>
     <Compile Include="DbHelper.cs" />
     <Compile Include="ExportExcel.cs" />
     <Compile Include="Home.cs">
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Batch.resx">
       <DependentUpon>Batch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer_billing.resx">
+      <DependentUpon>Customer_billing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
