@@ -16,7 +16,7 @@ namespace KTV_management_system
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new System_settings());
+            Application.Run(new Home());
         }
     }
 }

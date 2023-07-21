@@ -32,6 +32,12 @@ namespace KTV_management_system
             skinCaptionPanel1.Text = DateTime.Now.ToString("yyyy-MM-dd  HH:MM:ss");
             skinCaptionPanel5.Text = DateTime.Now.ToString("yyyy-MM-dd  HH:MM:ss");
 
+            skinLabel7.Text = DbHelper.executeScalar("select count(*) from [dbo].[Private_rooms]");
+            skinLabel13.Text = DbHelper.executeScalar("select count(*) from [dbo].[Private_rooms] where [Private_room_status] = '1'");
+            skinLabel14.Text = DbHelper.executeScalar("select count(*) from [dbo].[Private_rooms] where [Private_room_status] = '0'");
+            skinLabel15.Text = DbHelper.executeScalar("select count(*) from [dbo].[Private_rooms] where [Private_room_status] = '3'");
+            skinLabel16.Text = DbHelper.executeScalar("select count(*) from [dbo].[Private_rooms] where [Private_room_status] = '2'");
+
             foreach (SkinButton skinButton in skinFlowLayoutPanel1.Controls)
             {
                 if (skinButton.Capture) // 判断当前 skinButton 是否被鼠标捕获
