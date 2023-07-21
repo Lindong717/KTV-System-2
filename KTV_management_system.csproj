@@ -113,6 +113,12 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="Increase_consumption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Increase_consumption.Designer.cs">
+      <DependentUpon>Increase_consumption.cs</DependentUpon>
+    </Compile>
     <Compile Include="Individually.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Increase_consumption.resx">
+      <DependentUpon>Increase_consumption.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Individually.resx">
       <DependentUpon>Individually.cs</DependentUpon>

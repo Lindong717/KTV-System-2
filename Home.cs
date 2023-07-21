@@ -61,6 +61,8 @@ namespace KTV_management_system
                 skinButton.Invalidate();
             }
 
+            skinCaptionPanel2.Text = DbHelper.executeScalar($"select [type_Name] from [dbo].[Type_of_private_room] where [Private_rooms_type_ID] = '{lastSelectedIndex}'");
+
             foreach (SkinButton skinButton1 in skinFlowLayoutPanel1.Controls)
             {
                 if (skinButton1.Capture)
@@ -287,6 +289,53 @@ namespace KTV_management_system
         private void 退出系统ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void Billing()
+        {
+            if (string.IsNullOrEmpty(skinListView1.SelectedItems[0].ToString()))
+            {
+                MessageBox.Show("请选择包间", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (skinListView1.SelectedItems[0].SubItems[1].Text == "占用")
+            {
+                MessageBox.Show("该包间已被占用", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (skinListView1.SelectedItems[0].SubItems[1].Text == "停用")
+            {
+                MessageBox.Show("该包间已被停用", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            Customer_billing customer_Billing = new Customer_billing();
+
+            customer_Billing.Private_rooms_ID = skinListView1.SelectedItems[0].SubItems[0].Text;
+
+            customer_Billing.ShowDialog();
+        }
+
+        private void skinListView1_DoubleClick(object sender, EventArgs e)
+        {
+            Billing();
+        }
+
+        private void 顾客开单ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Billing();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            Billing();
+        }
+
+        private void skinListView1_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        {
+            //111
         }
     }
 }

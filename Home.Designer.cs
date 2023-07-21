@@ -613,6 +613,7 @@ namespace KTV_management_system
             this.toolStripButton1.Size = new System.Drawing.Size(73, 44);
             this.toolStripButton1.Text = "顾客开单";
             this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripButton2
             // 
@@ -1478,7 +1479,9 @@ namespace KTV_management_system
             this.skinListView1.TabIndex = 3;
             this.skinListView1.UseCompatibleStateImageBehavior = false;
             this.skinListView1.View = System.Windows.Forms.View.Details;
+            this.skinListView1.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.skinListView1_ItemSelectionChanged);
             this.skinListView1.Click += new System.EventHandler(this.skinListView1_Click_1);
+            this.skinListView1.DoubleClick += new System.EventHandler(this.skinListView1_DoubleClick);
             // 
             // columnHeader19
             // 
@@ -1487,6 +1490,7 @@ namespace KTV_management_system
             // columnHeader20
             // 
             this.columnHeader20.Text = "状态";
+            this.columnHeader20.Width = 86;
             // 
             // columnHeader21
             // 
@@ -1551,89 +1555,90 @@ namespace KTV_management_system
             // 宾客结账ToolStripMenuItem
             // 
             this.宾客结账ToolStripMenuItem.Name = "宾客结账ToolStripMenuItem";
-            this.宾客结账ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
+            this.宾客结账ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.宾客结账ToolStripMenuItem.Text = "宾客结账";
             // 
             // 增加消费ToolStripMenuItem
             // 
             this.增加消费ToolStripMenuItem.Name = "增加消费ToolStripMenuItem";
-            this.增加消费ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
+            this.增加消费ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.增加消费ToolStripMenuItem.Text = "增加消费";
             // 
             // 兑换商品ToolStripMenuItem
             // 
             this.兑换商品ToolStripMenuItem.Name = "兑换商品ToolStripMenuItem";
-            this.兑换商品ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
+            this.兑换商品ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.兑换商品ToolStripMenuItem.Text = "兑换商品";
             // 
             // 顾客开单ToolStripMenuItem
             // 
             this.顾客开单ToolStripMenuItem.Name = "顾客开单ToolStripMenuItem";
-            this.顾客开单ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
+            this.顾客开单ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.顾客开单ToolStripMenuItem.Text = "顾客开单";
+            this.顾客开单ToolStripMenuItem.Click += new System.EventHandler(this.顾客开单ToolStripMenuItem_Click);
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(135, 6);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(207, 6);
             // 
             // 修改登记ToolStripMenuItem1
             // 
             this.修改登记ToolStripMenuItem1.Name = "修改登记ToolStripMenuItem1";
-            this.修改登记ToolStripMenuItem1.Size = new System.Drawing.Size(138, 24);
+            this.修改登记ToolStripMenuItem1.Size = new System.Drawing.Size(210, 24);
             this.修改登记ToolStripMenuItem1.Text = "修改登记";
             // 
             // 更换包间ToolStripMenuItem1
             // 
             this.更换包间ToolStripMenuItem1.Name = "更换包间ToolStripMenuItem1";
-            this.更换包间ToolStripMenuItem1.Size = new System.Drawing.Size(138, 24);
+            this.更换包间ToolStripMenuItem1.Size = new System.Drawing.Size(210, 24);
             this.更换包间ToolStripMenuItem1.Text = "更换包间";
             // 
             // 包间状态ToolStripMenuItem1
             // 
             this.包间状态ToolStripMenuItem1.Name = "包间状态ToolStripMenuItem1";
-            this.包间状态ToolStripMenuItem1.Size = new System.Drawing.Size(138, 24);
+            this.包间状态ToolStripMenuItem1.Size = new System.Drawing.Size(210, 24);
             this.包间状态ToolStripMenuItem1.Text = "包间状态";
             this.包间状态ToolStripMenuItem1.Click += new System.EventHandler(this.包间状态ToolStripMenuItem1_Click);
             // 
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(135, 6);
+            this.toolStripSeparator9.Size = new System.Drawing.Size(207, 6);
             // 
             // 合并账单ToolStripMenuItem1
             // 
             this.合并账单ToolStripMenuItem1.Name = "合并账单ToolStripMenuItem1";
-            this.合并账单ToolStripMenuItem1.Size = new System.Drawing.Size(138, 24);
+            this.合并账单ToolStripMenuItem1.Size = new System.Drawing.Size(210, 24);
             this.合并账单ToolStripMenuItem1.Text = "合并账单";
             // 
             // 分拆账单ToolStripMenuItem
             // 
             this.分拆账单ToolStripMenuItem.Name = "分拆账单ToolStripMenuItem";
-            this.分拆账单ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
+            this.分拆账单ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.分拆账单ToolStripMenuItem.Text = "分拆账单";
             // 
             // toolStripSeparator10
             // 
             this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(135, 6);
+            this.toolStripSeparator10.Size = new System.Drawing.Size(207, 6);
             // 
             // 宾客预订ToolStripMenuItem
             // 
             this.宾客预订ToolStripMenuItem.Name = "宾客预订ToolStripMenuItem";
-            this.宾客预订ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
+            this.宾客预订ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.宾客预订ToolStripMenuItem.Text = "宾客预订";
             // 
             // 分拆结账ToolStripMenuItem
             // 
             this.分拆结账ToolStripMenuItem.Name = "分拆结账ToolStripMenuItem";
-            this.分拆结账ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
+            this.分拆结账ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.分拆结账ToolStripMenuItem.Text = "分拆结账";
             // 
             // Tool
             // 
             this.Tool.Name = "Tool";
-            this.Tool.Size = new System.Drawing.Size(138, 24);
+            this.Tool.Size = new System.Drawing.Size(210, 24);
             this.Tool.Text = "预订信息";
             // 
             // Large_icons

@@ -30,6 +30,7 @@ namespace KTV_management_system
                 Inquire();
                 return;
             }
+
             Inquire();
         }
 

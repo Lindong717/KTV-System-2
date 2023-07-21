@@ -102,6 +102,20 @@ namespace KTV_management_system
             }
         }
 
+        public static void Inquire(string sql,ref List<string> list)
+        {
+            DataTable dataTable = getDataTable(sql);
+
+            foreach (DataRow item in dataTable.Rows)
+            {
+                list.Add(item[0].ToString());
+                list.Add(item[1].ToString());
+                list.Add(item[2].ToString());
+                list.Add(item[3].ToString());
+            }
+
+        }
+
         public static void skinDataGridView(SkinDataGridView skinDataGridView,string sql,string Pinyin)
         {
             DataTable dataTable = getDataTable(sql);
