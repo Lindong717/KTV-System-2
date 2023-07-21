@@ -34,7 +34,7 @@ namespace KTV_management_system
         /// <summary>
         /// 窗体嵌入通用方法
         /// </summary>
-        /// <param name="subForm"></param>
+        /// <param name="subForm"></param>；
         private void OpenForm(Form subForm,MetroTabPage metroTabPage)
         {
             foreach (Control item in metroTabPage.Controls)
