@@ -14,7 +14,7 @@ namespace KTV_management_system
 {
     class DbHelper
     {
-        private const string Source = "Data Source=LINDONG;Initial Catalog=KTV_entertainment_management_system;UID=sa;PWD=114514";
+        private const string Source = @"Data Source=DESKTOP-OURBTD4\SQL2019;Initial Catalog=KTV_entertainment_management_system;UID=sa;PWD=sasa";
 
         public static DataTable getDataTable(string sql)
         {
