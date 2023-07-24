@@ -14,6 +14,9 @@ namespace KTV_management_system
     public partial class Waiter : Form
 
     {
+        private static string sql = @"select [Grade number], [Rank name] = (case [Rank name] when '1' then '普通服务生' when '2' then '中级服务生' when '3' then '高级服务生'
+            when '4' then '究极服务生' when '5' then '终极服务生')  from [dbo].[Waiter_type] where 1=1";
+        private static string tmp = sql;
         public Waiter()
         {
             InitializeComponent();
@@ -25,7 +28,7 @@ namespace KTV_management_system
             DbHelper.skinDataGridView(skinDataGridView2, @"select [Waiter_number], [Waiter name], [Jane_spelling], [sex], [Rank name], [Contact], [identity card], [type_Name],[description] from [dbo].[Waiter] a
             join [dbo].[Waiter_type] b on a.level=b.[Grade number]
             join [dbo].[Type_of_private_room] c on a.[Service Area] = c.Private_rooms_type_ID", "");
-        }
+    }
 
         private void skinPanel1_Paint(object sender, PaintEventArgs e)
         {
@@ -58,7 +61,9 @@ namespace KTV_management_system
 
         private void Waiter_Load(object sender, EventArgs e)
         {
+
             DbHelper.skinCollections(skinComboBox1, "select [Grade number], [Rank name] from [dbo].[Waiter_type]", "Grade number", "Rank name", "请选择");
+
             select();
         }
 
@@ -121,6 +126,38 @@ namespace KTV_management_system
                 Close();
             }
             select();
+        }
+
+        private void skinComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+            if (Convert.ToInt32(skinComboBox1.SelectedValue) > 0)
+            {
+                tmp += $" and a.[Grade number] = '{skinComboBox1.SelectedValue}'";
+                sx();
+                return;
+            }
+            sx();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                throw;
+            }
+            
+        }
+
+        public void sx()
+        {
+            DbHelper.skinDataGridView(skinDataGridView2, tmp, "");
+
+            tmp = sql;
+        }
+
+        private void skinDataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
