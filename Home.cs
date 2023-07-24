@@ -4,7 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -116,6 +118,63 @@ namespace KTV_management_system
 
             skinListView1.HideSelection = true;
             lastSelectedIndex = 1;
+
+            bool fileExists = CheckFileExists(FilePath());
+
+            if (!fileExists)
+            {
+                new StreamWriter(FilePath());
+            }
+
+            using (FileStream stream = new FileStream(FilePath(), FileMode.Open))
+            {
+                byte[] bytes = new byte[stream.Length];
+
+                // 读取文件流中的数据
+                stream.Read(bytes, 0, bytes.Length);
+
+                // 将字节数组转换为字符串
+                textBox1.Text = Encoding.UTF8.GetString(bytes);
+
+                stream.Close();
+            }
+        }
+
+        private void write()
+        {
+            using (FileStream stream = new FileStream(FilePath(), FileMode.Create))
+            {
+                string data = textBox1.Text; // 要写入的数据
+
+                // 将字符串转换为字节数组
+                byte[] bytes = Encoding.UTF8.GetBytes(data);
+
+                // 写入数据到文件流
+                stream.Write(bytes, 0, bytes.Length);
+
+                stream.Close();
+            }
+        }
+
+        private string FilePath()
+        {
+            string ExegesisFileName = "114514.txt";
+            string currentDirectory = Environment.CurrentDirectory;
+            return Path.Combine(currentDirectory, ExegesisFileName);
+        }
+
+        static bool CheckFileExists(string folderPath)
+        {
+            try
+            {
+                // 判断文件是否存在
+                return File.Exists(folderPath);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "系统提示",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return false;
+            }
         }
 
         private void 列表ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -250,12 +309,34 @@ namespace KTV_management_system
 
         private void skinListView1_Click_1(object sender, EventArgs e)
         {
+            skinLabel17.Text = null;
+            skinLabel18.Text = null;
+
+            skinLabel17.Text = DbHelper.executeScalar($@"select [manner_Name] from [dbo].[Private_rooms] as a
+                join [dbo].[Type_of_private_room] as b on a.Private_rooms_type = b.Private_rooms_type_ID
+                join [dbo].[Billing_type] as c on b.Billing_method = c.manner_ID
+                where [Private_rooms_ID] = '{skinListView1.SelectedItems[0].SubItems[0].Text}'");
+
+            skinLabel18.Text = "￥" + DbHelper.executeScalar($@"select [Minimum_consumption] from [dbo].[Private_rooms] as a
+                join [dbo].[Type_of_private_room] as b on a.Private_rooms_type = b.Private_rooms_type_ID
+                where [Private_rooms_ID] = '{skinListView1.SelectedItems[0].SubItems[0].Text}'");
+
             if (skinListView1.SelectedItems[0].SubItems[1].Text == "占用")
             {
+                skinLabel19.Text = $"{DbHelper.executeScalar($"SELECT MONTH([Start_time]) FROM [dbo].[Private_rooms] where [Private_rooms_ID] = '{skinListView1.SelectedItems[0].SubItems[0].Text}'")}月{DbHelper.executeScalar($"SELECT Day([Start_time]) FROM [dbo].[Private_rooms] where [Private_rooms_ID] = '{skinListView1.SelectedItems[0].SubItems[0].Text}'")}日";
+                skinLabel20.Text = DbHelper.executeScalar($"select [Elapsed_time] from [dbo].[Private_rooms] where [Private_rooms_ID] = '{skinListView1.SelectedItems[0].SubItems[0].Text}'");
+                skinLabel21.Text = "￥" + DbHelper.executeScalar($"select [deposit] from [dbo].[Private_rooms] where [Private_rooms_ID] = '{skinListView1.SelectedItems[0].SubItems[0].Text}'");
+                skinLabel22.Text = "￥" + DbHelper.executeScalar($"select SUM([amount]) from [dbo].[Consumption_list] where [Private_room] = '{skinListView1.SelectedItems[0].SubItems[0].Text}'");
+
                 skinCaptionPanel6.Text = $"{skinListView1.SelectedItems[0].Text}包间\t消费订单";
                 return;
             }
+
             skinCaptionPanel6.Text = null;
+            skinLabel19.Text = null;
+            skinLabel20.Text = null;
+            skinLabel21.Text = null;
+            skinLabel22.Text = null;
         }
 
         private void toolStripButton12_Click(object sender, EventArgs e)
@@ -299,12 +380,6 @@ namespace KTV_management_system
                 return;
             }
 
-            if (skinListView1.SelectedItems[0].SubItems[1].Text == "占用")
-            {
-                MessageBox.Show("该包间已被占用", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
             if (skinListView1.SelectedItems[0].SubItems[1].Text == "停用")
             {
                 MessageBox.Show("该包间已被停用", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -312,15 +387,28 @@ namespace KTV_management_system
             }
 
             Customer_billing customer_Billing = new Customer_billing();
-
             customer_Billing.Private_rooms_ID = skinListView1.SelectedItems[0].SubItems[0].Text;
-
             customer_Billing.ShowDialog();
+
+            Inquire();
+        }
+
+        private void Increase_consumption()
+        {
+            Increase_consumption increase_Consumption = new Increase_consumption();
+            increase_Consumption.Private_rooms_ID = skinListView1.SelectedItems[0].SubItems[0].Text;
+            increase_Consumption.ShowDialog();
         }
 
         private void skinListView1_DoubleClick(object sender, EventArgs e)
         {
-            Billing();
+            if (skinListView1.SelectedItems[0].SubItems[1].Text != "占用")
+            {
+                Billing();
+                return;
+            }
+
+            Increase_consumption();
         }
 
         private void 顾客开单ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -330,12 +418,74 @@ namespace KTV_management_system
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
+            if (skinListView1.SelectedItems[0].SubItems[1].Text == "占用")
+            {
+                MessageBox.Show("该包间已被占用", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             Billing();
         }
 
-        private void skinListView1_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        private void 增加消费ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //111
+            Increase_consumption();
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            if (skinListView1.SelectedItems[0].SubItems[1].Text != "占用")
+            {
+                MessageBox.Show("不能对非占用包间进行该操作", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            Increase_consumption();
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            for (int i = 0; i < skinListView1.Items.Count; i++)
+            {
+                if (skinListView1.Items[i].SubItems[1].Text == "占用")
+                {
+                    string Initial_time = DbHelper.executeScalar($"select [Start_time] from [dbo].[Private_rooms] where [Private_rooms_ID] = '{skinListView1.Items[i].SubItems[0].Text}'");
+                    string time = $"{DbHelper.executeScalar($"SELECT DATEDIFF(HH, '{Initial_time}', GETDATE())")}小时，{DbHelper.executeScalar($"SELECT DATEDIFF(MINUTE, '{Initial_time}', GETDATE());")}分钟";
+                    
+                    DbHelper.executeNonQuery($"update [dbo].[Private_rooms] set [Elapsed_time] = '{time}' where [Private_rooms_ID] = '{skinListView1.Items[i].SubItems[0].Text}'");
+                }
+            }
+        }
+
+        private void skinButton2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string calculatorPath = @"C:\Windows\System32\calc.exe";
+
+                Process.Start(calculatorPath);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("无法打开计算器： " + ex.Message);
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            write();
+        }
+
+        private void skinButton3_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = null;
+
+            write();
+        }
+
+        private void skinButton1_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += Environment.NewLine + $"----{DateTime.Now}----";
         }
     }
 }

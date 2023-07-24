@@ -111,7 +111,6 @@ namespace KTV_management_system
                 list.Add(item[0].ToString());
                 list.Add(item[1].ToString());
                 list.Add(item[2].ToString());
-                list.Add(item[3].ToString());
             }
 
         }

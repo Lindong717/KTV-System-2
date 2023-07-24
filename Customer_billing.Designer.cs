@@ -33,8 +33,6 @@ namespace KTV_management_system
             this.skinButton2 = new CCWin.SkinControl.SkinButton();
             this.skinTextBox4 = new CCWin.SkinControl.SkinTextBox();
             this.skinLabel11 = new CCWin.SkinControl.SkinLabel();
-            this.skinComboBox1 = new CCWin.SkinControl.SkinComboBox();
-            this.skinLabel5 = new CCWin.SkinControl.SkinLabel();
             this.skinTextBox1 = new CCWin.SkinControl.SkinTextBox();
             this.skinLabel6 = new CCWin.SkinControl.SkinLabel();
             this.skinLabel7 = new CCWin.SkinControl.SkinLabel();
@@ -55,7 +53,7 @@ namespace KTV_management_system
             this.skinButton2.BackColor = System.Drawing.Color.Transparent;
             this.skinButton2.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton2.DownBack = null;
-            this.skinButton2.Location = new System.Drawing.Point(420, 450);
+            this.skinButton2.Location = new System.Drawing.Point(412, 385);
             this.skinButton2.MouseBack = null;
             this.skinButton2.Name = "skinButton2";
             this.skinButton2.NormlBack = null;
@@ -75,7 +73,7 @@ namespace KTV_management_system
             this.skinTextBox4.IsPasswordChat = '\0';
             this.skinTextBox4.IsSystemPasswordChar = false;
             this.skinTextBox4.Lines = new string[0];
-            this.skinTextBox4.Location = new System.Drawing.Point(135, 240);
+            this.skinTextBox4.Location = new System.Drawing.Point(140, 173);
             this.skinTextBox4.Margin = new System.Windows.Forms.Padding(0);
             this.skinTextBox4.MaxLength = 32767;
             this.skinTextBox4.MinimumSize = new System.Drawing.Size(28, 28);
@@ -113,34 +111,11 @@ namespace KTV_management_system
             this.skinLabel11.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel11.BorderColor = System.Drawing.Color.White;
             this.skinLabel11.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel11.Location = new System.Drawing.Point(70, 240);
+            this.skinLabel11.Location = new System.Drawing.Point(75, 173);
             this.skinLabel11.Name = "skinLabel11";
             this.skinLabel11.Size = new System.Drawing.Size(54, 20);
             this.skinLabel11.TabIndex = 16;
             this.skinLabel11.Text = "备注：";
-            // 
-            // skinComboBox1
-            // 
-            this.skinComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.skinComboBox1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinComboBox1.FormattingEnabled = true;
-            this.skinComboBox1.Location = new System.Drawing.Point(135, 170);
-            this.skinComboBox1.Name = "skinComboBox1";
-            this.skinComboBox1.Size = new System.Drawing.Size(175, 26);
-            this.skinComboBox1.TabIndex = 9;
-            this.skinComboBox1.WaterText = "";
-            // 
-            // skinLabel5
-            // 
-            this.skinLabel5.AutoSize = true;
-            this.skinLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel5.BorderColor = System.Drawing.Color.White;
-            this.skinLabel5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel5.Location = new System.Drawing.Point(40, 174);
-            this.skinLabel5.Name = "skinLabel5";
-            this.skinLabel5.Size = new System.Drawing.Size(84, 20);
-            this.skinLabel5.TabIndex = 8;
-            this.skinLabel5.Text = "计费方法：";
             // 
             // skinTextBox1
             // 
@@ -276,7 +251,7 @@ namespace KTV_management_system
             this.skinButton1.BackColor = System.Drawing.Color.Transparent;
             this.skinButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton1.DownBack = null;
-            this.skinButton1.Location = new System.Drawing.Point(139, 450);
+            this.skinButton1.Location = new System.Drawing.Point(131, 385);
             this.skinButton1.MouseBack = null;
             this.skinButton1.Name = "skinButton1";
             this.skinButton1.NormlBack = null;
@@ -284,14 +259,13 @@ namespace KTV_management_system
             this.skinButton1.TabIndex = 4;
             this.skinButton1.Text = "确定";
             this.skinButton1.UseVisualStyleBackColor = false;
+            this.skinButton1.Click += new System.EventHandler(this.skinButton1_Click);
             // 
             // skinCaptionPanel1
             // 
             this.skinCaptionPanel1.CaptionFont = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.skinCaptionPanel1.Controls.Add(this.skinTextBox4);
             this.skinCaptionPanel1.Controls.Add(this.skinLabel11);
-            this.skinCaptionPanel1.Controls.Add(this.skinComboBox1);
-            this.skinCaptionPanel1.Controls.Add(this.skinLabel5);
             this.skinCaptionPanel1.Controls.Add(this.skinTextBox1);
             this.skinCaptionPanel1.Controls.Add(this.skinLabel6);
             this.skinCaptionPanel1.Controls.Add(this.skinLabel7);
@@ -304,7 +278,7 @@ namespace KTV_management_system
             this.skinCaptionPanel1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinCaptionPanel1.Location = new System.Drawing.Point(0, 0);
             this.skinCaptionPanel1.Name = "skinCaptionPanel1";
-            this.skinCaptionPanel1.Size = new System.Drawing.Size(560, 374);
+            this.skinCaptionPanel1.Size = new System.Drawing.Size(560, 304);
             this.skinCaptionPanel1.TabIndex = 3;
             this.skinCaptionPanel1.Text = "开单信息";
             this.skinCaptionPanel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -321,14 +295,14 @@ namespace KTV_management_system
             this.skinPanel1.MouseBack = null;
             this.skinPanel1.Name = "skinPanel1";
             this.skinPanel1.NormlBack = null;
-            this.skinPanel1.Size = new System.Drawing.Size(562, 376);
+            this.skinPanel1.Size = new System.Drawing.Size(562, 306);
             this.skinPanel1.TabIndex = 6;
             // 
             // Customer_billing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(633, 508);
+            this.ClientSize = new System.Drawing.Size(633, 455);
             this.Controls.Add(this.skinPanel1);
             this.Controls.Add(this.skinButton2);
             this.Controls.Add(this.skinButton1);
@@ -350,8 +324,6 @@ namespace KTV_management_system
         private CCWin.SkinControl.SkinButton skinButton2;
         private CCWin.SkinControl.SkinTextBox skinTextBox4;
         private CCWin.SkinControl.SkinLabel skinLabel11;
-        private CCWin.SkinControl.SkinComboBox skinComboBox1;
-        private CCWin.SkinControl.SkinLabel skinLabel5;
         private CCWin.SkinControl.SkinTextBox skinTextBox1;
         private CCWin.SkinControl.SkinLabel skinLabel6;
         private CCWin.SkinControl.SkinLabel skinLabel7;

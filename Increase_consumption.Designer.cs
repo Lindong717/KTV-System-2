@@ -69,13 +69,24 @@ namespace KTV_management_system
             this.skinLabel1 = new CCWin.SkinControl.SkinLabel();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.skinTreeView1 = new CCWin.SkinControl.SkinTreeView();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.skinPanel3 = new CCWin.SkinControl.SkinPanel();
             this.skinCaptionPanel2 = new CCWin.SkinControl.SkinCaptionPanel();
             this.skinButton1 = new CCWin.SkinControl.SkinButton();
             this.skinDataGridView2 = new CCWin.SkinControl.SkinDataGridView();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.skinLabel5 = new CCWin.SkinControl.SkinLabel();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.skinPanel1.SuspendLayout();
             this.skinPanel5.SuspendLayout();
             this.skinFlowLayoutPanel1.SuspendLayout();
@@ -334,7 +345,7 @@ namespace KTV_management_system
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.Location = new System.Drawing.Point(2, 30);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(403, 631);
             this.metroTabControl1.TabIndex = 0;
             this.metroTabControl1.UseSelectable = true;
@@ -418,6 +429,7 @@ namespace KTV_management_system
             this.skinDataGridView1.TitleBack = null;
             this.skinDataGridView1.TitleBackColorBegin = System.Drawing.Color.White;
             this.skinDataGridView1.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
+            this.skinDataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.skinDataGridView1_CellMouseDoubleClick);
             // 
             // Column1
             // 
@@ -552,6 +564,14 @@ namespace KTV_management_system
             this.skinTreeView1.Size = new System.Drawing.Size(395, 589);
             this.skinTreeView1.TabIndex = 2;
             this.skinTreeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.skinTreeView1_NodeMouseClick);
+            this.skinTreeView1.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.skinTreeView1_NodeMouseDoubleClick);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "close-folder.png");
+            this.imageList1.Images.SetKeyName(1, "open-folder.png");
             // 
             // skinPanel3
             // 
@@ -588,7 +608,7 @@ namespace KTV_management_system
             this.skinButton1.BackColor = System.Drawing.Color.Transparent;
             this.skinButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton1.DownBack = null;
-            this.skinButton1.Location = new System.Drawing.Point(17, 603);
+            this.skinButton1.Location = new System.Drawing.Point(17, 601);
             this.skinButton1.MouseBack = null;
             this.skinButton1.Name = "skinButton1";
             this.skinButton1.NormlBack = null;
@@ -596,6 +616,7 @@ namespace KTV_management_system
             this.skinButton1.TabIndex = 3;
             this.skinButton1.Text = "确认关闭";
             this.skinButton1.UseVisualStyleBackColor = false;
+            this.skinButton1.Click += new System.EventHandler(this.skinButton1_Click);
             // 
             // skinDataGridView2
             // 
@@ -603,6 +624,7 @@ namespace KTV_management_system
             this.skinDataGridView2.AllowUserToDeleteRows = false;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
             this.skinDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.skinDataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.skinDataGridView2.BackgroundColor = System.Drawing.SystemColors.Window;
             this.skinDataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.skinDataGridView2.ColumnFont = null;
@@ -616,6 +638,18 @@ namespace KTV_management_system
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.skinDataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.skinDataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.skinDataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column16,
+            this.Column6,
+            this.Column7,
+            this.Column8,
+            this.Column9,
+            this.Column10,
+            this.Column11,
+            this.Column12,
+            this.Column13,
+            this.Column14,
+            this.Column15});
             this.skinDataGridView2.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
@@ -630,6 +664,7 @@ namespace KTV_management_system
             this.skinDataGridView2.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.skinDataGridView2.HeadFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinDataGridView2.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
+            this.skinDataGridView2.LineNumber = false;
             this.skinDataGridView2.Location = new System.Drawing.Point(2, 30);
             this.skinDataGridView2.Name = "skinDataGridView2";
             this.skinDataGridView2.ReadOnly = true;
@@ -642,11 +677,122 @@ namespace KTV_management_system
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             this.skinDataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.skinDataGridView2.RowTemplate.Height = 23;
-            this.skinDataGridView2.Size = new System.Drawing.Size(414, 552);
+            this.skinDataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.skinDataGridView2.Size = new System.Drawing.Size(414, 536);
             this.skinDataGridView2.TabIndex = 2;
             this.skinDataGridView2.TitleBack = null;
             this.skinDataGridView2.TitleBackColorBegin = System.Drawing.Color.White;
             this.skinDataGridView2.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
+            // 
+            // Column16
+            // 
+            this.Column16.DataPropertyName = "manifestID";
+            this.Column16.HeaderText = "ID";
+            this.Column16.MinimumWidth = 6;
+            this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
+            this.Column16.Visible = false;
+            this.Column16.Width = 125;
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column6.DataPropertyName = "Private_room";
+            this.Column6.HeaderText = "包间号";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 80;
+            // 
+            // Column7
+            // 
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column7.DataPropertyName = "project_ID";
+            this.Column7.HeaderText = "项目名称";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 95;
+            // 
+            // Column8
+            // 
+            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column8.DataPropertyName = "unit_price";
+            this.Column8.HeaderText = "单价";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 65;
+            // 
+            // Column9
+            // 
+            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column9.DataPropertyName = "Fold_rate";
+            this.Column9.HeaderText = "打折比例";
+            this.Column9.MinimumWidth = 6;
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Width = 95;
+            // 
+            // Column10
+            // 
+            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column10.DataPropertyName = "quantity";
+            this.Column10.HeaderText = "数量";
+            this.Column10.MinimumWidth = 6;
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Width = 65;
+            // 
+            // Column11
+            // 
+            this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column11.DataPropertyName = "amount";
+            this.Column11.HeaderText = "金额";
+            this.Column11.MinimumWidth = 6;
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Width = 65;
+            // 
+            // Column12
+            // 
+            this.Column12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column12.DataPropertyName = "Crediting_time";
+            this.Column12.HeaderText = "入账时间";
+            this.Column12.MinimumWidth = 6;
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Width = 95;
+            // 
+            // Column13
+            // 
+            this.Column13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column13.DataPropertyName = "Waiter";
+            this.Column13.HeaderText = "服务生";
+            this.Column13.MinimumWidth = 6;
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            this.Column13.Width = 80;
+            // 
+            // Column14
+            // 
+            this.Column14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column14.DataPropertyName = "Bookkeeper";
+            this.Column14.HeaderText = "记账人";
+            this.Column14.MinimumWidth = 6;
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            this.Column14.Width = 80;
+            // 
+            // Column15
+            // 
+            this.Column15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column15.DataPropertyName = "remark";
+            this.Column15.HeaderText = "备注";
+            this.Column15.MinimumWidth = 6;
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            this.Column15.Width = 65;
             // 
             // textBox2
             // 
@@ -666,13 +812,6 @@ namespace KTV_management_system
             this.skinLabel5.Size = new System.Drawing.Size(54, 20);
             this.skinLabel5.TabIndex = 0;
             this.skinLabel5.Text = "搜索：";
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "close-folder.png");
-            this.imageList1.Images.SetKeyName(1, "open-folder.png");
             // 
             // Increase_consumption
             // 
@@ -750,5 +889,16 @@ namespace KTV_management_system
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
     }
 }

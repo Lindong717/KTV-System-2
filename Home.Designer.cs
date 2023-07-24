@@ -95,6 +95,12 @@ namespace KTV_management_system
             this.skinLabel12 = new CCWin.SkinControl.SkinLabel();
             this.skinPanel2 = new CCWin.SkinControl.SkinPanel();
             this.skinCaptionPanel2 = new CCWin.SkinControl.SkinCaptionPanel();
+            this.skinLabel22 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel21 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel20 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel19 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel18 = new CCWin.SkinControl.SkinLabel();
+            this.skinLabel17 = new CCWin.SkinControl.SkinLabel();
             this.skinLabel6 = new CCWin.SkinControl.SkinLabel();
             this.skinLabel5 = new CCWin.SkinControl.SkinLabel();
             this.skinLabel4 = new CCWin.SkinControl.SkinLabel();
@@ -102,11 +108,11 @@ namespace KTV_management_system
             this.skinLabel2 = new CCWin.SkinControl.SkinLabel();
             this.skinLabel1 = new CCWin.SkinControl.SkinLabel();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.skinPanel7 = new CCWin.SkinControl.SkinPanel();
             this.skinButton3 = new CCWin.SkinControl.SkinButton();
             this.skinButton2 = new CCWin.SkinControl.SkinButton();
             this.skinButton1 = new CCWin.SkinControl.SkinButton();
-            this.skinTextBox2 = new CCWin.SkinControl.SkinTextBox();
             this.skinPanel5 = new CCWin.SkinControl.SkinPanel();
             this.skinPanel6 = new CCWin.SkinControl.SkinPanel();
             this.skinCaptionPanel4 = new CCWin.SkinControl.SkinCaptionPanel();
@@ -202,6 +208,7 @@ namespace KTV_management_system
             this.进店时间 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.已用时间 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.备注 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.skinMenuStrip1.SuspendLayout();
             this.skinToolStrip1.SuspendLayout();
             this.skinPanel1.SuspendLayout();
@@ -642,6 +649,7 @@ namespace KTV_management_system
             this.toolStripButton4.Size = new System.Drawing.Size(73, 44);
             this.toolStripButton4.Text = "增加消费";
             this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // toolStripButton5
             // 
@@ -724,7 +732,7 @@ namespace KTV_management_system
             this.skinCaptionPanel1.Location = new System.Drawing.Point(0, 0);
             this.skinCaptionPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.skinCaptionPanel1.Name = "skinCaptionPanel1";
-            this.skinCaptionPanel1.Size = new System.Drawing.Size(230, 684);
+            this.skinCaptionPanel1.Size = new System.Drawing.Size(285, 684);
             this.skinCaptionPanel1.TabIndex = 5;
             this.skinCaptionPanel1.Text = "Time";
             // 
@@ -738,7 +746,7 @@ namespace KTV_management_system
             this.skinButton4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.skinButton4.DownBack = null;
             this.skinButton4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinButton4.Location = new System.Drawing.Point(207, 6);
+            this.skinButton4.Location = new System.Drawing.Point(263, 6);
             this.skinButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.skinButton4.MouseBack = null;
             this.skinButton4.Name = "skinButton4";
@@ -757,8 +765,8 @@ namespace KTV_management_system
             this.metroTabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroTabControl1.Multiline = true;
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
-            this.metroTabControl1.Size = new System.Drawing.Size(226, 595);
+            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.Size = new System.Drawing.Size(281, 656);
             this.metroTabControl1.TabIndex = 6;
             this.metroTabControl1.UseSelectable = true;
             // 
@@ -774,7 +782,7 @@ namespace KTV_management_system
             this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(218, 553);
+            this.metroTabPage1.Size = new System.Drawing.Size(273, 614);
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "状态";
             this.metroTabPage1.VerticalScrollbar = true;
@@ -794,7 +802,7 @@ namespace KTV_management_system
             this.skinPanel4.MouseBack = null;
             this.skinPanel4.Name = "skinPanel4";
             this.skinPanel4.NormlBack = null;
-            this.skinPanel4.Size = new System.Drawing.Size(205, 224);
+            this.skinPanel4.Size = new System.Drawing.Size(258, 224);
             this.skinPanel4.TabIndex = 7;
             // 
             // skinCaptionPanel3
@@ -815,7 +823,7 @@ namespace KTV_management_system
             this.skinCaptionPanel3.Location = new System.Drawing.Point(0, 0);
             this.skinCaptionPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.skinCaptionPanel3.Name = "skinCaptionPanel3";
-            this.skinCaptionPanel3.Size = new System.Drawing.Size(203, 222);
+            this.skinCaptionPanel3.Size = new System.Drawing.Size(256, 222);
             this.skinCaptionPanel3.TabIndex = 6;
             this.skinCaptionPanel3.Text = "包间总状态";
             // 
@@ -946,12 +954,18 @@ namespace KTV_management_system
             this.skinPanel2.MouseBack = null;
             this.skinPanel2.Name = "skinPanel2";
             this.skinPanel2.NormlBack = null;
-            this.skinPanel2.Size = new System.Drawing.Size(205, 281);
+            this.skinPanel2.Size = new System.Drawing.Size(258, 281);
             this.skinPanel2.TabIndex = 6;
             // 
             // skinCaptionPanel2
             // 
             this.skinCaptionPanel2.CaptionFont = new System.Drawing.Font("Microsoft YaHei UI", 9F);
+            this.skinCaptionPanel2.Controls.Add(this.skinLabel22);
+            this.skinCaptionPanel2.Controls.Add(this.skinLabel21);
+            this.skinCaptionPanel2.Controls.Add(this.skinLabel20);
+            this.skinCaptionPanel2.Controls.Add(this.skinLabel19);
+            this.skinCaptionPanel2.Controls.Add(this.skinLabel18);
+            this.skinCaptionPanel2.Controls.Add(this.skinLabel17);
             this.skinCaptionPanel2.Controls.Add(this.skinLabel6);
             this.skinCaptionPanel2.Controls.Add(this.skinLabel5);
             this.skinCaptionPanel2.Controls.Add(this.skinLabel4);
@@ -963,9 +977,75 @@ namespace KTV_management_system
             this.skinCaptionPanel2.Location = new System.Drawing.Point(0, 0);
             this.skinCaptionPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.skinCaptionPanel2.Name = "skinCaptionPanel2";
-            this.skinCaptionPanel2.Size = new System.Drawing.Size(203, 279);
+            this.skinCaptionPanel2.Size = new System.Drawing.Size(256, 279);
             this.skinCaptionPanel2.TabIndex = 6;
             this.skinCaptionPanel2.Text = "豪华包间";
+            // 
+            // skinLabel22
+            // 
+            this.skinLabel22.AutoSize = true;
+            this.skinLabel22.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel22.BorderColor = System.Drawing.Color.Transparent;
+            this.skinLabel22.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel22.Location = new System.Drawing.Point(109, 235);
+            this.skinLabel22.Name = "skinLabel22";
+            this.skinLabel22.Size = new System.Drawing.Size(0, 20);
+            this.skinLabel22.TabIndex = 11;
+            // 
+            // skinLabel21
+            // 
+            this.skinLabel21.AutoSize = true;
+            this.skinLabel21.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel21.BorderColor = System.Drawing.Color.Transparent;
+            this.skinLabel21.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel21.Location = new System.Drawing.Point(109, 197);
+            this.skinLabel21.Name = "skinLabel21";
+            this.skinLabel21.Size = new System.Drawing.Size(0, 20);
+            this.skinLabel21.TabIndex = 10;
+            // 
+            // skinLabel20
+            // 
+            this.skinLabel20.AutoSize = true;
+            this.skinLabel20.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel20.BorderColor = System.Drawing.Color.Transparent;
+            this.skinLabel20.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel20.Location = new System.Drawing.Point(109, 159);
+            this.skinLabel20.Name = "skinLabel20";
+            this.skinLabel20.Size = new System.Drawing.Size(0, 20);
+            this.skinLabel20.TabIndex = 9;
+            // 
+            // skinLabel19
+            // 
+            this.skinLabel19.AutoSize = true;
+            this.skinLabel19.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel19.BorderColor = System.Drawing.Color.Transparent;
+            this.skinLabel19.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel19.Location = new System.Drawing.Point(109, 121);
+            this.skinLabel19.Name = "skinLabel19";
+            this.skinLabel19.Size = new System.Drawing.Size(0, 20);
+            this.skinLabel19.TabIndex = 8;
+            // 
+            // skinLabel18
+            // 
+            this.skinLabel18.AutoSize = true;
+            this.skinLabel18.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel18.BorderColor = System.Drawing.Color.Transparent;
+            this.skinLabel18.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel18.Location = new System.Drawing.Point(109, 83);
+            this.skinLabel18.Name = "skinLabel18";
+            this.skinLabel18.Size = new System.Drawing.Size(0, 20);
+            this.skinLabel18.TabIndex = 7;
+            // 
+            // skinLabel17
+            // 
+            this.skinLabel17.AutoSize = true;
+            this.skinLabel17.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel17.BorderColor = System.Drawing.Color.Transparent;
+            this.skinLabel17.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel17.Location = new System.Drawing.Point(109, 45);
+            this.skinLabel17.Name = "skinLabel17";
+            this.skinLabel17.Size = new System.Drawing.Size(0, 20);
+            this.skinLabel17.TabIndex = 6;
             // 
             // skinLabel6
             // 
@@ -1041,20 +1121,31 @@ namespace KTV_management_system
             // 
             // metroTabPage2
             // 
+            this.metroTabPage2.Controls.Add(this.textBox1);
             this.metroTabPage2.Controls.Add(this.skinPanel7);
-            this.metroTabPage2.Controls.Add(this.skinTextBox2);
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.HorizontalScrollbarSize = 10;
             this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(218, 553);
+            this.metroTabPage2.Size = new System.Drawing.Size(273, 614);
             this.metroTabPage2.TabIndex = 1;
             this.metroTabPage2.Text = "便签";
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 11;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.textBox1.Font = new System.Drawing.Font("新宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox1.Location = new System.Drawing.Point(0, 79);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(273, 535);
+            this.textBox1.TabIndex = 4;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // skinPanel7
             // 
@@ -1070,7 +1161,7 @@ namespace KTV_management_system
             this.skinPanel7.MouseBack = null;
             this.skinPanel7.Name = "skinPanel7";
             this.skinPanel7.NormlBack = null;
-            this.skinPanel7.Size = new System.Drawing.Size(218, 74);
+            this.skinPanel7.Size = new System.Drawing.Size(273, 74);
             this.skinPanel7.TabIndex = 7;
             // 
             // skinButton3
@@ -1092,6 +1183,7 @@ namespace KTV_management_system
             this.skinButton3.Size = new System.Drawing.Size(68, 74);
             this.skinButton3.TabIndex = 8;
             this.skinButton3.UseVisualStyleBackColor = false;
+            this.skinButton3.Click += new System.EventHandler(this.skinButton3_Click);
             // 
             // skinButton2
             // 
@@ -1111,6 +1203,7 @@ namespace KTV_management_system
             this.skinButton2.Size = new System.Drawing.Size(61, 74);
             this.skinButton2.TabIndex = 7;
             this.skinButton2.UseVisualStyleBackColor = false;
+            this.skinButton2.Click += new System.EventHandler(this.skinButton2_Click);
             // 
             // skinButton1
             // 
@@ -1130,50 +1223,7 @@ namespace KTV_management_system
             this.skinButton1.Size = new System.Drawing.Size(69, 74);
             this.skinButton1.TabIndex = 0;
             this.skinButton1.UseVisualStyleBackColor = false;
-            // 
-            // skinTextBox2
-            // 
-            this.skinTextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.skinTextBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.skinTextBox2.DownBack = null;
-            this.skinTextBox2.Icon = null;
-            this.skinTextBox2.IconIsButton = false;
-            this.skinTextBox2.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox2.IsPasswordChat = '\0';
-            this.skinTextBox2.IsSystemPasswordChar = false;
-            this.skinTextBox2.Lines = new string[0];
-            this.skinTextBox2.Location = new System.Drawing.Point(0, 91);
-            this.skinTextBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.skinTextBox2.MaxLength = 32767;
-            this.skinTextBox2.MinimumSize = new System.Drawing.Size(28, 28);
-            this.skinTextBox2.MouseBack = null;
-            this.skinTextBox2.MouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox2.Multiline = true;
-            this.skinTextBox2.Name = "skinTextBox2";
-            this.skinTextBox2.NormlBack = null;
-            this.skinTextBox2.Padding = new System.Windows.Forms.Padding(5);
-            this.skinTextBox2.ReadOnly = false;
-            this.skinTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.skinTextBox2.Size = new System.Drawing.Size(218, 462);
-            // 
-            // 
-            // 
-            this.skinTextBox2.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.skinTextBox2.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTextBox2.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
-            this.skinTextBox2.SkinTxt.Location = new System.Drawing.Point(5, 5);
-            this.skinTextBox2.SkinTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.skinTextBox2.SkinTxt.Multiline = true;
-            this.skinTextBox2.SkinTxt.Name = "BaseText";
-            this.skinTextBox2.SkinTxt.Size = new System.Drawing.Size(208, 452);
-            this.skinTextBox2.SkinTxt.TabIndex = 0;
-            this.skinTextBox2.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox2.SkinTxt.WaterText = "";
-            this.skinTextBox2.TabIndex = 2;
-            this.skinTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.skinTextBox2.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox2.WaterText = "";
-            this.skinTextBox2.WordWrap = true;
+            this.skinButton1.Click += new System.EventHandler(this.skinButton1_Click);
             // 
             // skinPanel5
             // 
@@ -1190,7 +1240,7 @@ namespace KTV_management_system
             this.skinPanel5.MouseBack = null;
             this.skinPanel5.Name = "skinPanel5";
             this.skinPanel5.NormlBack = null;
-            this.skinPanel5.Size = new System.Drawing.Size(236, 845);
+            this.skinPanel5.Size = new System.Drawing.Size(291, 845);
             this.skinPanel5.TabIndex = 6;
             // 
             // skinPanel6
@@ -1207,7 +1257,7 @@ namespace KTV_management_system
             this.skinPanel6.MouseBack = null;
             this.skinPanel6.Name = "skinPanel6";
             this.skinPanel6.NormlBack = null;
-            this.skinPanel6.Size = new System.Drawing.Size(232, 686);
+            this.skinPanel6.Size = new System.Drawing.Size(287, 686);
             this.skinPanel6.TabIndex = 7;
             // 
             // skinCaptionPanel4
@@ -1220,7 +1270,7 @@ namespace KTV_management_system
             this.skinCaptionPanel4.Location = new System.Drawing.Point(0, 686);
             this.skinCaptionPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.skinCaptionPanel4.Name = "skinCaptionPanel4";
-            this.skinCaptionPanel4.Size = new System.Drawing.Size(232, 155);
+            this.skinCaptionPanel4.Size = new System.Drawing.Size(287, 155);
             this.skinCaptionPanel4.TabIndex = 0;
             this.skinCaptionPanel4.Text = "[F3]快速通道";
             // 
@@ -1247,7 +1297,7 @@ namespace KTV_management_system
             this.skinTextBox1.Padding = new System.Windows.Forms.Padding(5);
             this.skinTextBox1.ReadOnly = false;
             this.skinTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.skinTextBox1.Size = new System.Drawing.Size(228, 28);
+            this.skinTextBox1.Size = new System.Drawing.Size(283, 28);
             // 
             // 
             // 
@@ -1257,7 +1307,7 @@ namespace KTV_management_system
             this.skinTextBox1.SkinTxt.Location = new System.Drawing.Point(5, 5);
             this.skinTextBox1.SkinTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.skinTextBox1.SkinTxt.Name = "BaseText";
-            this.skinTextBox1.SkinTxt.Size = new System.Drawing.Size(218, 22);
+            this.skinTextBox1.SkinTxt.Size = new System.Drawing.Size(273, 22);
             this.skinTextBox1.SkinTxt.TabIndex = 0;
             this.skinTextBox1.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.skinTextBox1.SkinTxt.WaterText = "";
@@ -1385,10 +1435,10 @@ namespace KTV_management_system
             this.skinCaptionPanel6.CaptionFont = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.skinCaptionPanel6.Controls.Add(this.skinListView2);
             this.skinCaptionPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinCaptionPanel6.Location = new System.Drawing.Point(268, 688);
+            this.skinCaptionPanel6.Location = new System.Drawing.Point(323, 688);
             this.skinCaptionPanel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.skinCaptionPanel6.Name = "skinCaptionPanel6";
-            this.skinCaptionPanel6.Size = new System.Drawing.Size(765, 157);
+            this.skinCaptionPanel6.Size = new System.Drawing.Size(710, 157);
             this.skinCaptionPanel6.TabIndex = 9;
             this.skinCaptionPanel6.Text = "skinCaptionPanel6";
             // 
@@ -1411,7 +1461,7 @@ namespace KTV_management_system
             this.skinListView2.Location = new System.Drawing.Point(2, 24);
             this.skinListView2.Name = "skinListView2";
             this.skinListView2.OwnerDraw = true;
-            this.skinListView2.Size = new System.Drawing.Size(761, 131);
+            this.skinListView2.Size = new System.Drawing.Size(706, 131);
             this.skinListView2.TabIndex = 0;
             this.skinListView2.UseCompatibleStateImageBehavior = false;
             this.skinListView2.View = System.Windows.Forms.View.Details;
@@ -1456,10 +1506,10 @@ namespace KTV_management_system
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(268, 0);
+            this.metroPanel1.Location = new System.Drawing.Point(323, 0);
             this.metroPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(765, 688);
+            this.metroPanel1.Size = new System.Drawing.Size(710, 688);
             this.metroPanel1.TabIndex = 8;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -1478,7 +1528,7 @@ namespace KTV_management_system
             this.skinPanel8.MouseBack = null;
             this.skinPanel8.Name = "skinPanel8";
             this.skinPanel8.NormlBack = null;
-            this.skinPanel8.Size = new System.Drawing.Size(765, 661);
+            this.skinPanel8.Size = new System.Drawing.Size(710, 661);
             this.skinPanel8.TabIndex = 4;
             // 
             // skinPanel9
@@ -1492,7 +1542,7 @@ namespace KTV_management_system
             this.skinPanel9.MouseBack = null;
             this.skinPanel9.Name = "skinPanel9";
             this.skinPanel9.NormlBack = null;
-            this.skinPanel9.Size = new System.Drawing.Size(765, 629);
+            this.skinPanel9.Size = new System.Drawing.Size(710, 629);
             this.skinPanel9.TabIndex = 4;
             // 
             // skinListView1
@@ -1518,18 +1568,18 @@ namespace KTV_management_system
             this.skinListView1.OwnerDraw = true;
             this.skinListView1.RowBackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(180)))), ((int)(((byte)(200)))));
             this.skinListView1.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(180)))), ((int)(((byte)(200)))));
-            this.skinListView1.Size = new System.Drawing.Size(765, 629);
+            this.skinListView1.Size = new System.Drawing.Size(710, 629);
             this.skinListView1.SmallImageList = this.imageMin;
             this.skinListView1.TabIndex = 3;
             this.skinListView1.UseCompatibleStateImageBehavior = false;
             this.skinListView1.View = System.Windows.Forms.View.Details;
-            this.skinListView1.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.skinListView1_ItemSelectionChanged);
             this.skinListView1.Click += new System.EventHandler(this.skinListView1_Click_1);
             this.skinListView1.DoubleClick += new System.EventHandler(this.skinListView1_DoubleClick);
             // 
             // columnHeader19
             // 
             this.columnHeader19.Text = "包间号";
+            this.columnHeader19.Width = 99;
             // 
             // columnHeader20
             // 
@@ -1539,19 +1589,22 @@ namespace KTV_management_system
             // columnHeader21
             // 
             this.columnHeader21.Text = "消费金额";
+            this.columnHeader21.Width = 96;
             // 
             // columnHeader22
             // 
             this.columnHeader22.Text = "进店时间";
+            this.columnHeader22.Width = 103;
             // 
             // columnHeader23
             // 
             this.columnHeader23.Text = "已用时间";
+            this.columnHeader23.Width = 99;
             // 
             // columnHeader24
             // 
             this.columnHeader24.Text = "备注";
-            this.columnHeader24.Width = 97;
+            this.columnHeader24.Width = 148;
             // 
             // skinContextMenuStrip1
             // 
@@ -1607,6 +1660,7 @@ namespace KTV_management_system
             this.增加消费ToolStripMenuItem.Name = "增加消费ToolStripMenuItem";
             this.增加消费ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
             this.增加消费ToolStripMenuItem.Text = "增加消费";
+            this.增加消费ToolStripMenuItem.Click += new System.EventHandler(this.增加消费ToolStripMenuItem_Click);
             // 
             // 兑换商品ToolStripMenuItem
             // 
@@ -1713,7 +1767,7 @@ namespace KTV_management_system
             this.skinFlowLayoutPanel1.MouseBack = null;
             this.skinFlowLayoutPanel1.Name = "skinFlowLayoutPanel1";
             this.skinFlowLayoutPanel1.NormlBack = null;
-            this.skinFlowLayoutPanel1.Size = new System.Drawing.Size(765, 32);
+            this.skinFlowLayoutPanel1.Size = new System.Drawing.Size(710, 32);
             this.skinFlowLayoutPanel1.TabIndex = 0;
             // 
             // skinToolStrip2
@@ -1765,7 +1819,7 @@ namespace KTV_management_system
             this.skinToolStrip2.Location = new System.Drawing.Point(0, 661);
             this.skinToolStrip2.Name = "skinToolStrip2";
             this.skinToolStrip2.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinToolStrip2.Size = new System.Drawing.Size(765, 27);
+            this.skinToolStrip2.Size = new System.Drawing.Size(710, 27);
             this.skinToolStrip2.SkinAllColor = true;
             this.skinToolStrip2.TabIndex = 3;
             this.skinToolStrip2.Text = "skinToolStrip2";
@@ -2043,6 +2097,12 @@ namespace KTV_management_system
             this.备注.Text = "备注";
             this.备注.Width = 159;
             // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -2076,6 +2136,7 @@ namespace KTV_management_system
             this.skinCaptionPanel2.ResumeLayout(false);
             this.skinCaptionPanel2.PerformLayout();
             this.metroTabPage2.ResumeLayout(false);
+            this.metroTabPage2.PerformLayout();
             this.skinPanel7.ResumeLayout(false);
             this.skinPanel5.ResumeLayout(false);
             this.skinPanel6.ResumeLayout(false);
@@ -2168,7 +2229,6 @@ namespace KTV_management_system
         private CCWin.SkinControl.SkinCaptionPanel skinCaptionPanel4;
         private CCWin.SkinControl.SkinTextBox skinTextBox1;
         private CCWin.SkinControl.SkinPanel skinPanel6;
-        private CCWin.SkinControl.SkinTextBox skinTextBox2;
         private CCWin.SkinControl.SkinPanel skinPanel7;
         private CCWin.SkinControl.SkinButton skinButton1;
         private CCWin.SkinControl.SkinButton skinButton2;
@@ -2270,6 +2330,14 @@ namespace KTV_management_system
         private CCWin.SkinControl.SkinLabel skinLabel15;
         private CCWin.SkinControl.SkinLabel skinLabel14;
         private CCWin.SkinControl.SkinLabel skinLabel13;
+        private CCWin.SkinControl.SkinLabel skinLabel22;
+        private CCWin.SkinControl.SkinLabel skinLabel21;
+        private CCWin.SkinControl.SkinLabel skinLabel20;
+        private CCWin.SkinControl.SkinLabel skinLabel19;
+        private CCWin.SkinControl.SkinLabel skinLabel18;
+        private CCWin.SkinControl.SkinLabel skinLabel17;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
