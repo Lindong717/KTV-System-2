@@ -182,6 +182,12 @@
     <Compile Include="revise_Product_type.Designer.cs">
       <DependentUpon>revise_Product_type.cs</DependentUpon>
     </Compile>
+    <Compile Include="Select_Waiter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Select_Waiter.Designer.cs">
+      <DependentUpon>Select_Waiter.cs</DependentUpon>
+    </Compile>
     <Compile Include="System_settings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,6 +262,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="revise_Product_type.resx">
       <DependentUpon>revise_Product_type.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Select_Waiter.resx">
+      <DependentUpon>Select_Waiter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="System_settings.resx">
       <DependentUpon>System_settings.cs</DependentUpon>

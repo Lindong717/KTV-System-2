@@ -121,22 +121,20 @@ namespace KTV_management_system
 
             bool fileExists = CheckFileExists(FilePath());
 
-            if (!fileExists)
+            if (fileExists)
             {
-                new StreamWriter(FilePath());
-            }
 
-            using (FileStream stream = new FileStream(FilePath(), FileMode.Open))
-            {
-                byte[] bytes = new byte[stream.Length];
+                using (FileStream stream = new FileStream(FilePath(), FileMode.Open))
+                {
+                    byte[] bytes = new byte[stream.Length];
 
-                // 读取文件流中的数据
-                stream.Read(bytes, 0, bytes.Length);
+                    // 读取文件流中的数据
+                    stream.Read(bytes, 0, bytes.Length);
 
-                // 将字节数组转换为字符串
-                textBox1.Text = Encoding.UTF8.GetString(bytes);
+                    // 将字节数组转换为字符串
+                    textBox1.Text = Encoding.UTF8.GetString(bytes);
 
-                stream.Close();
+                }
             }
         }
 
@@ -346,6 +344,8 @@ namespace KTV_management_system
 
         private void Home_FormClosing(object sender, FormClosingEventArgs e)
         {
+            write();
+
             if (MessageBox.Show("是否退出系统", "系统提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 e.Cancel = false;
@@ -471,15 +471,9 @@ namespace KTV_management_system
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            write();
-        }
-
         private void skinButton3_Click(object sender, EventArgs e)
         {
             textBox1.Text = null;
-
             write();
         }
 

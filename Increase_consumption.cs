@@ -98,6 +98,12 @@ namespace KTV_management_system
                 return;
             }
 
+            if (DbHelper.executeScalar($"select [category_ID] from [dbo].[Commodity] where [project_ID] = '{skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column1"].Value}'") == "1")
+            {
+                Select_Waiter select_Waiter = new Select_Waiter();
+                select_Waiter.ShowDialog();
+            }
+
             string i = DbHelper.executeScalar($"select [Preset_unit_price] from [dbo].[Commodity] where [project_ID] = '{skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column1"].Value}'");
 
             string Fold_rate = DbHelper.executeScalar($@"select [Fold_rate] from [dbo].[Private_rooms] as a
