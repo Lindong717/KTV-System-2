@@ -62,7 +62,7 @@ namespace KTV_management_system
             this.skinButton2.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton2.DownBack = null;
             this.skinButton2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinButton2.Location = new System.Drawing.Point(439, 498);
+            this.skinButton2.Location = new System.Drawing.Point(434, 530);
             this.skinButton2.MouseBack = null;
             this.skinButton2.Name = "skinButton2";
             this.skinButton2.NormlBack = null;
@@ -70,6 +70,7 @@ namespace KTV_management_system
             this.skinButton2.TabIndex = 7;
             this.skinButton2.Text = "取消";
             this.skinButton2.UseVisualStyleBackColor = false;
+            this.skinButton2.Click += new System.EventHandler(this.skinButton2_Click);
             // 
             // skinComboBox3
             // 
@@ -122,7 +123,7 @@ namespace KTV_management_system
             this.skinCaptionPanel2.Controls.Add(this.skinLabel9);
             this.skinCaptionPanel2.Controls.Add(this.skinComboBox2);
             this.skinCaptionPanel2.Controls.Add(this.skinLabel8);
-            this.skinCaptionPanel2.Location = new System.Drawing.Point(12, 353);
+            this.skinCaptionPanel2.Location = new System.Drawing.Point(7, 385);
             this.skinCaptionPanel2.Name = "skinCaptionPanel2";
             this.skinCaptionPanel2.Size = new System.Drawing.Size(766, 121);
             this.skinCaptionPanel2.TabIndex = 5;
@@ -440,7 +441,7 @@ namespace KTV_management_system
             this.skinTextBox1.Name = "skinTextBox1";
             this.skinTextBox1.NormlBack = null;
             this.skinTextBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.skinTextBox1.ReadOnly = false;
+            this.skinTextBox1.ReadOnly = true;
             this.skinTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.skinTextBox1.Size = new System.Drawing.Size(188, 28);
             // 
@@ -479,7 +480,7 @@ namespace KTV_management_system
             this.skinButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton1.DownBack = null;
             this.skinButton1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinButton1.Location = new System.Drawing.Point(154, 498);
+            this.skinButton1.Location = new System.Drawing.Point(149, 530);
             this.skinButton1.MouseBack = null;
             this.skinButton1.Name = "skinButton1";
             this.skinButton1.NormlBack = null;
@@ -487,6 +488,7 @@ namespace KTV_management_system
             this.skinButton1.TabIndex = 6;
             this.skinButton1.Text = "保存";
             this.skinButton1.UseVisualStyleBackColor = false;
+            this.skinButton1.Click += new System.EventHandler(this.skinButton1_Click);
             // 
             // skinCaptionPanel1
             // 
@@ -505,7 +507,7 @@ namespace KTV_management_system
             this.skinCaptionPanel1.Controls.Add(this.skinLabel2);
             this.skinCaptionPanel1.Controls.Add(this.skinTextBox1);
             this.skinCaptionPanel1.Controls.Add(this.skinLabel1);
-            this.skinCaptionPanel1.Location = new System.Drawing.Point(12, 12);
+            this.skinCaptionPanel1.Location = new System.Drawing.Point(7, 44);
             this.skinCaptionPanel1.Name = "skinCaptionPanel1";
             this.skinCaptionPanel1.Size = new System.Drawing.Size(766, 327);
             this.skinCaptionPanel1.TabIndex = 4;
@@ -516,7 +518,7 @@ namespace KTV_management_system
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(802, 571);
+            this.ClientSize = new System.Drawing.Size(802, 596);
             this.Controls.Add(this.skinButton2);
             this.Controls.Add(this.skinCaptionPanel2);
             this.Controls.Add(this.skinButton1);
@@ -525,8 +527,8 @@ namespace KTV_management_system
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "modify2";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "modify2";
+            this.Text = "信息修改";
+            this.Load += new System.EventHandler(this.modify2_Load);
             this.skinCaptionPanel2.ResumeLayout(false);
             this.skinCaptionPanel2.PerformLayout();
             this.skinCaptionPanel1.ResumeLayout(false);

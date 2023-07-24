@@ -22,7 +22,9 @@ namespace KTV_management_system
         void select()
         {
             DbHelper.skinDataGridView(skinDataGridView1, "select [Grade number], [Rank name] from [dbo].[Waiter_type]", "");
-            DbHelper.skinDataGridView(skinDataGridView2, "select [Waiter_number], [Waiter name], [Jane_spelling], [sex], [level], [Contact], [identity card], [description] from [dbo].[Waiter]", "");
+            DbHelper.skinDataGridView(skinDataGridView2, @"select [Waiter_number], [Waiter name], [Jane_spelling], [sex], [Rank name], [Contact], [identity card], [type_Name],[description] from [dbo].[Waiter] a
+            join [dbo].[Waiter_type] b on a.level=b.[Grade number]
+            join [dbo].[Type_of_private_room] c on a.[Service Area] = c.Private_rooms_type_ID", "");
         }
 
         private void skinPanel1_Paint(object sender, PaintEventArgs e)
@@ -56,6 +58,7 @@ namespace KTV_management_system
 
         private void Waiter_Load(object sender, EventArgs e)
         {
+            DbHelper.skinCollections(skinComboBox1, "select [Grade number], [Rank name] from [dbo].[Waiter_type]", "Grade number", "Rank name", "请选择");
             select();
         }
 
@@ -79,12 +82,45 @@ namespace KTV_management_system
         {
             increase2 increase = new increase2();
             increase.ShowDialog();
+            select();
         }
 
         private void skinDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-       
+
+        private void skinButton5_Click(object sender, EventArgs e)
+        {
+            modify2 modify = new modify2();
+
+            modify.id = skinDataGridView2.Rows[skinDataGridView2.CurrentCell.RowIndex].Cells["Column3"].Value.ToString();
+            modify.name = skinDataGridView2.Rows[skinDataGridView2.CurrentCell.RowIndex].Cells["Column4"].Value.ToString();
+            modify.jane = skinDataGridView2.Rows[skinDataGridView2.CurrentCell.RowIndex].Cells["Column5"].Value.ToString();
+            modify.sex = skinDataGridView2.Rows[skinDataGridView2.CurrentCell.RowIndex].Cells["Column6"].Value.ToString();
+            modify.type = skinDataGridView2.Rows[skinDataGridView2.CurrentCell.RowIndex].Cells["Column8"].Value.ToString();
+            modify.Rank = skinDataGridView2.Rows[skinDataGridView2.CurrentCell.RowIndex].Cells["Column9"].Value.ToString();
+            modify.phone = skinDataGridView2.Rows[skinDataGridView2.CurrentCell.RowIndex].Cells["Column10"].Value.ToString();
+            modify.idcard = skinDataGridView2.Rows[skinDataGridView2.CurrentCell.RowIndex].Cells["Column11"].Value.ToString();
+            modify.miaoshu = skinDataGridView2.Rows[skinDataGridView2.CurrentCell.RowIndex].Cells["Column7"].Value.ToString();
+
+            modify.ShowDialog();
+            select();
+        }
+
+        private void skinButton4_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("确定删除吗？", "确认删除", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                DbHelper.executeNonQuery($@"delete from [dbo].[Waiter] where [Waiter_number]= '{skinDataGridView2.Rows[skinDataGridView2.CurrentCell.RowIndex].Cells["Column3"].Value}'");
+            }
+            else if (result == DialogResult.No)
+            {
+                Close();
+            }
+            select();
+        }
     }
 }
