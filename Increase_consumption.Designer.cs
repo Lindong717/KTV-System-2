@@ -74,7 +74,14 @@ namespace KTV_management_system
             this.skinCaptionPanel2 = new CCWin.SkinControl.SkinCaptionPanel();
             this.skinButton1 = new CCWin.SkinControl.SkinButton();
             this.skinDataGridView2 = new CCWin.SkinControl.SkinDataGridView();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.skinLabel5 = new CCWin.SkinControl.SkinLabel();
+            this.skinContextMenuStrip1 = new CCWin.SkinControl.SkinContextMenuStrip();
+            this.消费退单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.消费赠单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.消费备注ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -85,8 +92,6 @@ namespace KTV_management_system
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.skinLabel5 = new CCWin.SkinControl.SkinLabel();
             this.skinPanel1.SuspendLayout();
             this.skinPanel5.SuspendLayout();
             this.skinFlowLayoutPanel1.SuspendLayout();
@@ -102,6 +107,7 @@ namespace KTV_management_system
             this.skinPanel3.SuspendLayout();
             this.skinCaptionPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.skinDataGridView2)).BeginInit();
+            this.skinContextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // skinPanel1
@@ -269,6 +275,7 @@ namespace KTV_management_system
             this.skinButton4.Text = "备注";
             this.skinButton4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.skinButton4.UseVisualStyleBackColor = false;
+            this.skinButton4.Click += new System.EventHandler(this.skinButton4_Click);
             // 
             // skinButton5
             // 
@@ -289,6 +296,7 @@ namespace KTV_management_system
             this.skinButton5.Text = "退单";
             this.skinButton5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.skinButton5.UseVisualStyleBackColor = false;
+            this.skinButton5.Click += new System.EventHandler(this.skinButton5_Click);
             // 
             // skinButton6
             // 
@@ -309,6 +317,7 @@ namespace KTV_management_system
             this.skinButton6.Text = "赠单";
             this.skinButton6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.skinButton6.UseVisualStyleBackColor = false;
+            this.skinButton6.Click += new System.EventHandler(this.skinButton6_Click);
             // 
             // skinPanel2
             // 
@@ -345,7 +354,7 @@ namespace KTV_management_system
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.Location = new System.Drawing.Point(2, 30);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(403, 631);
             this.metroTabControl1.TabIndex = 0;
             this.metroTabControl1.UseSelectable = true;
@@ -640,6 +649,7 @@ namespace KTV_management_system
             this.skinDataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.skinDataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column16,
+            this.Column17,
             this.Column6,
             this.Column7,
             this.Column8,
@@ -651,6 +661,7 @@ namespace KTV_management_system
             this.Column14,
             this.Column15});
             this.skinDataGridView2.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
+            this.skinDataGridView2.ContextMenuStrip = this.skinContextMenuStrip1;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -684,6 +695,78 @@ namespace KTV_management_system
             this.skinDataGridView2.TitleBackColorBegin = System.Drawing.Color.White;
             this.skinDataGridView2.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(340, 5);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(73, 25);
+            this.textBox2.TabIndex = 1;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // skinLabel5
+            // 
+            this.skinLabel5.AutoSize = true;
+            this.skinLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel5.BorderColor = System.Drawing.Color.White;
+            this.skinLabel5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel5.Location = new System.Drawing.Point(283, 7);
+            this.skinLabel5.Name = "skinLabel5";
+            this.skinLabel5.Size = new System.Drawing.Size(54, 20);
+            this.skinLabel5.TabIndex = 0;
+            this.skinLabel5.Text = "搜索：";
+            // 
+            // skinContextMenuStrip1
+            // 
+            this.skinContextMenuStrip1.Arrow = System.Drawing.Color.Black;
+            this.skinContextMenuStrip1.Back = System.Drawing.Color.White;
+            this.skinContextMenuStrip1.BackRadius = 4;
+            this.skinContextMenuStrip1.Base = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(200)))), ((int)(((byte)(254)))));
+            this.skinContextMenuStrip1.DropDownImageSeparator = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
+            this.skinContextMenuStrip1.Fore = System.Drawing.Color.Black;
+            this.skinContextMenuStrip1.HoverFore = System.Drawing.Color.White;
+            this.skinContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.skinContextMenuStrip1.ItemAnamorphosis = true;
+            this.skinContextMenuStrip1.ItemBorder = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinContextMenuStrip1.ItemBorderShow = true;
+            this.skinContextMenuStrip1.ItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinContextMenuStrip1.ItemPressed = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinContextMenuStrip1.ItemRadius = 4;
+            this.skinContextMenuStrip1.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinContextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.消费退单ToolStripMenuItem,
+            this.消费赠单ToolStripMenuItem,
+            this.消费备注ToolStripMenuItem});
+            this.skinContextMenuStrip1.ItemSplitter = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinContextMenuStrip1.Name = "skinContextMenuStrip1";
+            this.skinContextMenuStrip1.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinContextMenuStrip1.Size = new System.Drawing.Size(139, 76);
+            this.skinContextMenuStrip1.SkinAllColor = true;
+            this.skinContextMenuStrip1.TitleAnamorphosis = true;
+            this.skinContextMenuStrip1.TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(228)))), ((int)(((byte)(236)))));
+            this.skinContextMenuStrip1.TitleRadius = 4;
+            this.skinContextMenuStrip1.TitleRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            // 
+            // 消费退单ToolStripMenuItem
+            // 
+            this.消费退单ToolStripMenuItem.Name = "消费退单ToolStripMenuItem";
+            this.消费退单ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
+            this.消费退单ToolStripMenuItem.Text = "消费退单";
+            this.消费退单ToolStripMenuItem.Click += new System.EventHandler(this.消费退单ToolStripMenuItem_Click);
+            // 
+            // 消费赠单ToolStripMenuItem
+            // 
+            this.消费赠单ToolStripMenuItem.Name = "消费赠单ToolStripMenuItem";
+            this.消费赠单ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
+            this.消费赠单ToolStripMenuItem.Text = "消费赠单";
+            this.消费赠单ToolStripMenuItem.Click += new System.EventHandler(this.消费赠单ToolStripMenuItem_Click);
+            // 
+            // 消费备注ToolStripMenuItem
+            // 
+            this.消费备注ToolStripMenuItem.Name = "消费备注ToolStripMenuItem";
+            this.消费备注ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
+            this.消费备注ToolStripMenuItem.Text = "消费备注";
+            this.消费备注ToolStripMenuItem.Click += new System.EventHandler(this.消费备注ToolStripMenuItem_Click);
+            // 
             // Column16
             // 
             this.Column16.DataPropertyName = "manifestID";
@@ -693,6 +776,16 @@ namespace KTV_management_system
             this.Column16.ReadOnly = true;
             this.Column16.Visible = false;
             this.Column16.Width = 125;
+            // 
+            // Column17
+            // 
+            this.Column17.DataPropertyName = "Pinyin";
+            this.Column17.HeaderText = "拼音";
+            this.Column17.MinimumWidth = 6;
+            this.Column17.Name = "Column17";
+            this.Column17.ReadOnly = true;
+            this.Column17.Visible = false;
+            this.Column17.Width = 125;
             // 
             // Column6
             // 
@@ -794,25 +887,6 @@ namespace KTV_management_system
             this.Column15.ReadOnly = true;
             this.Column15.Width = 65;
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(340, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(73, 25);
-            this.textBox2.TabIndex = 1;
-            // 
-            // skinLabel5
-            // 
-            this.skinLabel5.AutoSize = true;
-            this.skinLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel5.BorderColor = System.Drawing.Color.White;
-            this.skinLabel5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel5.Location = new System.Drawing.Point(283, 7);
-            this.skinLabel5.Name = "skinLabel5";
-            this.skinLabel5.Size = new System.Drawing.Size(54, 20);
-            this.skinLabel5.TabIndex = 0;
-            this.skinLabel5.Text = "搜索：";
-            // 
             // Increase_consumption
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -846,6 +920,7 @@ namespace KTV_management_system
             this.skinCaptionPanel2.ResumeLayout(false);
             this.skinCaptionPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.skinDataGridView2)).EndInit();
+            this.skinContextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -889,7 +964,12 @@ namespace KTV_management_system
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.ImageList imageList1;
+        private CCWin.SkinControl.SkinContextMenuStrip skinContextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 消费退单ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 消费赠单ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 消费备注ToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;

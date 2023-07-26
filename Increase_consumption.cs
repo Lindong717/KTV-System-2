@@ -15,6 +15,7 @@ namespace KTV_management_system
     {
         public string Private_rooms_ID;
         private string sql = "select [project_ID],[Name],[Pinyin],[Preset_unit_price],[Repository] from [dbo].[Commodity]";
+        private string Waiter;
 
         public Increase_consumption()
         {
@@ -80,47 +81,192 @@ namespace KTV_management_system
 
         private void skinDataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (numericUpDown1.Value <= 0)
+            try
             {
-                MessageBox.Show("数量不能小于或等于0", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+                Waiter = "*";
 
-            if((int)skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column4"].Value <= 0)
+                if (numericUpDown1.Value <= 0)
+                {
+                    MessageBox.Show("数量不能小于或等于0", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if ((int)skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column4"].Value <= 0)
+                {
+                    MessageBox.Show("该项目已经没有存库", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if ((int)skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column4"].Value - numericUpDown1.Value < 0)
+                {
+                    MessageBox.Show("存库不足", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (DbHelper.executeScalar($"select [category_ID] from [dbo].[Commodity] where [project_ID] = '{skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column1"].Value}'") == "1")
+                {
+                    Select_Waiter select_Waiter = new Select_Waiter();
+                    select_Waiter.ShowDialog();
+
+                    Waiter = select_Waiter.WaiterName;
+
+                    if (string.IsNullOrEmpty(Waiter))
+                    {
+                        return;
+                    }
+                }
+
+                string i = DbHelper.executeScalar($"select [Preset_unit_price] from [dbo].[Commodity] where [project_ID] = '{skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column1"].Value}'");
+
+                string Fold_rate = DbHelper.executeScalar($@"select [Fold_rate] from [dbo].[Private_rooms] as a
+                join[dbo].[Type_of_private_room] as b on a.Private_rooms_type = b.Private_rooms_type_ID
+                where [Private_rooms_ID] = '{Private_rooms_ID}'");
+
+                DbHelper.executeNonQuery($@"insert into [dbo].[Consumption_list]([Private_room], [project_ID],[Pinyin], [unit_price], [Fold_rate], [quantity], [amount], [Crediting_time], [Waiter], [Bookkeeper], [remark])
+                values('{Private_rooms_ID}','{skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column2"].Value}','{skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column5"].Value}','{i}','{Fold_rate}','{numericUpDown1.Value}','{(float.Parse(i) * float.Parse(Fold_rate)) * float.Parse(numericUpDown1.Value.ToString())}',GETDATE(),'{Waiter}','*','*')");
+
+                DbHelper.executeNonQuery($"update [dbo].[Commodity] set [Repository] -= '{numericUpDown1.Value}' where [project_ID] = '{skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column1"].Value}'");
+
+                Inquire();
+            }catch(Exception ee)
             {
-                MessageBox.Show("该项目已经没有存库", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                MessageBox.Show(ee.Message, "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            if ((int)skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column4"].Value - numericUpDown1.Value < 0)
-            {
-                MessageBox.Show("存库不足", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (DbHelper.executeScalar($"select [category_ID] from [dbo].[Commodity] where [project_ID] = '{skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column1"].Value}'") == "1")
-            {
-                Select_Waiter select_Waiter = new Select_Waiter();
-                select_Waiter.ShowDialog();
-            }
-
-            string i = DbHelper.executeScalar($"select [Preset_unit_price] from [dbo].[Commodity] where [project_ID] = '{skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column1"].Value}'");
-
-            string Fold_rate = DbHelper.executeScalar($@"select [Fold_rate] from [dbo].[Private_rooms] as a
-            join[dbo].[Type_of_private_room] as b on a.Private_rooms_type = b.Private_rooms_type_ID
-            where[Private_rooms_ID] = '{Private_rooms_ID}'");
-
-            DbHelper.executeNonQuery($@"insert into [dbo].[Consumption_list]([Private_room], [project_ID], [unit_price], [Fold_rate], [quantity], [amount], [Crediting_time], [Waiter], [Bookkeeper], [remark])
-            values('{Private_rooms_ID}','{skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column2"].Value}','{i}','{Fold_rate}','{numericUpDown1.Value}','{(float.Parse(i) * float.Parse(Fold_rate)) * float.Parse(numericUpDown1.Value.ToString())}',GETDATE(),'*','*','*')");
-
-            DbHelper.executeNonQuery($"update [dbo].[Commodity] set [Repository] -= '{numericUpDown1.Value}' where [project_ID] = '{skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column1"].Value}'");
-
-            Inquire();
         }
 
         private void skinTreeView1_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            
+            try
+            {
+                TreeNode node = skinTreeView1.SelectedNode;
+
+                if (node != null && node.Parent == null)
+                {
+                    return;
+                }
+
+                Waiter = "*";
+
+                if (Convert.ToInt32(DbHelper.executeScalar($"select [Repository] from [dbo].[Commodity] where [project_ID] = '{skinTreeView1.SelectedNode.Tag}'")) <= 0)
+                {
+                    MessageBox.Show("该项目已经没有存库", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (DbHelper.executeScalar($"select [category_ID] from [dbo].[Commodity] where [project_ID] = '{skinTreeView1.SelectedNode.Tag}'") == "1")
+                {
+                    Select_Waiter select_Waiter = new Select_Waiter();
+                    select_Waiter.ShowDialog();
+
+                    Waiter = select_Waiter.WaiterName;
+
+                    if (string.IsNullOrEmpty(Waiter))
+                    {
+                        return;
+                    }
+                }
+
+                string i = DbHelper.executeScalar($"select [Preset_unit_price] from [dbo].[Commodity] where [project_ID] = '{skinTreeView1.SelectedNode.Tag}'");
+
+                string Fold_rate = DbHelper.executeScalar($@"select [Fold_rate] from [dbo].[Private_rooms] as a
+                join[dbo].[Type_of_private_room] as b on a.Private_rooms_type = b.Private_rooms_type_ID
+                where [Private_rooms_ID] = '{Private_rooms_ID}'");
+
+                DbHelper.executeNonQuery($@"insert into [dbo].[Consumption_list]([Private_room], [project_ID],[Pinyin], [unit_price], [Fold_rate], [quantity], [amount], [Crediting_time], [Waiter], [Bookkeeper], [remark])
+                values('{Private_rooms_ID}','{DbHelper.executeScalar($"select [Name] from [dbo].[Commodity] where [project_ID] = '{skinTreeView1.SelectedNode.Tag}'")}','{DbHelper.executeScalar($"select [Pinyin] from [dbo].[Commodity] where [project_ID] = '{skinTreeView1.SelectedNode.Tag}'")}','{i}','{Fold_rate}','1','{(float.Parse(i) * float.Parse(Fold_rate)) * float.Parse(numericUpDown1.Value.ToString())}',GETDATE(),'{Waiter}','*','*')");
+
+                DbHelper.executeNonQuery($"update [dbo].[Commodity] set [Repository] -= '1'");
+
+                Inquire();
+            }catch(Exception ee)
+            {
+                MessageBox.Show(ee.Message, "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void Chargebacks()
+        {
+            DbHelper.skinDataGridView(skinDataGridView2, $"select * from [dbo].[Consumption_list] where [Private_room] = '{Private_rooms_ID}'", textBox2.Text);
+        }
+
+        public void give()
+        {
+            try
+            {
+                if (skinDataGridView2.Rows[skinDataGridView2.CurrentCell.RowIndex].Cells["Column7"].Value.ToString() == "包间费用")
+                {
+                    MessageBox.Show("包间费用不可以赠送", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                DbHelper.executeNonQuery($"update [dbo].[Consumption_list] set [project_ID] += '(赠)',[unit_price] = '0',[amount] = '0' where [manifestID] = '{skinDataGridView2.Rows[skinDataGridView2.CurrentCell.RowIndex].Cells["Column16"].Value}'");
+                Inquire();
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.Message, "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void remark()
+        {
+            Note_information note = new Note_information();
+
+            note.commodityID = skinDataGridView2.Rows[skinDataGridView2.CurrentCell.RowIndex].Cells["Column16"].Value.ToString();
+            note.commodityName = skinDataGridView2.Rows[skinDataGridView2.CurrentCell.RowIndex].Cells["Column7"].Value.ToString();
+            note.commodityRemark = skinDataGridView2.Rows[skinDataGridView2.CurrentCell.RowIndex].Cells["Column15"].Value.ToString();
+
+            note.ShowDialog();
+            Inquire();
+        }
+
+        private void skinButton4_Click(object sender, EventArgs e)
+        {
+            remark();
+        }
+
+        private void skinButton6_Click(object sender, EventArgs e)
+        {
+            give();
+        }
+
+        private void skinButton5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (skinDataGridView2.Rows[skinDataGridView2.CurrentCell.RowIndex].Cells["Column7"].Value.ToString() == "包间费用")
+                {
+                    MessageBox.Show("包间费用不可以退单", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                DbHelper.executeNonQuery($"delete from [dbo].[Consumption_list] where [manifestID] = '{skinDataGridView2.Rows[skinDataGridView2.CurrentCell.RowIndex].Cells["Column16"].Value}'");
+                Inquire();
+            }
+            catch(Exception ee)
+            {
+                MessageBox.Show(ee.Message, "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            Chargebacks();
+        }
+
+        private void 消费退单ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Chargebacks();
+        }
+
+        private void 消费赠单ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            give();
+        }
+
+        private void 消费备注ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            remark();
         }
     }
 }

@@ -119,6 +119,12 @@
     <Compile Include="Increase_consumption.Designer.cs">
       <DependentUpon>Increase_consumption.cs</DependentUpon>
     </Compile>
+    <Compile Include="Increase_membership.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Increase_membership.Designer.cs">
+      <DependentUpon>Increase_membership.cs</DependentUpon>
+    </Compile>
     <Compile Include="Individually.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,18 @@
     </Compile>
     <Compile Include="Membership_Settings.Designer.cs">
       <DependentUpon>Membership_Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Checkout.Designer.cs">
+      <DependentUpon>Checkout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Member_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Member_Management.Designer.cs">
+      <DependentUpon>Member_Management.cs</DependentUpon>
     </Compile>
     <Compile Include="Modify_Membership.cs">
       <SubType>Form</SubType>
@@ -161,6 +179,12 @@
     <Compile Include="Modify_the_status.Designer.cs">
       <DependentUpon>Modify_the_status.cs</DependentUpon>
     </Compile>
+    <Compile Include="Note_information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Note_information.Designer.cs">
+      <DependentUpon>Note_information.cs</DependentUpon>
+    </Compile>
     <Compile Include="PingYinHelper.cs" />
     <Compile Include="Private_room_settings.cs">
       <SubType>Form</SubType>
@@ -170,11 +194,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recharge.Designer.cs">
+      <DependentUpon>Recharge.cs</DependentUpon>
+    </Compile>
     <Compile Include="revise_commodity.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="revise_commodity.Designer.cs">
       <DependentUpon>revise_commodity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Revise_Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Revise_Information.Designer.cs">
+      <DependentUpon>Revise_Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Revise_password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Revise_password.Designer.cs">
+      <DependentUpon>Revise_password.cs</DependentUpon>
     </Compile>
     <Compile Include="revise_Product_type.cs">
       <SubType>Form</SubType>
@@ -224,6 +266,9 @@
     <EmbeddedResource Include="Increase_consumption.resx">
       <DependentUpon>Increase_consumption.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Increase_membership.resx">
+      <DependentUpon>Increase_membership.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Individually.resx">
       <DependentUpon>Individually.cs</DependentUpon>
     </EmbeddedResource>
@@ -232,6 +277,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Membership_Settings.resx">
       <DependentUpon>Membership_Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Checkout.resx">
+      <DependentUpon>Checkout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Member_Management.resx">
+      <DependentUpon>Member_Management.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modify_Membership.resx">
       <DependentUpon>Modify_Membership.cs</DependentUpon>
@@ -245,6 +296,9 @@
     <EmbeddedResource Include="Modify_the_status.resx">
       <DependentUpon>Modify_the_status.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Note_information.resx">
+      <DependentUpon>Note_information.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Private_room_settings.resx">
       <DependentUpon>Private_room_settings.cs</DependentUpon>
     </EmbeddedResource>
@@ -257,8 +311,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Recharge.resx">
+      <DependentUpon>Recharge.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="revise_commodity.resx">
       <DependentUpon>revise_commodity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Revise_Information.resx">
+      <DependentUpon>Revise_Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Revise_password.resx">
+      <DependentUpon>Revise_password.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="revise_Product_type.resx">
       <DependentUpon>revise_Product_type.cs</DependentUpon>

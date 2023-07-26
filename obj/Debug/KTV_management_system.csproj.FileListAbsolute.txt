@@ -118,3 +118,10 @@ D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\obj\Debug\KTV_managemen
 D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\obj\Debug\KTV_management_system.Waiter.resources
 D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\obj\Debug\KTV_management_system.Increase_consumption.resources
 D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\obj\Debug\KTV_management_system.Select_Waiter.resources
+D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\obj\Debug\KTV_management_system.Note_information.resources
+D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\obj\Debug\KTV_management_system.Checkout.resources
+D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\obj\Debug\KTV_management_system.Member_Management.resources
+D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\obj\Debug\KTV_management_system.Increase_membership.resources
+D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\obj\Debug\KTV_management_system.Revise_Information.resources
+D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\obj\Debug\KTV_management_system.Recharge.resources
+D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\obj\Debug\KTV_management_system.Revise_password.resources

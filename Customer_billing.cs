@@ -41,14 +41,6 @@ namespace KTV_management_system
 
         private void skinButton1_Click(object sender, EventArgs e)
         {
-            DbHelper.executeNonQuery($@"update [dbo].[Private_rooms] set
-                [Private_room_status] = '1',
-                [Start_time] = GETDATE(),
-                [remark] = '{skinTextBox4.Text}',
-                [deposit] = '{skinTextBox1.Text}'
-                where [Private_rooms_ID] = '{Private_rooms_ID}'
-            ");
-
             string i = DbHelper.executeScalar($@"select [Minimum_consumption] from [dbo].[Private_rooms] as a
                 join[dbo].[Type_of_private_room] as b on a.Private_rooms_type = b.Private_rooms_type_ID
                 where[Private_rooms_ID] = '{Private_rooms_ID}'");
@@ -59,6 +51,15 @@ namespace KTV_management_system
 
             DbHelper.executeNonQuery($@"insert into [dbo].[Consumption_list]([Private_room], [project_ID], [unit_price], [Fold_rate], [quantity], [amount], [Crediting_time], [Waiter], [Bookkeeper], [remark])
             values('{Private_rooms_ID}','包间费用','{i}','{Fold_rate}','1','{(float.Parse(i) * float.Parse(Fold_rate))}',GETDATE(),'*','*','*')");
+
+            DbHelper.executeNonQuery($@"update [dbo].[Private_rooms] set
+                [Private_room_status] = '1',
+                [Amount_spent] = '{DbHelper.executeScalar($"select SUM([amount]) from [dbo].[Consumption_list] where [Private_room] = '{Private_rooms_ID}'")}',
+                [Start_time] = GETDATE(),
+                [remark] = '{skinTextBox4.Text}',
+                [deposit] = '{skinTextBox1.Text}'
+                where [Private_rooms_ID] = '{Private_rooms_ID}'
+            ");
 
             Close();
         }

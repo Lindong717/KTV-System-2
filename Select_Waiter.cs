@@ -16,6 +16,7 @@ namespace KTV_management_system
         private static string sql = @"select [Waiter_number],[Waiter name],[sex],[Rank name],[Jane_spelling] as Pinyin from [dbo].[Waiter] as a
         join [dbo].[Waiter_type] as b on a.[level] = b.[Grade number]
         where 1=1";
+        public string WaiterName;
 
         public Select_Waiter()
         {
@@ -39,7 +40,8 @@ namespace KTV_management_system
 
         private void skinButton1_Click(object sender, EventArgs e)
         {
-
+            WaiterName = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column2"].Value.ToString();
+            Close();
         }
     }
 }

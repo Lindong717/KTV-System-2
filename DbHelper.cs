@@ -102,6 +102,31 @@ namespace KTV_management_system
             }
         }
 
+        public static void Consumption_list(SkinListView skinListView,string sql)
+        {
+            DataTable dataTable = getDataTable(sql);
+
+            foreach (DataRow item in dataTable.Rows)
+            {
+                ListViewItem listViewItem = new ListViewItem
+                {
+                    ImageIndex = 4,
+
+                    Text = item[0].ToString()
+                };
+
+                listViewItem.SubItems.Add(item[1].ToString());
+                listViewItem.SubItems.Add(item[2].ToString());
+                listViewItem.SubItems.Add(item[3].ToString());
+                listViewItem.SubItems.Add(item[4].ToString());
+                listViewItem.SubItems.Add(item[5].ToString());
+                listViewItem.SubItems.Add(item[6].ToString());
+                listViewItem.SubItems.Add(item[7].ToString());
+
+                skinListView.Items.Add(listViewItem);
+            }
+        }
+
         public static void Inquire(string sql,ref List<string> list)
         {
             DataTable dataTable = getDataTable(sql);
@@ -127,7 +152,6 @@ namespace KTV_management_system
                 dataView.RowFilter = $"Pinyin LIKE '%{filterValue}%'";
                 DataTable filteredTable = dataView.ToTable();
                 skinDataGridView.DataSource = filteredTable;
-
             }
             else
             {

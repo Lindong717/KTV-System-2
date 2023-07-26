@@ -117,13 +117,13 @@ namespace KTV_management_system
             DbHelper.Private_roomsListView(skinListView1, "select [Private_rooms_ID],[Private_room_status] = (case [Private_room_status] when '0' then '可供' when '1' then '占用' when '2' then '停用' when '3' then '预订' end),[Amount_spent],[Start_time],[Elapsed_time],[remark] from [dbo].[Private_rooms] where [Private_rooms_type] = '1'");
 
             skinListView1.HideSelection = true;
+            skinListView2.HideSelection = true;
             lastSelectedIndex = 1;
 
             bool fileExists = CheckFileExists(FilePath());
 
             if (fileExists)
             {
-
                 using (FileStream stream = new FileStream(FilePath(), FileMode.Open))
                 {
                     byte[] bytes = new byte[stream.Length];
@@ -309,6 +309,7 @@ namespace KTV_management_system
         {
             skinLabel17.Text = null;
             skinLabel18.Text = null;
+            skinListView2.Items.Clear();
 
             skinLabel17.Text = DbHelper.executeScalar($@"select [manner_Name] from [dbo].[Private_rooms] as a
                 join [dbo].[Type_of_private_room] as b on a.Private_rooms_type = b.Private_rooms_type_ID
@@ -321,12 +322,18 @@ namespace KTV_management_system
 
             if (skinListView1.SelectedItems[0].SubItems[1].Text == "占用")
             {
-                skinLabel19.Text = $"{DbHelper.executeScalar($"SELECT MONTH([Start_time]) FROM [dbo].[Private_rooms] where [Private_rooms_ID] = '{skinListView1.SelectedItems[0].SubItems[0].Text}'")}月{DbHelper.executeScalar($"SELECT Day([Start_time]) FROM [dbo].[Private_rooms] where [Private_rooms_ID] = '{skinListView1.SelectedItems[0].SubItems[0].Text}'")}日";
+                skinLabel19.Text = $"{DbHelper.executeScalar($"SELECT MONTH([Start_time]) FROM [dbo].[Private_rooms] where [Private_rooms_ID] = '{skinListView1.SelectedItems[0].SubItems[0].Text}'")}月" +
+                    $"{DbHelper.executeScalar($"SELECT Day([Start_time]) FROM [dbo].[Private_rooms] where [Private_rooms_ID] = '{skinListView1.SelectedItems[0].SubItems[0].Text}'")}日";
+
                 skinLabel20.Text = DbHelper.executeScalar($"select [Elapsed_time] from [dbo].[Private_rooms] where [Private_rooms_ID] = '{skinListView1.SelectedItems[0].SubItems[0].Text}'");
                 skinLabel21.Text = "￥" + DbHelper.executeScalar($"select [deposit] from [dbo].[Private_rooms] where [Private_rooms_ID] = '{skinListView1.SelectedItems[0].SubItems[0].Text}'");
-                skinLabel22.Text = "￥" + DbHelper.executeScalar($"select SUM([amount]) from [dbo].[Consumption_list] where [Private_room] = '{skinListView1.SelectedItems[0].SubItems[0].Text}'");
+                skinLabel22.Text = string.IsNullOrEmpty(skinListView1.SelectedItems[0].SubItems[2].Text) ? "￥0.00" : $"￥{skinListView1.SelectedItems[0].SubItems[2].Text}";
 
                 skinCaptionPanel6.Text = $"{skinListView1.SelectedItems[0].Text}包间\t消费订单";
+
+                DbHelper.Consumption_list(skinListView2, $@"select [project_ID],[unit_price],[Fold_rate],[quantity],[amount],[Crediting_time],[Waiter],[Bookkeeper] from [dbo].[Consumption_list]
+                where [Private_room] = '{skinListView1.SelectedItems[0].SubItems[0].Text}'");
+
                 return;
             }
 
@@ -398,6 +405,9 @@ namespace KTV_management_system
             Increase_consumption increase_Consumption = new Increase_consumption();
             increase_Consumption.Private_rooms_ID = skinListView1.SelectedItems[0].SubItems[0].Text;
             increase_Consumption.ShowDialog();
+
+            DbHelper.executeNonQuery($"update [dbo].[Private_rooms] set [Amount_spent] = '{DbHelper.executeScalar($"select SUM([amount]) from [dbo].[Consumption_list] where [Private_room] = '{increase_Consumption.Private_rooms_ID}'")}' where [Private_rooms_ID] = '{increase_Consumption.Private_rooms_ID}'");
+            Inquire();
         }
 
         private void skinListView1_DoubleClick(object sender, EventArgs e)
@@ -434,7 +444,7 @@ namespace KTV_management_system
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            if (skinListView1.SelectedItems[0].SubItems[1].Text != "占用")
+            if (skinListView1.SelectedItems.Count > 0 && skinListView1.SelectedItems[0].SubItems[1].Text != "占用")
             {
                 MessageBox.Show("不能对非占用包间进行该操作", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -479,7 +489,15 @@ namespace KTV_management_system
 
         private void skinButton1_Click(object sender, EventArgs e)
         {
-            textBox1.Text += Environment.NewLine + $"----{DateTime.Now}----";
+            textBox1.Text += Environment.NewLine + $"------{DateTime.Now}------";
+        }
+
+        private void 宾客结账ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Checkout checkout = new Checkout();
+            checkout.Private_room_number = skinListView1.SelectedItems[0].SubItems[0].Text;
+            checkout.ShowDialog();
+            Inquire();
         }
     }
 }
