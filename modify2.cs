@@ -38,7 +38,7 @@ namespace KTV_management_system
             skinTextBox6.Text = miaoshu;
             skinComboBox2.Text = type;
             skinComboBox3.Text = Rank;
-            DbHelper.skinCollections(skinComboBox3, "select [Grade number], [Rank name] from [dbo].[Waiter_type]", "Grade number", "Rank name", "请选择");
+            DbHelper.skinCollections(skinComboBox3, "select [Grade_number], [Rank_name] from [dbo].[Waiter_type]", "Grade_number", "Rank_name", "请选择");
             DbHelper.skinCollections(skinComboBox2, "select [Private_rooms_type_ID], [type_Name] from [dbo].[Type_of_private_room]", "Private_rooms_type_ID", "type_Name", "请选择");
         }
 

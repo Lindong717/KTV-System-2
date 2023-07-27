@@ -27,7 +27,7 @@ namespace KTV_management_system
 
         private void skinButton1_Click(object sender, EventArgs e)
         {
-            DbHelper.executeNonQuery($@"update [dbo].[Waiter_type] set [Rank name] = {skinTextBox2.Text} where [Grade number]={skinTextBox1.Text} ");
+            DbHelper.executeNonQuery($@"update [dbo].[Waiter_type] set [Rank_name] = {skinTextBox2.Text} where [Grade_number]={skinTextBox1.Text} ");
 
             Close();
         }

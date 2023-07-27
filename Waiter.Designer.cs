@@ -43,8 +43,6 @@ namespace KTV_management_system
             this.skinButton2 = new CCWin.SkinControl.SkinButton();
             this.skinButton1 = new CCWin.SkinControl.SkinButton();
             this.skinDataGridView1 = new CCWin.SkinControl.SkinDataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.skinPanel2 = new CCWin.SkinControl.SkinPanel();
             this.skinButton4 = new CCWin.SkinControl.SkinButton();
             this.skinButton5 = new CCWin.SkinControl.SkinButton();
@@ -52,6 +50,8 @@ namespace KTV_management_system
             this.skinDataGridView2 = new CCWin.SkinControl.SkinDataGridView();
             this.skinComboBox1 = new CCWin.SkinControl.SkinComboBox();
             this.skinLabel1 = new CCWin.SkinControl.SkinLabel();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -196,22 +196,6 @@ namespace KTV_management_system
             this.skinDataGridView1.TitleBackColorBegin = System.Drawing.Color.White;
             this.skinDataGridView1.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
             this.skinDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.skinDataGridView1_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Grade number";
-            this.Column1.HeaderText = "等级编号";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Rank name";
-            this.Column2.HeaderText = "服务生等级";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
             // 
             // skinPanel2
             // 
@@ -369,6 +353,22 @@ namespace KTV_management_system
             this.skinLabel1.TabIndex = 0;
             this.skinLabel1.Text = "按服务生等级过滤：";
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Grade_number";
+            this.Column1.HeaderText = "等级编号";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Rank_name";
+            this.Column2.HeaderText = "服务生等级";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
             // Column3
             // 
             this.Column3.DataPropertyName = "Waiter_number";
@@ -411,7 +411,7 @@ namespace KTV_management_system
             // 
             // Column9
             // 
-            this.Column9.DataPropertyName = "Rank name";
+            this.Column9.DataPropertyName = "Rank_name";
             this.Column9.HeaderText = "服务级别";
             this.Column9.MinimumWidth = 6;
             this.Column9.Name = "Column9";

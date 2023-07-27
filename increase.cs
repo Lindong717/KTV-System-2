@@ -25,7 +25,7 @@ namespace KTV_management_system
             {
                 MessageBox.Show("请填写完整！");
             }
-            DbHelper.executeNonQuery($"insert into [dbo].[Waiter_type] ([Grade number], [Rank name]) values ({skinTextBox1.Text},'{skinTextBox2.Text}')");
+            DbHelper.executeNonQuery($"insert into [dbo].[Waiter_type] ([Grade_number], [Rank_name]) values ({skinTextBox1.Text},'{skinTextBox2.Text}')");
             Close();
 
         }
