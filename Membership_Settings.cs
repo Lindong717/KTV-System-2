@@ -51,6 +51,7 @@ namespace KTV_management_system
         private void Membership_Settings_Load(object sender, EventArgs e)
         {
             Member_refresh();
+            skinDataGridView3.RowHeadersVisible = false;
         }
 
         private void skinButton4_Click(object sender, EventArgs e)

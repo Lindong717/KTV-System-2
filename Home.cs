@@ -499,5 +499,11 @@ namespace KTV_management_system
             checkout.ShowDialog();
             Inquire();
         }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            Member_Management member = new Member_Management();
+            member.ShowDialog();
+        }
     }
 }

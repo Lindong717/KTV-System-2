@@ -34,6 +34,8 @@ namespace KTV_management_system
                 where[Private_rooms_ID] = '{Private_rooms_ID}'")}）";
 
             skinDataGridView2.Focus();
+            skinDataGridView1.RowHeadersVisible = false;
+            skinDataGridView2.RowHeadersVisible = false;
         }
 
         private void skinTreeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)

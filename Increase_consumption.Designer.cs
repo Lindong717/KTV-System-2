@@ -74,12 +74,6 @@ namespace KTV_management_system
             this.skinCaptionPanel2 = new CCWin.SkinControl.SkinCaptionPanel();
             this.skinButton1 = new CCWin.SkinControl.SkinButton();
             this.skinDataGridView2 = new CCWin.SkinControl.SkinDataGridView();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.skinLabel5 = new CCWin.SkinControl.SkinLabel();
-            this.skinContextMenuStrip1 = new CCWin.SkinControl.SkinContextMenuStrip();
-            this.消费退单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.消费赠单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.消费备注ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -92,6 +86,12 @@ namespace KTV_management_system
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.skinContextMenuStrip1 = new CCWin.SkinControl.SkinContextMenuStrip();
+            this.消费退单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.消费赠单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.消费备注ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.skinLabel5 = new CCWin.SkinControl.SkinLabel();
             this.skinPanel1.SuspendLayout();
             this.skinPanel5.SuspendLayout();
             this.skinFlowLayoutPanel1.SuspendLayout();
@@ -260,7 +260,7 @@ namespace KTV_management_system
             // 
             this.skinButton4.BackColor = System.Drawing.Color.Transparent;
             this.skinButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("skinButton4.BackgroundImage")));
-            this.skinButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.skinButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.skinButton4.BaseColor = System.Drawing.Color.Transparent;
             this.skinButton4.BorderColor = System.Drawing.Color.Transparent;
             this.skinButton4.ControlState = CCWin.SkinClass.ControlState.Normal;
@@ -281,7 +281,7 @@ namespace KTV_management_system
             // 
             this.skinButton5.BackColor = System.Drawing.Color.Transparent;
             this.skinButton5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("skinButton5.BackgroundImage")));
-            this.skinButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.skinButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.skinButton5.BaseColor = System.Drawing.Color.Transparent;
             this.skinButton5.BorderColor = System.Drawing.Color.Transparent;
             this.skinButton5.ControlState = CCWin.SkinClass.ControlState.Normal;
@@ -302,7 +302,7 @@ namespace KTV_management_system
             // 
             this.skinButton6.BackColor = System.Drawing.Color.Transparent;
             this.skinButton6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("skinButton6.BackgroundImage")));
-            this.skinButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.skinButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.skinButton6.BaseColor = System.Drawing.Color.Transparent;
             this.skinButton6.BorderColor = System.Drawing.Color.Transparent;
             this.skinButton6.ControlState = CCWin.SkinClass.ControlState.Normal;
@@ -516,6 +516,11 @@ namespace KTV_management_system
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(100, 25);
             this.numericUpDown1.TabIndex = 6;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // skinLabel2
             // 
@@ -695,78 +700,6 @@ namespace KTV_management_system
             this.skinDataGridView2.TitleBackColorBegin = System.Drawing.Color.White;
             this.skinDataGridView2.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(340, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(73, 25);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // skinLabel5
-            // 
-            this.skinLabel5.AutoSize = true;
-            this.skinLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel5.BorderColor = System.Drawing.Color.White;
-            this.skinLabel5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel5.Location = new System.Drawing.Point(283, 7);
-            this.skinLabel5.Name = "skinLabel5";
-            this.skinLabel5.Size = new System.Drawing.Size(54, 20);
-            this.skinLabel5.TabIndex = 0;
-            this.skinLabel5.Text = "搜索：";
-            // 
-            // skinContextMenuStrip1
-            // 
-            this.skinContextMenuStrip1.Arrow = System.Drawing.Color.Black;
-            this.skinContextMenuStrip1.Back = System.Drawing.Color.White;
-            this.skinContextMenuStrip1.BackRadius = 4;
-            this.skinContextMenuStrip1.Base = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(200)))), ((int)(((byte)(254)))));
-            this.skinContextMenuStrip1.DropDownImageSeparator = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
-            this.skinContextMenuStrip1.Fore = System.Drawing.Color.Black;
-            this.skinContextMenuStrip1.HoverFore = System.Drawing.Color.White;
-            this.skinContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.skinContextMenuStrip1.ItemAnamorphosis = true;
-            this.skinContextMenuStrip1.ItemBorder = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
-            this.skinContextMenuStrip1.ItemBorderShow = true;
-            this.skinContextMenuStrip1.ItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
-            this.skinContextMenuStrip1.ItemPressed = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
-            this.skinContextMenuStrip1.ItemRadius = 4;
-            this.skinContextMenuStrip1.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinContextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.消费退单ToolStripMenuItem,
-            this.消费赠单ToolStripMenuItem,
-            this.消费备注ToolStripMenuItem});
-            this.skinContextMenuStrip1.ItemSplitter = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
-            this.skinContextMenuStrip1.Name = "skinContextMenuStrip1";
-            this.skinContextMenuStrip1.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinContextMenuStrip1.Size = new System.Drawing.Size(139, 76);
-            this.skinContextMenuStrip1.SkinAllColor = true;
-            this.skinContextMenuStrip1.TitleAnamorphosis = true;
-            this.skinContextMenuStrip1.TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(228)))), ((int)(((byte)(236)))));
-            this.skinContextMenuStrip1.TitleRadius = 4;
-            this.skinContextMenuStrip1.TitleRadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            // 
-            // 消费退单ToolStripMenuItem
-            // 
-            this.消费退单ToolStripMenuItem.Name = "消费退单ToolStripMenuItem";
-            this.消费退单ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
-            this.消费退单ToolStripMenuItem.Text = "消费退单";
-            this.消费退单ToolStripMenuItem.Click += new System.EventHandler(this.消费退单ToolStripMenuItem_Click);
-            // 
-            // 消费赠单ToolStripMenuItem
-            // 
-            this.消费赠单ToolStripMenuItem.Name = "消费赠单ToolStripMenuItem";
-            this.消费赠单ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
-            this.消费赠单ToolStripMenuItem.Text = "消费赠单";
-            this.消费赠单ToolStripMenuItem.Click += new System.EventHandler(this.消费赠单ToolStripMenuItem_Click);
-            // 
-            // 消费备注ToolStripMenuItem
-            // 
-            this.消费备注ToolStripMenuItem.Name = "消费备注ToolStripMenuItem";
-            this.消费备注ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
-            this.消费备注ToolStripMenuItem.Text = "消费备注";
-            this.消费备注ToolStripMenuItem.Click += new System.EventHandler(this.消费备注ToolStripMenuItem_Click);
-            // 
             // Column16
             // 
             this.Column16.DataPropertyName = "manifestID";
@@ -886,6 +819,78 @@ namespace KTV_management_system
             this.Column15.Name = "Column15";
             this.Column15.ReadOnly = true;
             this.Column15.Width = 65;
+            // 
+            // skinContextMenuStrip1
+            // 
+            this.skinContextMenuStrip1.Arrow = System.Drawing.Color.Black;
+            this.skinContextMenuStrip1.Back = System.Drawing.Color.White;
+            this.skinContextMenuStrip1.BackRadius = 4;
+            this.skinContextMenuStrip1.Base = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(200)))), ((int)(((byte)(254)))));
+            this.skinContextMenuStrip1.DropDownImageSeparator = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
+            this.skinContextMenuStrip1.Fore = System.Drawing.Color.Black;
+            this.skinContextMenuStrip1.HoverFore = System.Drawing.Color.White;
+            this.skinContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.skinContextMenuStrip1.ItemAnamorphosis = true;
+            this.skinContextMenuStrip1.ItemBorder = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinContextMenuStrip1.ItemBorderShow = true;
+            this.skinContextMenuStrip1.ItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinContextMenuStrip1.ItemPressed = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinContextMenuStrip1.ItemRadius = 4;
+            this.skinContextMenuStrip1.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinContextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.消费退单ToolStripMenuItem,
+            this.消费赠单ToolStripMenuItem,
+            this.消费备注ToolStripMenuItem});
+            this.skinContextMenuStrip1.ItemSplitter = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinContextMenuStrip1.Name = "skinContextMenuStrip1";
+            this.skinContextMenuStrip1.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinContextMenuStrip1.Size = new System.Drawing.Size(139, 76);
+            this.skinContextMenuStrip1.SkinAllColor = true;
+            this.skinContextMenuStrip1.TitleAnamorphosis = true;
+            this.skinContextMenuStrip1.TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(228)))), ((int)(((byte)(236)))));
+            this.skinContextMenuStrip1.TitleRadius = 4;
+            this.skinContextMenuStrip1.TitleRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            // 
+            // 消费退单ToolStripMenuItem
+            // 
+            this.消费退单ToolStripMenuItem.Name = "消费退单ToolStripMenuItem";
+            this.消费退单ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
+            this.消费退单ToolStripMenuItem.Text = "消费退单";
+            this.消费退单ToolStripMenuItem.Click += new System.EventHandler(this.消费退单ToolStripMenuItem_Click);
+            // 
+            // 消费赠单ToolStripMenuItem
+            // 
+            this.消费赠单ToolStripMenuItem.Name = "消费赠单ToolStripMenuItem";
+            this.消费赠单ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
+            this.消费赠单ToolStripMenuItem.Text = "消费赠单";
+            this.消费赠单ToolStripMenuItem.Click += new System.EventHandler(this.消费赠单ToolStripMenuItem_Click);
+            // 
+            // 消费备注ToolStripMenuItem
+            // 
+            this.消费备注ToolStripMenuItem.Name = "消费备注ToolStripMenuItem";
+            this.消费备注ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
+            this.消费备注ToolStripMenuItem.Text = "消费备注";
+            this.消费备注ToolStripMenuItem.Click += new System.EventHandler(this.消费备注ToolStripMenuItem_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(340, 5);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(73, 25);
+            this.textBox2.TabIndex = 1;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // skinLabel5
+            // 
+            this.skinLabel5.AutoSize = true;
+            this.skinLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel5.BorderColor = System.Drawing.Color.White;
+            this.skinLabel5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel5.Location = new System.Drawing.Point(283, 7);
+            this.skinLabel5.Name = "skinLabel5";
+            this.skinLabel5.Size = new System.Drawing.Size(54, 20);
+            this.skinLabel5.TabIndex = 0;
+            this.skinLabel5.Text = "搜索：";
             // 
             // Increase_consumption
             // 

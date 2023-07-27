@@ -158,6 +158,9 @@ namespace KTV_management_system
             Private_room_type_refresh();
             Inquire();
             DbHelper.skinCollections(skinComboBox1, "select [Private_rooms_type_ID],[type_Name] from [dbo].[Type_of_private_room]", "Private_rooms_type_ID", "type_Name", "所有包间");
+
+            skinDataGridView1.RowHeadersVisible = false;
+            skinDataGridView2.RowHeadersVisible = false;
         }
     }
 }

@@ -36,6 +36,9 @@ namespace KTV_management_system
             commodity_flushed();
 
             DbHelper.skinCollections(skinComboBox2, "select [CommodityTypeID],[TypeName] from [dbo].[commodityType]", "CommodityTypeID", "TypeName", "所有项目");
+
+            skinDataGridView4.RowHeadersVisible = false;
+            skinDataGridView5.RowHeadersVisible = false;
         }
 
         private void skinComboBox2_SelectedIndexChanged(object sender, EventArgs e)

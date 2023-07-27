@@ -125,3 +125,17 @@ D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\obj\Debug\KTV_managemen
 D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\obj\Debug\KTV_management_system.Revise_Information.resources
 D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\obj\Debug\KTV_management_system.Recharge.resources
 D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\obj\Debug\KTV_management_system.Revise_password.resources
+D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\bin\Debug\EPPlus.dll
+D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\bin\Debug\EPPlus.Interfaces.dll
+D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\bin\Debug\EPPlus.System.Drawing.dll
+D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\bin\Debug\EPPlus.xml
+D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\bin\Debug\System.Buffers.dll
+D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\bin\Debug\System.Memory.dll
+D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\bin\Debug\System.Numerics.Vectors.dll
+D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\bin\Debug\System.Buffers.xml
+D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\bin\Debug\System.Memory.xml
+D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\bin\Debug\System.Numerics.Vectors.xml
+D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
