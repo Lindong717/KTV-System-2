@@ -59,6 +59,10 @@ namespace KTV_management_system
             this.skinButton16 = new CCWin.SkinControl.SkinButton();
             this.skinButton17 = new CCWin.SkinControl.SkinButton();
             this.skinDataGridView5 = new CCWin.SkinControl.SkinDataGridView();
+            this.skinContextMenuStrip2 = new CCWin.SkinControl.SkinContextMenuStrip();
+            this.添加ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.修改ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.删除ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,10 +73,6 @@ namespace KTV_management_system
             this.Column25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.skinContextMenuStrip2 = new CCWin.SkinControl.SkinContextMenuStrip();
-            this.添加ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.修改ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.删除ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.skinPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.skinDataGridView4)).BeginInit();
             this.skinContextMenuStrip1.SuspendLayout();
@@ -454,97 +454,6 @@ namespace KTV_management_system
             this.skinDataGridView5.TitleBackColorBegin = System.Drawing.Color.White;
             this.skinDataGridView5.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
             // 
-            // Column16
-            // 
-            this.Column16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column16.DataPropertyName = "project_ID";
-            this.Column16.HeaderText = "编号";
-            this.Column16.MinimumWidth = 6;
-            this.Column16.Name = "Column16";
-            this.Column16.ReadOnly = true;
-            // 
-            // Column17
-            // 
-            this.Column17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column17.DataPropertyName = "Name";
-            this.Column17.HeaderText = "名称";
-            this.Column17.MinimumWidth = 6;
-            this.Column17.Name = "Column17";
-            this.Column17.ReadOnly = true;
-            // 
-            // Column18
-            // 
-            this.Column18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column18.DataPropertyName = "unit";
-            this.Column18.HeaderText = "单位";
-            this.Column18.MinimumWidth = 6;
-            this.Column18.Name = "Column18";
-            this.Column18.ReadOnly = true;
-            // 
-            // Column19
-            // 
-            this.Column19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column19.DataPropertyName = "Preset_unit_price";
-            this.Column19.HeaderText = "单价";
-            this.Column19.MinimumWidth = 6;
-            this.Column19.Name = "Column19";
-            this.Column19.ReadOnly = true;
-            // 
-            // Column20
-            // 
-            this.Column20.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column20.DataPropertyName = "cost";
-            this.Column20.HeaderText = "成本价";
-            this.Column20.MinimumWidth = 6;
-            this.Column20.Name = "Column20";
-            this.Column20.ReadOnly = true;
-            // 
-            // Column21
-            // 
-            this.Column21.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column21.DataPropertyName = "TypeName";
-            this.Column21.HeaderText = "项目类别";
-            this.Column21.MinimumWidth = 6;
-            this.Column21.Name = "Column21";
-            this.Column21.ReadOnly = true;
-            // 
-            // Column22
-            // 
-            this.Column22.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column22.DataPropertyName = "Repository";
-            this.Column22.HeaderText = "存库";
-            this.Column22.MinimumWidth = 6;
-            this.Column22.Name = "Column22";
-            this.Column22.ReadOnly = true;
-            // 
-            // Column25
-            // 
-            this.Column25.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column25.DataPropertyName = "exchange";
-            this.Column25.HeaderText = "能否兑换";
-            this.Column25.MinimumWidth = 6;
-            this.Column25.Name = "Column25";
-            this.Column25.ReadOnly = true;
-            // 
-            // Column26
-            // 
-            this.Column26.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column26.DataPropertyName = "Redeem_points";
-            this.Column26.HeaderText = "兑换积分";
-            this.Column26.MinimumWidth = 6;
-            this.Column26.Name = "Column26";
-            this.Column26.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.DataPropertyName = "Pinyin";
-            this.Column1.HeaderText = "Pinyin";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            // 
             // skinContextMenuStrip2
             // 
             this.skinContextMenuStrip2.Arrow = System.Drawing.Color.Black;
@@ -597,6 +506,97 @@ namespace KTV_management_system
             this.删除ToolStripMenuItem1.Text = "删除";
             this.删除ToolStripMenuItem1.Click += new System.EventHandler(this.删除ToolStripMenuItem1_Click);
             // 
+            // Column16
+            // 
+            this.Column16.DataPropertyName = "project_ID";
+            this.Column16.HeaderText = "编号";
+            this.Column16.MinimumWidth = 6;
+            this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
+            this.Column16.Width = 80;
+            // 
+            // Column17
+            // 
+            this.Column17.DataPropertyName = "Name";
+            this.Column17.HeaderText = "名称";
+            this.Column17.MinimumWidth = 6;
+            this.Column17.Name = "Column17";
+            this.Column17.ReadOnly = true;
+            this.Column17.Width = 79;
+            // 
+            // Column18
+            // 
+            this.Column18.DataPropertyName = "unit";
+            this.Column18.HeaderText = "单位";
+            this.Column18.MinimumWidth = 6;
+            this.Column18.Name = "Column18";
+            this.Column18.ReadOnly = true;
+            this.Column18.Width = 80;
+            // 
+            // Column19
+            // 
+            this.Column19.DataPropertyName = "Preset_unit_price";
+            this.Column19.HeaderText = "单价";
+            this.Column19.MinimumWidth = 6;
+            this.Column19.Name = "Column19";
+            this.Column19.ReadOnly = true;
+            this.Column19.Width = 80;
+            // 
+            // Column20
+            // 
+            this.Column20.DataPropertyName = "cost";
+            this.Column20.HeaderText = "成本价";
+            this.Column20.MinimumWidth = 6;
+            this.Column20.Name = "Column20";
+            this.Column20.ReadOnly = true;
+            this.Column20.Width = 79;
+            // 
+            // Column21
+            // 
+            this.Column21.DataPropertyName = "TypeName";
+            this.Column21.HeaderText = "项目类别";
+            this.Column21.MinimumWidth = 6;
+            this.Column21.Name = "Column21";
+            this.Column21.ReadOnly = true;
+            this.Column21.Width = 80;
+            // 
+            // Column22
+            // 
+            this.Column22.DataPropertyName = "Repository";
+            this.Column22.HeaderText = "存库";
+            this.Column22.MinimumWidth = 6;
+            this.Column22.Name = "Column22";
+            this.Column22.ReadOnly = true;
+            this.Column22.Width = 80;
+            // 
+            // Column25
+            // 
+            this.Column25.DataPropertyName = "exchange";
+            this.Column25.HeaderText = "能否兑换";
+            this.Column25.MinimumWidth = 6;
+            this.Column25.Name = "Column25";
+            this.Column25.ReadOnly = true;
+            this.Column25.Width = 79;
+            // 
+            // Column26
+            // 
+            this.Column26.DataPropertyName = "Redeem_points";
+            this.Column26.HeaderText = "兑换积分";
+            this.Column26.MinimumWidth = 6;
+            this.Column26.Name = "Column26";
+            this.Column26.ReadOnly = true;
+            this.Column26.Width = 80;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Pinyin";
+            this.Column1.HeaderText = "Pinyin";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            this.Column1.Width = 125;
+            // 
             // Item_merchandise
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -639,6 +639,14 @@ namespace KTV_management_system
         private CCWin.SkinControl.SkinButton skinButton17;
         private CCWin.SkinControl.SkinDataGridView skinDataGridView5;
         private System.Windows.Forms.TextBox textBox1;
+        private CCWin.SkinControl.SkinContextMenuStrip skinContextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 添加ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 修改ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 删除ToolStripMenuItem;
+        private CCWin.SkinControl.SkinContextMenuStrip skinContextMenuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem 添加ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 修改ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 删除ToolStripMenuItem1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
@@ -649,13 +657,5 @@ namespace KTV_management_system
         private System.Windows.Forms.DataGridViewTextBoxColumn Column25;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column26;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private CCWin.SkinControl.SkinContextMenuStrip skinContextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 添加ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 修改ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 删除ToolStripMenuItem;
-        private CCWin.SkinControl.SkinContextMenuStrip skinContextMenuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem 添加ToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem 修改ToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem 删除ToolStripMenuItem1;
     }
 }

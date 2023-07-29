@@ -552,5 +552,31 @@ namespace KTV_management_system
             reservation.Private_room_number = skinListView1.SelectedItems[0].SubItems[0].Text;
             reservation.ShowDialog();
         }
+
+        private void skinListView1_DrawItem(object sender, DrawListViewItemEventArgs e)
+        {
+            if (skinListView1.View == View.Details)
+            {
+                switch (e.Item.SubItems[1].Text)
+                {
+                    case "占用":
+                        e.Item.BackColor = Color.FromArgb(Convert.ToInt32("82B7FF", 16));
+                        break;
+                    case "停用":
+                        e.Item.BackColor = Color.FromArgb(Convert.ToInt32("00D3FD", 16));
+                        e.Item.ForeColor = Color.Red;
+                        break;
+                    case "预订":
+                        e.Item.BackColor = Color.FromArgb(Convert.ToInt32("00FFFE", 16));
+                        break;
+                }
+            }
+            else
+            {
+                e.Item.BackColor = Color.White;
+            }
+
+            e.DrawDefault = true;
+        }
     }
 }

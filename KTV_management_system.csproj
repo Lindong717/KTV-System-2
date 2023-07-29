@@ -118,6 +118,18 @@
     <Compile Include="Add_Product_type.Designer.cs">
       <DependentUpon>Add_Product_type.cs</DependentUpon>
     </Compile>
+    <Compile Include="Add_waiter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_waiter.Designer.cs">
+      <DependentUpon>Add_waiter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_waiter_type.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_waiter_type.Designer.cs">
+      <DependentUpon>Add_waiter_type.cs</DependentUpon>
+    </Compile>
     <Compile Include="Batch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,6 +291,18 @@
     <Compile Include="revise_Product_type.Designer.cs">
       <DependentUpon>revise_Product_type.cs</DependentUpon>
     </Compile>
+    <Compile Include="Revise_Waiter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Revise_Waiter.Designer.cs">
+      <DependentUpon>Revise_Waiter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Revise_waiter_type.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Revise_waiter_type.Designer.cs">
+      <DependentUpon>Revise_waiter_type.cs</DependentUpon>
+    </Compile>
     <Compile Include="Select_Waiter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -308,6 +332,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Add_Product_type.resx">
       <DependentUpon>Add_Product_type.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_waiter.resx">
+      <DependentUpon>Add_waiter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_waiter_type.resx">
+      <DependentUpon>Add_waiter_type.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Batch.resx">
       <DependentUpon>Batch.cs</DependentUpon>
@@ -395,6 +425,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="revise_Product_type.resx">
       <DependentUpon>revise_Product_type.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Revise_Waiter.resx">
+      <DependentUpon>Revise_Waiter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Revise_waiter_type.resx">
+      <DependentUpon>Revise_waiter_type.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Select_Waiter.resx">
       <DependentUpon>Select_Waiter.cs</DependentUpon>
