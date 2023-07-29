@@ -124,11 +124,29 @@
     <Compile Include="Batch.Designer.cs">
       <DependentUpon>Batch.cs</DependentUpon>
     </Compile>
+    <Compile Include="Booking_manage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Booking_manage.Designer.cs">
+      <DependentUpon>Booking_manage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Booking_Recording.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Booking_Recording.Designer.cs">
+      <DependentUpon>Booking_Recording.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer_billing.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Customer_billing.Designer.cs">
       <DependentUpon>Customer_billing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom_time.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Custom_time.Designer.cs">
+      <DependentUpon>Custom_time.cs</DependentUpon>
     </Compile>
     <Compile Include="DbHelper.cs" />
     <Compile Include="ExportExcel.cs" />
@@ -225,6 +243,18 @@
     <Compile Include="Recharge.Designer.cs">
       <DependentUpon>Recharge.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reservation_Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservation_Information.Designer.cs">
+      <DependentUpon>Reservation_Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Revise_booking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Revise_booking.Designer.cs">
+      <DependentUpon>Revise_booking.cs</DependentUpon>
+    </Compile>
     <Compile Include="revise_commodity.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,8 +312,17 @@
     <EmbeddedResource Include="Batch.resx">
       <DependentUpon>Batch.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Booking_manage.resx">
+      <DependentUpon>Booking_manage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Booking_Recording.resx">
+      <DependentUpon>Booking_Recording.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customer_billing.resx">
       <DependentUpon>Customer_billing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom_time.resx">
+      <DependentUpon>Custom_time.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -338,6 +377,12 @@
     </Compile>
     <EmbeddedResource Include="Recharge.resx">
       <DependentUpon>Recharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservation_Information.resx">
+      <DependentUpon>Reservation_Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Revise_booking.resx">
+      <DependentUpon>Revise_booking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="revise_commodity.resx">
       <DependentUpon>revise_commodity.cs</DependentUpon>

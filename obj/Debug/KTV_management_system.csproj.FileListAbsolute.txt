@@ -139,3 +139,8 @@ D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\bin\Debug\System.Buffer
 D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\bin\Debug\System.Memory.xml
 D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\bin\Debug\System.Numerics.Vectors.xml
 D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\obj\Debug\KTV_management_system.Booking_Recording.resources
+D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\obj\Debug\KTV_management_system.Booking_manage.resources
+D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\obj\Debug\KTV_management_system.Revise_booking.resources
+D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\obj\Debug\KTV_management_system.Custom_time.resources
+D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\obj\Debug\KTV_management_system.Reservation_Information.resources

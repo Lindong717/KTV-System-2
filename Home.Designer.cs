@@ -31,6 +31,7 @@ namespace KTV_management_system
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.skinMenuStrip1 = new CCWin.SkinControl.SkinMenuStrip();
             this.来宾登记ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.客户开单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -603,7 +604,7 @@ namespace KTV_management_system
             this.skinToolStrip1.Location = new System.Drawing.Point(0, 28);
             this.skinToolStrip1.Name = "skinToolStrip1";
             this.skinToolStrip1.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinToolStrip1.Size = new System.Drawing.Size(726, 47);
+            this.skinToolStrip1.Size = new System.Drawing.Size(687, 47);
             this.skinToolStrip1.SkinAllColor = true;
             this.skinToolStrip1.TabIndex = 1;
             this.skinToolStrip1.Text = "skinToolStrip1";
@@ -631,6 +632,7 @@ namespace KTV_management_system
             this.toolStripButton2.Text = "预订管理";
             this.toolStripButton2.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripButton3
             // 
@@ -1566,6 +1568,7 @@ namespace KTV_management_system
             // 
             // skinListView1
             // 
+            this.skinListView1.AllowDrop = true;
             this.skinListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader19,
             this.columnHeader20,
@@ -1579,13 +1582,16 @@ namespace KTV_management_system
             this.skinListView1.GridLines = true;
             this.skinListView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.skinListView1.HideSelection = false;
+            listViewItem1.UseItemStyleForSubItems = false;
+            this.skinListView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1});
             this.skinListView1.LargeImageList = this.Large_icons;
             this.skinListView1.Location = new System.Drawing.Point(0, 0);
             this.skinListView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.skinListView1.MultiSelect = false;
             this.skinListView1.Name = "skinListView1";
             this.skinListView1.OwnerDraw = true;
-            this.skinListView1.RowBackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(180)))), ((int)(((byte)(200)))));
+            this.skinListView1.RowBackColor2 = System.Drawing.Color.Transparent;
             this.skinListView1.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(180)))), ((int)(((byte)(200)))));
             this.skinListView1.Size = new System.Drawing.Size(710, 629);
             this.skinListView1.SmallImageList = this.imageMin;
@@ -1746,6 +1752,7 @@ namespace KTV_management_system
             this.宾客预订ToolStripMenuItem.Name = "宾客预订ToolStripMenuItem";
             this.宾客预订ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
             this.宾客预订ToolStripMenuItem.Text = "宾客预订";
+            this.宾客预订ToolStripMenuItem.Click += new System.EventHandler(this.宾客预订ToolStripMenuItem_Click);
             // 
             // 分拆结账ToolStripMenuItem
             // 
@@ -1758,6 +1765,7 @@ namespace KTV_management_system
             this.Tool.Name = "Tool";
             this.Tool.Size = new System.Drawing.Size(138, 24);
             this.Tool.Text = "预订信息";
+            this.Tool.Click += new System.EventHandler(this.Tool_Click);
             // 
             // Large_icons
             // 

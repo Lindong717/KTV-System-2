@@ -136,6 +136,8 @@ namespace KTV_management_system
 
                 }
             }
+
+            Inquire();
         }
 
         private void write()
@@ -412,6 +414,18 @@ namespace KTV_management_system
 
         private void skinListView1_DoubleClick(object sender, EventArgs e)
         {
+            if (skinListView1.SelectedItems[0].SubItems[1].Text == "预订")
+            {
+                if (MessageBox.Show($"该包间已被“{(DbHelper.executeScalar($@"select count(*) from [dbo].[Appointment_management] where [Private_room_number] = '{skinListView1.SelectedItems[0].SubItems[0].Text}'") == "0" ? "NULL" : DbHelper.executeScalar($"select [Customer_name] from [dbo].[Appointment_management] where [Private_room_number] = '{skinListView1.SelectedItems[0].SubItems[0].Text}'"))}”预订，\n" +
+                    $"预计到达时间：{(DbHelper.executeScalar($@"select count(*) from [dbo].[Appointment_management] where [Private_room_number] = '{skinListView1.SelectedItems[0].SubItems[0].Text}'") == "0" ? "NULL" : DbHelper.executeScalar($"select [Arrival_time] from [dbo].[Appointment_management] where [Private_room_number] = '{skinListView1.SelectedItems[0].SubItems[0].Text}'"))}\n" +
+                    $"确定开单吗？", "系统提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    Billing();
+                }
+
+                return;
+            }
+
             if (skinListView1.SelectedItems[0].SubItems[1].Text != "占用")
             {
                 Billing();
@@ -461,8 +475,21 @@ namespace KTV_management_system
                 {
                     string Initial_time = DbHelper.executeScalar($"select [Start_time] from [dbo].[Private_rooms] where [Private_rooms_ID] = '{skinListView1.Items[i].SubItems[0].Text}'");
                     string time = $"{DbHelper.executeScalar($"SELECT DATEDIFF(HH, '{Initial_time}', GETDATE())")}小时，{DbHelper.executeScalar($"SELECT DATEDIFF(MINUTE, '{Initial_time}', GETDATE());")}分钟";
-                    
+
                     DbHelper.executeNonQuery($"update [dbo].[Private_rooms] set [Elapsed_time] = '{time}' where [Private_rooms_ID] = '{skinListView1.Items[i].SubItems[0].Text}'");
+                }
+
+                if (skinListView1.Items[i].SubItems[1].Text == "预订")
+                {
+                    if (DbHelper.executeScalar($"select count(*) from [dbo].[Appointment_management] where [Private_room_number] = '{skinListView1.Items[i].SubItems[0].Text}'") == "0")
+                    {
+                        return;
+                    }
+
+                    if (DbHelper.executeScalar($"select [Automatic_cancellation] from [dbo].[Appointment_management] where [Private_room_number] = '{skinListView1.Items[i].SubItems[0].Text}'") == "1" && DbHelper.executeScalar($"select [state] from [dbo].[Appointment_management] where [Private_room_number] = '{skinListView1.Items[i].SubItems[0].Text}'") == "N")
+                    {
+                        DbHelper.executeNonQuery($"update [dbo].[Private_rooms] set [Private_room_status] = '0' where [Private_rooms_ID] = '{skinListView1.Items[i].SubItems[0].Text}'");
+                    }
                 }
             }
         }
@@ -504,6 +531,26 @@ namespace KTV_management_system
         {
             Member_Management member = new Member_Management();
             member.ShowDialog();
+        }
+
+        private void 宾客预订ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Booking_Recording booking = new Booking_Recording();
+            booking.Private_room_number = skinListView1.SelectedItems[0].SubItems[0].Text;
+            booking.ShowDialog();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            Booking_manage booking = new Booking_manage();
+            booking.ShowDialog();
+        }
+
+        private void Tool_Click(object sender, EventArgs e)
+        {
+            Reservation_Information reservation = new Reservation_Information();
+            reservation.Private_room_number = skinListView1.SelectedItems[0].SubItems[0].Text;
+            reservation.ShowDialog();
         }
     }
 }

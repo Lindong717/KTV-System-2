@@ -53,7 +53,10 @@ namespace KTV_management_system
 
             foreach (DataGridViewRow row in Collections)
             {
-                DbHelper.executeNonQuery($"update [dbo].[Member_Information] set [Card_balance] += '{textBox1.Text}' where [InformationID] = '{row.Cells["Column1"].Value}'");
+                if (row.Cells["Column4"].Value.ToString() == "储值卡")
+                {
+                    DbHelper.executeNonQuery($"update [dbo].[Member_Information] set [Card_balance] += '{textBox1.Text}' where [InformationID] = '{row.Cells["Column1"].Value}'");
+                }
             }
 
             Close();
