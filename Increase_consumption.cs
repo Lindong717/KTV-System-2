@@ -234,6 +234,11 @@ namespace KTV_management_system
 
         private void skinButton5_Click(object sender, EventArgs e)
         {
+            delete();
+        }
+
+        private void delete()
+        {
             try
             {
                 if (skinDataGridView2.Rows[skinDataGridView2.CurrentCell.RowIndex].Cells["Column7"].Value.ToString() == "包间费用")
@@ -245,7 +250,7 @@ namespace KTV_management_system
                 DbHelper.executeNonQuery($"delete from [dbo].[Consumption_list] where [manifestID] = '{skinDataGridView2.Rows[skinDataGridView2.CurrentCell.RowIndex].Cells["Column16"].Value}'");
                 Inquire();
             }
-            catch(Exception ee)
+            catch (Exception ee)
             {
                 MessageBox.Show(ee.Message, "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -258,7 +263,7 @@ namespace KTV_management_system
 
         private void 消费退单ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Chargebacks();
+            delete();
         }
 
         private void 消费赠单ToolStripMenuItem_Click(object sender, EventArgs e)

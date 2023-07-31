@@ -42,19 +42,20 @@ namespace KTV_management_system
 
         public void revise()
         {
-            Revise_Information revise = new Revise_Information();
-
-            revise.Membership_Number = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column1"].Value.ToString();
-            revise.Member_Name = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column2"].Value.ToString();
-            revise.MemberSex = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column3"].Value.ToString();
-            revise.birthday = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column10"].Value.ToString();
-            revise.Phone = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column11"].Value.ToString();
-            revise.state = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column13"].Value.ToString();
-            revise.cardType = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column4"].Value.ToString();
-            revise.Membership_Level = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column6"].Value.ToString();
-            revise.Integral = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column7"].Value.ToString();
-            revise.pwd = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column9"].Value.ToString();
-            revise.remark = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column14"].Value.ToString();
+            Revise_Information revise = new Revise_Information
+            {
+                Membership_Number = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column1"].Value.ToString(),
+                Member_Name = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column2"].Value.ToString(),
+                MemberSex = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column3"].Value.ToString(),
+                birthday = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column10"].Value.ToString(),
+                Phone = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column11"].Value.ToString(),
+                state = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column13"].Value.ToString(),
+                cardType = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column4"].Value.ToString(),
+                Membership_Level = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column6"].Value.ToString(),
+                Integral = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column7"].Value.ToString(),
+                pwd = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column9"].Value.ToString(),
+                remark = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column14"].Value.ToString()
+            };
 
             revise.ShowDialog();
             flushed();
@@ -98,12 +99,14 @@ namespace KTV_management_system
                 }
             }
 
-            Recharge recharge = new Recharge();
-            recharge.Collections = skinDataGridView1.SelectedRows;
-            recharge.Membership_Number = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column1"].Value.ToString();
-            recharge.Member_Name = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column2"].Value.ToString();
-            recharge.balance = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column5"].Value.ToString();
-            recharge.Membership_Level = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column6"].Value.ToString();
+            Recharge recharge = new Recharge
+            {
+                Collections = skinDataGridView1.SelectedRows,
+                Membership_Number = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column1"].Value.ToString(),
+                Member_Name = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column2"].Value.ToString(),
+                balance = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column5"].Value.ToString(),
+                Membership_Level = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column6"].Value.ToString()
+            };
             recharge.ShowDialog();
 
             flushed();
@@ -111,8 +114,10 @@ namespace KTV_management_system
 
         private void skinButton5_Click(object sender, EventArgs e)
         {
-            Revise_password revise = new Revise_password();
-            revise.Membership_Number = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column1"].Value.ToString();
+            Revise_password revise = new Revise_password
+            {
+                Membership_Number = skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column1"].Value.ToString()
+            };
             revise.ShowDialog();
         }
 

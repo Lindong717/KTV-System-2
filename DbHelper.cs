@@ -200,5 +200,32 @@ namespace KTV_management_system
             }
 
         }
+
+        public static void exchangeTree(SkinTreeView treeView, string root)
+        {
+            DataTable dataTable = getDataTable(root);
+
+            foreach (DataRow dataRow in dataTable.Rows)
+            {
+                TreeNode treeNode1 = new TreeNode(dataRow[1].ToString());
+                treeView.Nodes.Add(treeNode1);
+
+                DataTable dataTable2 = getDataTable($"select [project_ID],[Name],[Redeem_points] from [dbo].[Commodity] where [category_ID] = '{dataRow[0]}' and [exchange] = 'Y'");
+                foreach (DataRow dataRow2 in dataTable2.Rows)
+                {
+                    TreeNode treeNode = new TreeNode
+                    {
+                        Tag = dataRow2[0],
+                        Text = $"{dataRow2[1]}  积分：{dataRow2[2]}",
+                        ImageIndex = 0,
+                        SelectedImageIndex = 1
+                    };
+
+                    treeNode1.ImageIndex = 0;
+                    treeNode1.SelectedImageIndex = 1;
+                    treeNode1.Nodes.Add(treeNode);
+                }
+            }
+        }
     }
 }

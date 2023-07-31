@@ -578,5 +578,18 @@ namespace KTV_management_system
 
             e.DrawDefault = true;
         }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            Waiter_management waiter = new Waiter_management();
+            waiter.ShowDialog();
+        }
+
+        private void 兑换商品ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Login_member login = new Login_member();
+            login.Private_room_number = skinListView1.SelectedItems[0].SubItems[0].Text;
+            login.ShowDialog();
+        }
     }
 }
