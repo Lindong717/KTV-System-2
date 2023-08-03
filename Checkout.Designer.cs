@@ -304,7 +304,7 @@ namespace KTV_management_system
             this.skinLabel14.BorderColor = System.Drawing.Color.White;
             this.skinLabel14.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel14.ForeColor = System.Drawing.Color.Red;
-            this.skinLabel14.Location = new System.Drawing.Point(922, 16);
+            this.skinLabel14.Location = new System.Drawing.Point(971, 16);
             this.skinLabel14.Name = "skinLabel14";
             this.skinLabel14.Size = new System.Drawing.Size(39, 25);
             this.skinLabel14.TabIndex = 10;
@@ -317,7 +317,7 @@ namespace KTV_management_system
             this.skinLabel11.BorderColor = System.Drawing.Color.White;
             this.skinLabel11.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel11.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.skinLabel11.Location = new System.Drawing.Point(748, 16);
+            this.skinLabel11.Location = new System.Drawing.Point(797, 16);
             this.skinLabel11.Name = "skinLabel11";
             this.skinLabel11.Size = new System.Drawing.Size(31, 25);
             this.skinLabel11.TabIndex = 8;
@@ -353,6 +353,7 @@ namespace KTV_management_system
             this.textBox4.Size = new System.Drawing.Size(118, 25);
             this.textBox4.TabIndex = 32;
             this.textBox4.Text = "普通宾客";
+            this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox4_KeyDown);
             // 
             // skinLabel15
             // 
@@ -361,7 +362,7 @@ namespace KTV_management_system
             this.skinLabel15.BorderColor = System.Drawing.Color.White;
             this.skinLabel15.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel15.ForeColor = System.Drawing.Color.Black;
-            this.skinLabel15.Location = new System.Drawing.Point(827, 16);
+            this.skinLabel15.Location = new System.Drawing.Point(876, 16);
             this.skinLabel15.Name = "skinLabel15";
             this.skinLabel15.Size = new System.Drawing.Size(107, 25);
             this.skinLabel15.TabIndex = 9;
@@ -374,7 +375,7 @@ namespace KTV_management_system
             this.skinLabel13.BorderColor = System.Drawing.Color.White;
             this.skinLabel13.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel13.ForeColor = System.Drawing.Color.Black;
-            this.skinLabel13.Location = new System.Drawing.Point(653, 16);
+            this.skinLabel13.Location = new System.Drawing.Point(702, 16);
             this.skinLabel13.Name = "skinLabel13";
             this.skinLabel13.Size = new System.Drawing.Size(107, 25);
             this.skinLabel13.TabIndex = 7;
@@ -387,7 +388,7 @@ namespace KTV_management_system
             this.skinLabel7.BorderColor = System.Drawing.Color.White;
             this.skinLabel7.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel7.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.skinLabel7.Location = new System.Drawing.Point(579, 16);
+            this.skinLabel7.Location = new System.Drawing.Point(593, 16);
             this.skinLabel7.Name = "skinLabel7";
             this.skinLabel7.Size = new System.Drawing.Size(31, 25);
             this.skinLabel7.TabIndex = 5;
@@ -757,6 +758,7 @@ namespace KTV_management_system
             this.skinCheckBox2.TabIndex = 28;
             this.skinCheckBox2.Text = "退单";
             this.skinCheckBox2.UseVisualStyleBackColor = false;
+            this.skinCheckBox2.CheckedChanged += new System.EventHandler(this.skinCheckBox2_CheckedChanged);
             // 
             // skinCheckBox1
             // 
@@ -776,6 +778,7 @@ namespace KTV_management_system
             this.skinCheckBox1.TabIndex = 27;
             this.skinCheckBox1.Text = "免单";
             this.skinCheckBox1.UseVisualStyleBackColor = false;
+            this.skinCheckBox1.CheckedChanged += new System.EventHandler(this.skinCheckBox1_CheckedChanged);
             // 
             // Checkout
             // 

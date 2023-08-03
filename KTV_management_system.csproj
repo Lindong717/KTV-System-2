@@ -78,8 +78,8 @@
     <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
     </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Security" />
     <Reference Include="System.Threading.Tasks" />
@@ -267,6 +267,12 @@
     <Compile Include="Redeem_goods.Designer.cs">
       <DependentUpon>Redeem_goods.cs</DependentUpon>
     </Compile>
+    <Compile Include="Replacement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Replacement.Designer.cs">
+      <DependentUpon>Replacement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reservation_Information.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -302,6 +308,12 @@
     </Compile>
     <Compile Include="revise_Product_type.Designer.cs">
       <DependentUpon>revise_Product_type.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Revise_Recording.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Revise_Recording.Designer.cs">
+      <DependentUpon>Revise_Recording.cs</DependentUpon>
     </Compile>
     <Compile Include="Revise_Waiter.cs">
       <SubType>Form</SubType>
@@ -339,6 +351,7 @@
     <Compile Include="Waiter_management.Designer.cs">
       <DependentUpon>Waiter_management.cs</DependentUpon>
     </Compile>
+    <Compile Include="WindowHelper.cs" />
     <EmbeddedResource Include="Add_a_private_room_type.resx">
       <DependentUpon>Add_a_private_room_type.cs</DependentUpon>
     </EmbeddedResource>
@@ -432,6 +445,9 @@
     <EmbeddedResource Include="Redeem_goods.resx">
       <DependentUpon>Redeem_goods.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Replacement.resx">
+      <DependentUpon>Replacement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reservation_Information.resx">
       <DependentUpon>Reservation_Information.cs</DependentUpon>
     </EmbeddedResource>
@@ -449,6 +465,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="revise_Product_type.resx">
       <DependentUpon>revise_Product_type.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Revise_Recording.resx">
+      <DependentUpon>Revise_Recording.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Revise_Waiter.resx">
       <DependentUpon>Revise_Waiter.cs</DependentUpon>

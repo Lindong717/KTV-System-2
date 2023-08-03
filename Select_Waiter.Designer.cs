@@ -124,6 +124,7 @@ namespace KTV_management_system
             this.skinDataGridView1.Name = "skinDataGridView1";
             this.skinDataGridView1.ReadOnly = true;
             this.skinDataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.skinDataGridView1.RowHeadersVisible = false;
             this.skinDataGridView1.RowHeadersWidth = 51;
             this.skinDataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;

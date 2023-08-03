@@ -13,7 +13,7 @@ namespace KTV_management_system
 {
     public partial class Waiter_management : Skin_Mac
     {
-        private static string sql = @"select [Waiter_number],[Waiter name],[sex],[identity card],[Contact],[type_Name],[Rank name] from [dbo].[Waiter] as a
+        private static string sql = @"select [Waiter_number],[Waiter name],[sex] = (case [sex] when '0' then '男' when '1' then '女' end),[identity card],[Contact],[type_Name],[Rank name] from [dbo].[Waiter] as a
         join [dbo].[Type_of_private_room] as b on a.region = b.Private_rooms_type_ID
         join [dbo].[Waiter_type] as c on a.level = c.[Grade number]
         where 1=1";

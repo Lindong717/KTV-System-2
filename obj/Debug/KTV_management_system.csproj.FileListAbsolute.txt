@@ -151,3 +151,5 @@ D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\obj\Debug\KTV_managemen
 D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\obj\Debug\KTV_management_system.Waiter_management.resources
 D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\obj\Debug\KTV_management_system.Login_member.resources
 D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\obj\Debug\KTV_management_system.Redeem_goods.resources
+D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\obj\Debug\KTV_management_system.Replacement.resources
+D:\vsCode2019\WindowsFormsApp3\KTV-System-2\KTV-System-2\obj\Debug\KTV_management_system.Revise_Recording.resources

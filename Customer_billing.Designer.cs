@@ -53,7 +53,7 @@ namespace KTV_management_system
             this.skinButton2.BackColor = System.Drawing.Color.Transparent;
             this.skinButton2.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton2.DownBack = null;
-            this.skinButton2.Location = new System.Drawing.Point(412, 385);
+            this.skinButton2.Location = new System.Drawing.Point(402, 385);
             this.skinButton2.MouseBack = null;
             this.skinButton2.Name = "skinButton2";
             this.skinButton2.NormlBack = null;
@@ -251,7 +251,7 @@ namespace KTV_management_system
             this.skinButton1.BackColor = System.Drawing.Color.Transparent;
             this.skinButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton1.DownBack = null;
-            this.skinButton1.Location = new System.Drawing.Point(131, 385);
+            this.skinButton1.Location = new System.Drawing.Point(121, 385);
             this.skinButton1.MouseBack = null;
             this.skinButton1.Name = "skinButton1";
             this.skinButton1.NormlBack = null;

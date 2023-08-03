@@ -31,8 +31,8 @@ namespace KTV_management_system
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            skinCaptionPanel1.Text = DateTime.Now.ToString("yyyy-MM-dd  HH:MM:ss");
-            skinCaptionPanel5.Text = DateTime.Now.ToString("yyyy-MM-dd  HH:MM:ss");
+            skinCaptionPanel1.Text = DateTime.Now.ToString();
+            skinCaptionPanel5.Text = DateTime.Now.ToString();
 
             skinLabel7.Text = DbHelper.executeScalar("select count(*) from [dbo].[Private_rooms]");
             skinLabel13.Text = DbHelper.executeScalar("select count(*) from [dbo].[Private_rooms] where [Private_room_status] = '1'");
@@ -74,6 +74,8 @@ namespace KTV_management_system
             }
 
             UpdateMenuItemsEnabledState();
+
+            toolStripLabel5.Text = $"当前界面：{(string.IsNullOrEmpty(WindowHelper.GetCurrentWindowText()) || WindowHelper.GetCurrentWindowText() == "SkinForm" ? "KTV娱乐管理系统" : WindowHelper.GetCurrentWindowText())}";
         }
 
         public void Inquire()
@@ -94,6 +96,17 @@ namespace KTV_management_system
 
             //清空条件
             condition = null;
+
+            for (int i = 0; i < skinListView1.Items.Count; i++)
+            {
+                if (skinListView1.Items[i].SubItems[1].Text == "占用")
+                {
+                    string Initial_time = DbHelper.executeScalar($"select [Start_time] from [dbo].[Private_rooms] where [Private_rooms_ID] = '{skinListView1.Items[i].SubItems[0].Text}'");
+                    string time = $"{DbHelper.executeScalar($"SELECT DATEDIFF(HH, '{Initial_time}', GETDATE())")}小时，{DbHelper.executeScalar($"SELECT DATEDIFF(MINUTE, '{Initial_time}', GETDATE());")}分钟";
+
+                    DbHelper.executeNonQuery($"update [dbo].[Private_rooms] set [Elapsed_time] = '{time}' where [Private_rooms_ID] = '{skinListView1.Items[i].SubItems[0].Text}'");
+                }
+            }
         }
 
         private void skinButton4_Click(object sender, EventArgs e)
@@ -244,14 +257,13 @@ namespace KTV_management_system
                         list.Add(2);
                         list.Add(5);
                         list.Add(6);
-                        list.Add(9);
+                        list.Add(11);
                         list.Add(10);
-                        list.Add(14);
                         break;
                     case "占用":
                         list.Add(3);
-                        list.Add(12);
-                        list.Add(14);
+                        list.Add(9);
+                        list.Add(10);
                         break;
                     case "停用":
                         list.Add(0);
@@ -263,7 +275,7 @@ namespace KTV_management_system
                         list.Add(9);
                         list.Add(10);
                         list.Add(12);
-                        list.Add(14);
+                        list.Add(11);
                         break;
                     case "预订":
                         list.Add(0);
@@ -272,16 +284,17 @@ namespace KTV_management_system
                         list.Add(5);
                         list.Add(6);
                         list.Add(9);
-                        list.Add(10);
-                        list.Add(12);
                         break;
                 }
 
                 foreach (int i in list)
                 {
-                    if (skinContextMenuStrip1.Items[i] is ToolStripMenuItem toolStripMenuItem)
+                    if (i >= 0 && i < skinContextMenuStrip1.Items.Count)
                     {
-                        toolStripMenuItem.Enabled = false;
+                        if (skinContextMenuStrip1.Items[i] is ToolStripMenuItem toolStripMenuItem)
+                        {
+                            toolStripMenuItem.Enabled = false;
+                        }
                     }
                 }
 
@@ -458,6 +471,8 @@ namespace KTV_management_system
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
+            skinListView1.Items[0].Selected = true;
+
             if (skinListView1.SelectedItems.Count > 0 && skinListView1.SelectedItems[0].SubItems[1].Text != "占用")
             {
                 MessageBox.Show("不能对非占用包间进行该操作", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -465,33 +480,6 @@ namespace KTV_management_system
             }
 
             Increase_consumption();
-        }
-
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-            for (int i = 0; i < skinListView1.Items.Count; i++)
-            {
-                if (skinListView1.Items[i].SubItems[1].Text == "占用")
-                {
-                    string Initial_time = DbHelper.executeScalar($"select [Start_time] from [dbo].[Private_rooms] where [Private_rooms_ID] = '{skinListView1.Items[i].SubItems[0].Text}'");
-                    string time = $"{DbHelper.executeScalar($"SELECT DATEDIFF(HH, '{Initial_time}', GETDATE())")}小时，{DbHelper.executeScalar($"SELECT DATEDIFF(MINUTE, '{Initial_time}', GETDATE());")}分钟";
-
-                    DbHelper.executeNonQuery($"update [dbo].[Private_rooms] set [Elapsed_time] = '{time}' where [Private_rooms_ID] = '{skinListView1.Items[i].SubItems[0].Text}'");
-                }
-
-                if (skinListView1.Items[i].SubItems[1].Text == "预订")
-                {
-                    if (DbHelper.executeScalar($"select count(*) from [dbo].[Appointment_management] where [Private_room_number] = '{skinListView1.Items[i].SubItems[0].Text}'") == "0")
-                    {
-                        return;
-                    }
-
-                    if (DbHelper.executeScalar($"select [Automatic_cancellation] from [dbo].[Appointment_management] where [Private_room_number] = '{skinListView1.Items[i].SubItems[0].Text}'") == "1" && DbHelper.executeScalar($"select [state] from [dbo].[Appointment_management] where [Private_room_number] = '{skinListView1.Items[i].SubItems[0].Text}'") == "N")
-                    {
-                        DbHelper.executeNonQuery($"update [dbo].[Private_rooms] set [Private_room_status] = '0' where [Private_rooms_ID] = '{skinListView1.Items[i].SubItems[0].Text}'");
-                    }
-                }
-            }
         }
 
         private void skinButton2_Click(object sender, EventArgs e)
@@ -531,6 +519,8 @@ namespace KTV_management_system
         {
             Member_Management member = new Member_Management();
             member.ShowDialog();
+
+            Inquire();
         }
 
         private void 宾客预订ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -538,12 +528,16 @@ namespace KTV_management_system
             Booking_Recording booking = new Booking_Recording();
             booking.Private_room_number = skinListView1.SelectedItems[0].SubItems[0].Text;
             booking.ShowDialog();
+
+            Inquire();
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             Booking_manage booking = new Booking_manage();
             booking.ShowDialog();
+
+            Inquire();
         }
 
         private void Tool_Click(object sender, EventArgs e)
@@ -551,6 +545,8 @@ namespace KTV_management_system
             Reservation_Information reservation = new Reservation_Information();
             reservation.Private_room_number = skinListView1.SelectedItems[0].SubItems[0].Text;
             reservation.ShowDialog();
+
+            Inquire();
         }
 
         private void skinListView1_DrawItem(object sender, DrawListViewItemEventArgs e)
@@ -583,6 +579,8 @@ namespace KTV_management_system
         {
             Waiter_management waiter = new Waiter_management();
             waiter.ShowDialog();
+
+            Inquire();
         }
 
         private void 兑换商品ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -590,6 +588,44 @@ namespace KTV_management_system
             Login_member login = new Login_member();
             login.Private_room_number = skinListView1.SelectedItems[0].SubItems[0].Text;
             login.ShowDialog();
+
+            Inquire();
+        }
+
+        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                foreach (ListViewItem item in skinListView1.Items)
+                {
+                    if (item.SubItems[0].Text == textBox2.Text)
+                    {
+                        skinListView1.Focus();
+                        item.Selected = true;
+                        return;
+                    }
+                }
+
+                MessageBox.Show("该包间类型没有该包间", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void 更换包间ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Replacement replacement = new Replacement();
+            replacement.Private_room_number = skinListView1.SelectedItems[0].SubItems[0].Text;
+            replacement.ShowDialog();
+
+            Inquire();
+        }
+
+        private void 修改登记ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Revise_Recording revise = new Revise_Recording();
+            revise.Private_rooms_ID = skinListView1.SelectedItems[0].SubItems[0].Text;
+            revise.ShowDialog();
+
+            Inquire();
         }
     }
 }

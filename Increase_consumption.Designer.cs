@@ -31,14 +31,14 @@ namespace KTV_management_system
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Increase_consumption));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
             this.skinPanel5 = new CCWin.SkinControl.SkinPanel();
             this.skinFlowLayoutPanel1 = new CCWin.SkinControl.SkinFlowLayoutPanel();
@@ -123,7 +123,7 @@ namespace KTV_management_system
             this.skinPanel1.MouseBack = null;
             this.skinPanel1.Name = "skinPanel1";
             this.skinPanel1.NormlBack = null;
-            this.skinPanel1.Size = new System.Drawing.Size(839, 78);
+            this.skinPanel1.Size = new System.Drawing.Size(873, 78);
             this.skinPanel1.TabIndex = 0;
             // 
             // skinPanel5
@@ -139,7 +139,7 @@ namespace KTV_management_system
             this.skinPanel5.MouseBack = null;
             this.skinPanel5.Name = "skinPanel5";
             this.skinPanel5.NormlBack = null;
-            this.skinPanel5.Size = new System.Drawing.Size(407, 74);
+            this.skinPanel5.Size = new System.Drawing.Size(404, 74);
             this.skinPanel5.TabIndex = 3;
             // 
             // skinFlowLayoutPanel1
@@ -151,7 +151,7 @@ namespace KTV_management_system
             this.skinFlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.skinFlowLayoutPanel1.DownBack = null;
             this.skinFlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.skinFlowLayoutPanel1.Location = new System.Drawing.Point(213, 0);
+            this.skinFlowLayoutPanel1.Location = new System.Drawing.Point(210, 0);
             this.skinFlowLayoutPanel1.MouseBack = null;
             this.skinFlowLayoutPanel1.Name = "skinFlowLayoutPanel1";
             this.skinFlowLayoutPanel1.NormlBack = null;
@@ -168,11 +168,11 @@ namespace KTV_management_system
             this.skinButton2.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton2.DownBack = null;
             this.skinButton2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinButton2.Location = new System.Drawing.Point(116, 3);
+            this.skinButton2.Location = new System.Drawing.Point(113, 3);
             this.skinButton2.MouseBack = null;
             this.skinButton2.Name = "skinButton2";
             this.skinButton2.NormlBack = null;
-            this.skinButton2.Size = new System.Drawing.Size(75, 67);
+            this.skinButton2.Size = new System.Drawing.Size(78, 67);
             this.skinButton2.TabIndex = 0;
             this.skinButton2.Text = "搜索";
             this.skinButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -189,7 +189,7 @@ namespace KTV_management_system
             this.skinButton3.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton3.DownBack = null;
             this.skinButton3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinButton3.Location = new System.Drawing.Point(35, 3);
+            this.skinButton3.Location = new System.Drawing.Point(32, 3);
             this.skinButton3.MouseBack = null;
             this.skinButton3.Name = "skinButton3";
             this.skinButton3.NormlBack = null;
@@ -232,11 +232,11 @@ namespace KTV_management_system
             this.skinPanel4.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinPanel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.skinPanel4.DownBack = null;
-            this.skinPanel4.Location = new System.Drawing.Point(407, 0);
+            this.skinPanel4.Location = new System.Drawing.Point(404, 0);
             this.skinPanel4.MouseBack = null;
             this.skinPanel4.Name = "skinPanel4";
             this.skinPanel4.NormlBack = null;
-            this.skinPanel4.Size = new System.Drawing.Size(428, 74);
+            this.skinPanel4.Size = new System.Drawing.Size(465, 74);
             this.skinPanel4.TabIndex = 2;
             // 
             // skinFlowLayoutPanel2
@@ -249,11 +249,11 @@ namespace KTV_management_system
             this.skinFlowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.skinFlowLayoutPanel2.DownBack = null;
             this.skinFlowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.skinFlowLayoutPanel2.Location = new System.Drawing.Point(10, 0);
+            this.skinFlowLayoutPanel2.Location = new System.Drawing.Point(3, 0);
             this.skinFlowLayoutPanel2.MouseBack = null;
             this.skinFlowLayoutPanel2.Name = "skinFlowLayoutPanel2";
             this.skinFlowLayoutPanel2.NormlBack = null;
-            this.skinFlowLayoutPanel2.Size = new System.Drawing.Size(418, 74);
+            this.skinFlowLayoutPanel2.Size = new System.Drawing.Size(462, 74);
             this.skinFlowLayoutPanel2.TabIndex = 0;
             // 
             // skinButton4
@@ -266,7 +266,7 @@ namespace KTV_management_system
             this.skinButton4.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton4.DownBack = null;
             this.skinButton4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinButton4.Location = new System.Drawing.Point(340, 3);
+            this.skinButton4.Location = new System.Drawing.Point(384, 3);
             this.skinButton4.MouseBack = null;
             this.skinButton4.Name = "skinButton4";
             this.skinButton4.NormlBack = null;
@@ -287,7 +287,7 @@ namespace KTV_management_system
             this.skinButton5.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton5.DownBack = null;
             this.skinButton5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinButton5.Location = new System.Drawing.Point(259, 3);
+            this.skinButton5.Location = new System.Drawing.Point(303, 3);
             this.skinButton5.MouseBack = null;
             this.skinButton5.Name = "skinButton5";
             this.skinButton5.NormlBack = null;
@@ -308,7 +308,7 @@ namespace KTV_management_system
             this.skinButton6.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton6.DownBack = null;
             this.skinButton6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinButton6.Location = new System.Drawing.Point(178, 3);
+            this.skinButton6.Location = new System.Drawing.Point(222, 3);
             this.skinButton6.MouseBack = null;
             this.skinButton6.Name = "skinButton6";
             this.skinButton6.NormlBack = null;
@@ -384,20 +384,20 @@ namespace KTV_management_system
             // 
             this.skinDataGridView1.AllowUserToAddRows = false;
             this.skinDataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.skinDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.skinDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.skinDataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.skinDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.skinDataGridView1.ColumnFont = null;
             this.skinDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.skinDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.skinDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.skinDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.skinDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -406,14 +406,14 @@ namespace KTV_management_system
             this.Column4,
             this.Column5});
             this.skinDataGridView1.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.skinDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.skinDataGridView1.DefaultCellStyle = dataGridViewCellStyle11;
             this.skinDataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.skinDataGridView1.EnableHeadersVisualStyles = false;
             this.skinDataGridView1.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -426,11 +426,11 @@ namespace KTV_management_system
             this.skinDataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.skinDataGridView1.RowHeadersWidth = 51;
             this.skinDataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.skinDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.skinDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.skinDataGridView1.RowTemplate.Height = 23;
             this.skinDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.skinDataGridView1.Size = new System.Drawing.Size(395, 473);
@@ -599,7 +599,7 @@ namespace KTV_management_system
             this.skinPanel3.MouseBack = null;
             this.skinPanel3.Name = "skinPanel3";
             this.skinPanel3.NormlBack = null;
-            this.skinPanel3.Size = new System.Drawing.Size(422, 667);
+            this.skinPanel3.Size = new System.Drawing.Size(456, 667);
             this.skinPanel3.TabIndex = 2;
             // 
             // skinCaptionPanel2
@@ -613,7 +613,7 @@ namespace KTV_management_system
             this.skinCaptionPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.skinCaptionPanel2.Location = new System.Drawing.Point(0, 0);
             this.skinCaptionPanel2.Name = "skinCaptionPanel2";
-            this.skinCaptionPanel2.Size = new System.Drawing.Size(418, 663);
+            this.skinCaptionPanel2.Size = new System.Drawing.Size(452, 663);
             this.skinCaptionPanel2.TabIndex = 0;
             this.skinCaptionPanel2.Text = "T0001消费清单（全场打折0.1）";
             // 
@@ -636,21 +636,21 @@ namespace KTV_management_system
             // 
             this.skinDataGridView2.AllowUserToAddRows = false;
             this.skinDataGridView2.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.skinDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.skinDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.skinDataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.skinDataGridView2.BackgroundColor = System.Drawing.SystemColors.Window;
             this.skinDataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.skinDataGridView2.ColumnFont = null;
             this.skinDataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.skinDataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.skinDataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.skinDataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.skinDataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column16,
@@ -667,14 +667,14 @@ namespace KTV_management_system
             this.Column15});
             this.skinDataGridView2.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
             this.skinDataGridView2.ContextMenuStrip = this.skinContextMenuStrip1;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.skinDataGridView2.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.skinDataGridView2.DefaultCellStyle = dataGridViewCellStyle15;
             this.skinDataGridView2.Dock = System.Windows.Forms.DockStyle.Top;
             this.skinDataGridView2.EnableHeadersVisualStyles = false;
             this.skinDataGridView2.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -687,14 +687,14 @@ namespace KTV_management_system
             this.skinDataGridView2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.skinDataGridView2.RowHeadersWidth = 51;
             this.skinDataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.skinDataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.skinDataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.skinDataGridView2.RowTemplate.Height = 23;
             this.skinDataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.skinDataGridView2.Size = new System.Drawing.Size(414, 536);
+            this.skinDataGridView2.Size = new System.Drawing.Size(448, 536);
             this.skinDataGridView2.TabIndex = 2;
             this.skinDataGridView2.TitleBack = null;
             this.skinDataGridView2.TitleBackColorBegin = System.Drawing.Color.White;
@@ -874,7 +874,7 @@ namespace KTV_management_system
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(340, 5);
+            this.textBox2.Location = new System.Drawing.Point(371, 5);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(73, 25);
             this.textBox2.TabIndex = 1;
@@ -886,7 +886,7 @@ namespace KTV_management_system
             this.skinLabel5.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel5.BorderColor = System.Drawing.Color.White;
             this.skinLabel5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel5.Location = new System.Drawing.Point(283, 7);
+            this.skinLabel5.Location = new System.Drawing.Point(314, 7);
             this.skinLabel5.Name = "skinLabel5";
             this.skinLabel5.Size = new System.Drawing.Size(54, 20);
             this.skinLabel5.TabIndex = 0;
@@ -897,7 +897,7 @@ namespace KTV_management_system
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(847, 781);
+            this.ClientSize = new System.Drawing.Size(881, 781);
             this.Controls.Add(this.skinPanel3);
             this.Controls.Add(this.skinPanel2);
             this.Controls.Add(this.skinPanel1);

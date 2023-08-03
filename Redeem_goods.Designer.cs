@@ -84,6 +84,7 @@ namespace KTV_management_system
             this.skinLabel1 = new CCWin.SkinControl.SkinLabel();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.skinTreeView1 = new CCWin.SkinControl.SkinTreeView();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
             this.skinPanel5 = new CCWin.SkinControl.SkinPanel();
             this.skinFlowLayoutPanel1 = new CCWin.SkinControl.SkinFlowLayoutPanel();
@@ -96,7 +97,6 @@ namespace KTV_management_system
             this.skinButton4 = new CCWin.SkinControl.SkinButton();
             this.skinButton5 = new CCWin.SkinControl.SkinButton();
             this.skinButton6 = new CCWin.SkinControl.SkinButton();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.skinPanel3.SuspendLayout();
             this.skinCaptionPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.skinDataGridView2)).BeginInit();
@@ -123,11 +123,11 @@ namespace KTV_management_system
             this.skinPanel3.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinPanel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.skinPanel3.DownBack = null;
-            this.skinPanel3.Location = new System.Drawing.Point(421, 110);
+            this.skinPanel3.Location = new System.Drawing.Point(419, 110);
             this.skinPanel3.MouseBack = null;
             this.skinPanel3.Name = "skinPanel3";
             this.skinPanel3.NormlBack = null;
-            this.skinPanel3.Size = new System.Drawing.Size(422, 667);
+            this.skinPanel3.Size = new System.Drawing.Size(455, 667);
             this.skinPanel3.TabIndex = 5;
             // 
             // skinCaptionPanel2
@@ -141,7 +141,7 @@ namespace KTV_management_system
             this.skinCaptionPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.skinCaptionPanel2.Location = new System.Drawing.Point(0, 0);
             this.skinCaptionPanel2.Name = "skinCaptionPanel2";
-            this.skinCaptionPanel2.Size = new System.Drawing.Size(418, 663);
+            this.skinCaptionPanel2.Size = new System.Drawing.Size(451, 663);
             this.skinCaptionPanel2.TabIndex = 0;
             this.skinCaptionPanel2.Text = "T0001消费清单（全场打折0.1）";
             // 
@@ -221,7 +221,7 @@ namespace KTV_management_system
             this.skinDataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.skinDataGridView2.RowTemplate.Height = 23;
             this.skinDataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.skinDataGridView2.Size = new System.Drawing.Size(414, 536);
+            this.skinDataGridView2.Size = new System.Drawing.Size(447, 536);
             this.skinDataGridView2.TabIndex = 2;
             this.skinDataGridView2.TitleBack = null;
             this.skinDataGridView2.TitleBackColorBegin = System.Drawing.Color.White;
@@ -401,7 +401,7 @@ namespace KTV_management_system
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(340, 5);
+            this.textBox2.Location = new System.Drawing.Point(368, 5);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(73, 25);
             this.textBox2.TabIndex = 1;
@@ -412,7 +412,7 @@ namespace KTV_management_system
             this.skinLabel5.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel5.BorderColor = System.Drawing.Color.White;
             this.skinLabel5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel5.Location = new System.Drawing.Point(283, 7);
+            this.skinLabel5.Location = new System.Drawing.Point(311, 7);
             this.skinLabel5.Name = "skinLabel5";
             this.skinLabel5.Size = new System.Drawing.Size(54, 20);
             this.skinLabel5.TabIndex = 0;
@@ -742,6 +742,13 @@ namespace KTV_management_system
             this.skinTreeView1.TabIndex = 2;
             this.skinTreeView1.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.skinTreeView1_NodeMouseDoubleClick);
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "close-folder.png");
+            this.imageList1.Images.SetKeyName(1, "open-folder.png");
+            // 
             // skinPanel1
             // 
             this.skinPanel1.BackColor = System.Drawing.Color.Transparent;
@@ -755,7 +762,7 @@ namespace KTV_management_system
             this.skinPanel1.MouseBack = null;
             this.skinPanel1.Name = "skinPanel1";
             this.skinPanel1.NormlBack = null;
-            this.skinPanel1.Size = new System.Drawing.Size(839, 78);
+            this.skinPanel1.Size = new System.Drawing.Size(870, 78);
             this.skinPanel1.TabIndex = 3;
             // 
             // skinPanel5
@@ -765,7 +772,6 @@ namespace KTV_management_system
             this.skinPanel5.Controls.Add(this.skinLabel6);
             this.skinPanel5.Controls.Add(this.skinLabel7);
             this.skinPanel5.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.skinPanel5.DownBack = null;
             this.skinPanel5.Location = new System.Drawing.Point(0, 0);
             this.skinPanel5.MouseBack = null;
@@ -864,11 +870,11 @@ namespace KTV_management_system
             this.skinPanel4.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinPanel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.skinPanel4.DownBack = null;
-            this.skinPanel4.Location = new System.Drawing.Point(407, 0);
+            this.skinPanel4.Location = new System.Drawing.Point(413, 0);
             this.skinPanel4.MouseBack = null;
             this.skinPanel4.Name = "skinPanel4";
             this.skinPanel4.NormlBack = null;
-            this.skinPanel4.Size = new System.Drawing.Size(428, 74);
+            this.skinPanel4.Size = new System.Drawing.Size(453, 74);
             this.skinPanel4.TabIndex = 2;
             // 
             // skinFlowLayoutPanel2
@@ -881,11 +887,11 @@ namespace KTV_management_system
             this.skinFlowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.skinFlowLayoutPanel2.DownBack = null;
             this.skinFlowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.skinFlowLayoutPanel2.Location = new System.Drawing.Point(10, 0);
+            this.skinFlowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.skinFlowLayoutPanel2.MouseBack = null;
             this.skinFlowLayoutPanel2.Name = "skinFlowLayoutPanel2";
             this.skinFlowLayoutPanel2.NormlBack = null;
-            this.skinFlowLayoutPanel2.Size = new System.Drawing.Size(418, 74);
+            this.skinFlowLayoutPanel2.Size = new System.Drawing.Size(453, 74);
             this.skinFlowLayoutPanel2.TabIndex = 0;
             // 
             // skinButton4
@@ -898,7 +904,7 @@ namespace KTV_management_system
             this.skinButton4.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton4.DownBack = null;
             this.skinButton4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinButton4.Location = new System.Drawing.Point(340, 3);
+            this.skinButton4.Location = new System.Drawing.Point(375, 3);
             this.skinButton4.MouseBack = null;
             this.skinButton4.Name = "skinButton4";
             this.skinButton4.NormlBack = null;
@@ -919,7 +925,7 @@ namespace KTV_management_system
             this.skinButton5.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton5.DownBack = null;
             this.skinButton5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinButton5.Location = new System.Drawing.Point(259, 3);
+            this.skinButton5.Location = new System.Drawing.Point(294, 3);
             this.skinButton5.MouseBack = null;
             this.skinButton5.Name = "skinButton5";
             this.skinButton5.NormlBack = null;
@@ -940,7 +946,7 @@ namespace KTV_management_system
             this.skinButton6.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton6.DownBack = null;
             this.skinButton6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinButton6.Location = new System.Drawing.Point(178, 3);
+            this.skinButton6.Location = new System.Drawing.Point(213, 3);
             this.skinButton6.MouseBack = null;
             this.skinButton6.Name = "skinButton6";
             this.skinButton6.NormlBack = null;
@@ -951,18 +957,11 @@ namespace KTV_management_system
             this.skinButton6.UseVisualStyleBackColor = false;
             this.skinButton6.Click += new System.EventHandler(this.skinButton6_Click);
             // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "close-folder.png");
-            this.imageList1.Images.SetKeyName(1, "open-folder.png");
-            // 
             // Redeem_goods
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 781);
+            this.ClientSize = new System.Drawing.Size(878, 781);
             this.Controls.Add(this.skinPanel3);
             this.Controls.Add(this.skinPanel2);
             this.Controls.Add(this.skinPanel1);

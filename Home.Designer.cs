@@ -46,8 +46,6 @@ namespace KTV_management_system
             this.退出系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.收银结算ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.宾客结单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.合并账单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.拆分账单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.已挂账单结账ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.宾客消费明细ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -117,7 +115,7 @@ namespace KTV_management_system
             this.skinPanel5 = new CCWin.SkinControl.SkinPanel();
             this.skinPanel6 = new CCWin.SkinControl.SkinPanel();
             this.skinCaptionPanel4 = new CCWin.SkinControl.SkinCaptionPanel();
-            this.skinTextBox1 = new CCWin.SkinControl.SkinTextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.skinCaptionPanel5 = new CCWin.SkinControl.SkinCaptionPanel();
             this.skinButton5 = new CCWin.SkinControl.SkinButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
@@ -159,12 +157,8 @@ namespace KTV_management_system
             this.修改登记ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.更换包间ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.包间状态ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
-            this.合并账单ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.分拆账单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.宾客预订ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.分拆结账ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Tool = new System.Windows.Forms.ToolStripMenuItem();
             this.Large_icons = new System.Windows.Forms.ImageList(this.components);
             this.skinFlowLayoutPanel1 = new CCWin.SkinControl.SkinFlowLayoutPanel();
@@ -209,7 +203,6 @@ namespace KTV_management_system
             this.进店时间 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.已用时间 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.备注 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.skinMenuStrip1.SuspendLayout();
             this.skinToolStrip1.SuspendLayout();
             this.skinPanel1.SuspendLayout();
@@ -376,8 +369,6 @@ namespace KTV_management_system
             // 
             this.收银结算ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.宾客结单ToolStripMenuItem,
-            this.合并账单ToolStripMenuItem,
-            this.拆分账单ToolStripMenuItem,
             this.toolStripSeparator3,
             this.已挂账单结账ToolStripMenuItem,
             this.宾客消费明细ToolStripMenuItem,
@@ -393,20 +384,6 @@ namespace KTV_management_system
             this.宾客结单ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
             this.宾客结单ToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
             this.宾客结单ToolStripMenuItem.Text = "宾客结账";
-            // 
-            // 合并账单ToolStripMenuItem
-            // 
-            this.合并账单ToolStripMenuItem.Name = "合并账单ToolStripMenuItem";
-            this.合并账单ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.合并账单ToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
-            this.合并账单ToolStripMenuItem.Text = "合并账单";
-            // 
-            // 拆分账单ToolStripMenuItem
-            // 
-            this.拆分账单ToolStripMenuItem.Name = "拆分账单ToolStripMenuItem";
-            this.拆分账单ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            this.拆分账单ToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
-            this.拆分账单ToolStripMenuItem.Text = "拆分账单";
             // 
             // toolStripSeparator3
             // 
@@ -1268,7 +1245,7 @@ namespace KTV_management_system
             // 
             this.skinCaptionPanel4.BackColor = System.Drawing.Color.Gainsboro;
             this.skinCaptionPanel4.CaptionFont = new System.Drawing.Font("Microsoft YaHei UI", 9F);
-            this.skinCaptionPanel4.Controls.Add(this.skinTextBox1);
+            this.skinCaptionPanel4.Controls.Add(this.textBox2);
             this.skinCaptionPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.skinCaptionPanel4.Image = ((System.Drawing.Image)(resources.GetObject("skinCaptionPanel4.Image")));
             this.skinCaptionPanel4.Location = new System.Drawing.Point(0, 686);
@@ -1278,48 +1255,14 @@ namespace KTV_management_system
             this.skinCaptionPanel4.TabIndex = 0;
             this.skinCaptionPanel4.Text = "[F3]快速通道";
             // 
-            // skinTextBox1
+            // textBox2
             // 
-            this.skinTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.skinTextBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.skinTextBox1.DownBack = null;
-            this.skinTextBox1.Icon = null;
-            this.skinTextBox1.IconIsButton = false;
-            this.skinTextBox1.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox1.IsPasswordChat = '\0';
-            this.skinTextBox1.IsSystemPasswordChar = false;
-            this.skinTextBox1.Lines = new string[0];
-            this.skinTextBox1.Location = new System.Drawing.Point(2, 24);
-            this.skinTextBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.skinTextBox1.MaxLength = 32767;
-            this.skinTextBox1.MinimumSize = new System.Drawing.Size(28, 28);
-            this.skinTextBox1.MouseBack = null;
-            this.skinTextBox1.MouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox1.Multiline = false;
-            this.skinTextBox1.Name = "skinTextBox1";
-            this.skinTextBox1.NormlBack = null;
-            this.skinTextBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.skinTextBox1.ReadOnly = false;
-            this.skinTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.skinTextBox1.Size = new System.Drawing.Size(283, 28);
-            // 
-            // 
-            // 
-            this.skinTextBox1.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.skinTextBox1.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTextBox1.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
-            this.skinTextBox1.SkinTxt.Location = new System.Drawing.Point(5, 5);
-            this.skinTextBox1.SkinTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.skinTextBox1.SkinTxt.Name = "BaseText";
-            this.skinTextBox1.SkinTxt.Size = new System.Drawing.Size(273, 22);
-            this.skinTextBox1.SkinTxt.TabIndex = 0;
-            this.skinTextBox1.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox1.SkinTxt.WaterText = "";
-            this.skinTextBox1.TabIndex = 0;
-            this.skinTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.skinTextBox1.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox1.WaterText = "";
-            this.skinTextBox1.WordWrap = true;
+            this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textBox2.Location = new System.Drawing.Point(2, 24);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(283, 25);
+            this.textBox2.TabIndex = 0;
+            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
             // 
             // skinCaptionPanel5
             // 
@@ -1444,7 +1387,6 @@ namespace KTV_management_system
             this.skinCaptionPanel6.Name = "skinCaptionPanel6";
             this.skinCaptionPanel6.Size = new System.Drawing.Size(710, 157);
             this.skinCaptionPanel6.TabIndex = 9;
-            this.skinCaptionPanel6.Text = "skinCaptionPanel6";
             // 
             // skinListView2
             // 
@@ -1659,17 +1601,13 @@ namespace KTV_management_system
             this.修改登记ToolStripMenuItem1,
             this.更换包间ToolStripMenuItem1,
             this.包间状态ToolStripMenuItem1,
-            this.toolStripSeparator9,
-            this.合并账单ToolStripMenuItem1,
-            this.分拆账单ToolStripMenuItem,
             this.toolStripSeparator10,
             this.宾客预订ToolStripMenuItem,
-            this.分拆结账ToolStripMenuItem,
             this.Tool});
             this.skinContextMenuStrip1.ItemSplitter = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
             this.skinContextMenuStrip1.Name = "skinContextMenuStrip1";
             this.skinContextMenuStrip1.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinContextMenuStrip1.Size = new System.Drawing.Size(211, 338);
+            this.skinContextMenuStrip1.Size = new System.Drawing.Size(211, 260);
             this.skinContextMenuStrip1.SkinAllColor = true;
             this.skinContextMenuStrip1.TitleAnamorphosis = true;
             this.skinContextMenuStrip1.TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(228)))), ((int)(((byte)(236)))));
@@ -1714,12 +1652,14 @@ namespace KTV_management_system
             this.修改登记ToolStripMenuItem1.Name = "修改登记ToolStripMenuItem1";
             this.修改登记ToolStripMenuItem1.Size = new System.Drawing.Size(210, 24);
             this.修改登记ToolStripMenuItem1.Text = "修改登记";
+            this.修改登记ToolStripMenuItem1.Click += new System.EventHandler(this.修改登记ToolStripMenuItem1_Click);
             // 
             // 更换包间ToolStripMenuItem1
             // 
             this.更换包间ToolStripMenuItem1.Name = "更换包间ToolStripMenuItem1";
             this.更换包间ToolStripMenuItem1.Size = new System.Drawing.Size(210, 24);
             this.更换包间ToolStripMenuItem1.Text = "更换包间";
+            this.更换包间ToolStripMenuItem1.Click += new System.EventHandler(this.更换包间ToolStripMenuItem1_Click);
             // 
             // 包间状态ToolStripMenuItem1
             // 
@@ -1727,23 +1667,6 @@ namespace KTV_management_system
             this.包间状态ToolStripMenuItem1.Size = new System.Drawing.Size(210, 24);
             this.包间状态ToolStripMenuItem1.Text = "包间状态";
             this.包间状态ToolStripMenuItem1.Click += new System.EventHandler(this.包间状态ToolStripMenuItem1_Click);
-            // 
-            // toolStripSeparator9
-            // 
-            this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(207, 6);
-            // 
-            // 合并账单ToolStripMenuItem1
-            // 
-            this.合并账单ToolStripMenuItem1.Name = "合并账单ToolStripMenuItem1";
-            this.合并账单ToolStripMenuItem1.Size = new System.Drawing.Size(210, 24);
-            this.合并账单ToolStripMenuItem1.Text = "合并账单";
-            // 
-            // 分拆账单ToolStripMenuItem
-            // 
-            this.分拆账单ToolStripMenuItem.Name = "分拆账单ToolStripMenuItem";
-            this.分拆账单ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.分拆账单ToolStripMenuItem.Text = "分拆账单";
             // 
             // toolStripSeparator10
             // 
@@ -1756,12 +1679,6 @@ namespace KTV_management_system
             this.宾客预订ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.宾客预订ToolStripMenuItem.Text = "宾客预订";
             this.宾客预订ToolStripMenuItem.Click += new System.EventHandler(this.宾客预订ToolStripMenuItem_Click);
-            // 
-            // 分拆结账ToolStripMenuItem
-            // 
-            this.分拆结账ToolStripMenuItem.Name = "分拆结账ToolStripMenuItem";
-            this.分拆结账ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.分拆结账ToolStripMenuItem.Text = "分拆结账";
             // 
             // Tool
             // 
@@ -2119,12 +2036,6 @@ namespace KTV_management_system
             this.备注.Text = "备注";
             this.备注.Width = 159;
             // 
-            // timer2
-            // 
-            this.timer2.Enabled = true;
-            this.timer2.Interval = 1000;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -2163,6 +2074,7 @@ namespace KTV_management_system
             this.skinPanel5.ResumeLayout(false);
             this.skinPanel6.ResumeLayout(false);
             this.skinCaptionPanel4.ResumeLayout(false);
+            this.skinCaptionPanel4.PerformLayout();
             this.skinCaptionPanel5.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -2197,8 +2109,6 @@ namespace KTV_management_system
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem 宾客结单ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 合并账单ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 拆分账单ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 已挂账单结账ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 宾客消费明细ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 宾客消费明细ToolStripMenuItem1;
@@ -2249,7 +2159,6 @@ namespace KTV_management_system
         private CCWin.SkinControl.SkinLabel skinLabel12;
         private CCWin.SkinControl.SkinPanel skinPanel5;
         private CCWin.SkinControl.SkinCaptionPanel skinCaptionPanel4;
-        private CCWin.SkinControl.SkinTextBox skinTextBox1;
         private CCWin.SkinControl.SkinPanel skinPanel6;
         private CCWin.SkinControl.SkinPanel skinPanel7;
         private CCWin.SkinControl.SkinButton skinButton1;
@@ -2294,12 +2203,8 @@ namespace KTV_management_system
         private System.Windows.Forms.ToolStripMenuItem 修改登记ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem 更换包间ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem 包间状态ToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
-        private System.Windows.Forms.ToolStripMenuItem 合并账单ToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem 分拆账单ToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
         private System.Windows.Forms.ToolStripMenuItem 宾客预订ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 分拆结账ToolStripMenuItem;
         private System.Windows.Forms.ImageList Small_icons;
         private System.Windows.Forms.ImageList medium;
         private System.Windows.Forms.ImageList Large_icons;
@@ -2358,8 +2263,8 @@ namespace KTV_management_system
         private CCWin.SkinControl.SkinLabel skinLabel19;
         private CCWin.SkinControl.SkinLabel skinLabel18;
         private CCWin.SkinControl.SkinLabel skinLabel17;
-        private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
 

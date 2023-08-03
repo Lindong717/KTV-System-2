@@ -133,6 +133,12 @@ namespace KTV_management_system
                     return;
                 }
 
+                if (skinDataGridView2.Rows[skinDataGridView2.CurrentCell.RowIndex].Cells["Column8"].Value.ToString() == "0")
+                {
+                    MessageBox.Show("不能对赠单以及退单进行重复操作", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 DbHelper.executeNonQuery($"update [dbo].[Consumption_list] set [project_ID] += '(赠)',[unit_price] = '0',[amount] = '0' where [manifestID] = '{skinDataGridView2.Rows[skinDataGridView2.CurrentCell.RowIndex].Cells["Column16"].Value}'");
                 Inquire();
             }
@@ -162,7 +168,18 @@ namespace KTV_management_system
                     return;
                 }
 
-                DbHelper.executeNonQuery($"delete from [dbo].[Consumption_list] where [manifestID] = '{skinDataGridView2.Rows[skinDataGridView2.CurrentCell.RowIndex].Cells["Column16"].Value}'");
+                if (skinDataGridView2.Rows[skinDataGridView2.CurrentCell.RowIndex].Cells["Column8"].Value.ToString() == "0")
+                {
+                    MessageBox.Show("不能对赠单以及退单进行重复操作", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                DbHelper.executeNonQuery($@"update [dbo].[Consumption_list] set
+                [project_ID] += '(退)',
+                [unit_price] = '0',
+                [amount] = '0'
+                where [manifestID] = '{skinDataGridView2.Rows[skinDataGridView2.CurrentCell.RowIndex].Cells["Column16"].Value}'");
+
                 Inquire();
             }
             catch (Exception ee)

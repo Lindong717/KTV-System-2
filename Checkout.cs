@@ -1,4 +1,5 @@
 ﻿using CCWin;
+using CCWin.SkinControl;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,7 @@ namespace KTV_management_system
     public partial class Checkout : Skin_Mac
     {
         public string Private_room_number;
+        private static string tmp;
 
         public Checkout()
         {
@@ -28,8 +30,8 @@ namespace KTV_management_system
             string unit_price_sum = DbHelper.executeScalar($"select SUM([unit_price] * [quantity]) from [dbo].[Consumption_list] where [Private_room] = '{Private_room_number}'");
             string deposit = DbHelper.executeScalar($"select [deposit] from [dbo].[Private_rooms] where [Private_rooms_ID] = '{Private_room_number}'");
 
-            DbHelper.skinDataGridView(skinDataGridView1, $@"select [Private_room],[project_ID],[unit_price],[Fold_rate],[amount],[unit_price] * [quantity] - [amount] as 'WLJSB',[quantity],[amount] as '1145',[Waiter],[Crediting_time],[Bookkeeper] from [dbo].[Consumption_list]
-            where [Private_room] = '{Private_room_number}'","");
+            DbHelper.skinDataGridView(skinDataGridView1, $@"select [Private_room],[project_ID],[unit_price],[Fold_rate],[amount],CONVERT(decimal(18, 1),[unit_price] * [quantity] - [amount]) as 'WLJSB',[quantity],[amount] as '1145',[Waiter],[Crediting_time],[Bookkeeper] from [dbo].[Consumption_list]
+            where [Private_room] = '{Private_room_number}'", "");
 
             skinLabel3.Text = Private_room_number;
             skinCaptionPanel1.Text = $"{Private_room_number} 消费清单  合计：{sum}";
@@ -41,20 +43,28 @@ namespace KTV_management_system
             skinLabel5.Text = unit_price_sum;
             skinLabel18.Text = deposit;
             skinLabel2.Text = $"ZD{DateTime.Now:yyyyMMdd}{Convert.ToInt32(DbHelper.executeScalar("select count(*)+1 from [dbo].[Checkout]")):0000}";
+
+            skinDataGridView1.RowHeadersVisible = false;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(textBox1.Text) && !string.IsNullOrEmpty(textBox2.Text))
+            try
             {
-                if (float.Parse(textBox2.Text) - float.Parse(textBox1.Text) < 0)
+                if (!string.IsNullOrEmpty(textBox1.Text))
                 {
-                    skinLabel24.Text = Math.Abs((double.Parse(textBox2.Text) - double.Parse(textBox1.Text))).ToString("0.00");
-                    return;
+                    if (float.Parse(textBox2.Text) - float.Parse(textBox1.Text) < 0)
+                    {
+                        skinLabel24.Text = Math.Abs((double.Parse(textBox2.Text) - double.Parse(textBox1.Text))).ToString("0.00");
+                        return;
+                    }
                 }
-            }
 
-            skinLabel24.Text = "0.00";
+                skinLabel24.Text = "0.00";
+            }catch(Exception ee)
+            {
+                MessageBox.Show(ee.Message, "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void skinButton5_Click(object sender, EventArgs e)
@@ -100,6 +110,81 @@ namespace KTV_management_system
             where [Private_rooms_ID] = '{Private_room_number}'");
 
             Close();
+        }
+
+        private void textBox4_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && textBox4.Focus())
+            {
+                if (DbHelper.executeScalar($"select count(*) from [dbo].[Member_Information] where [InformationID] = '{textBox4.Text}'") == "1")
+                {
+                    skinLabel9.Text = DbHelper.executeScalar($"select [memberName] from [dbo].[Member_Information] where [InformationID] = '{textBox4.Text}'");
+                    skinLabel7.Text = DbHelper.executeScalar($@"select [TypeName] from [dbo].[Member_Information] as a
+                    join [dbo].[Member] as b on a.Membership_Level = b.memberID
+                    where [InformationID] = '{textBox4.Text}'");
+                    skinLabel11.Text = DbHelper.executeScalar($"select [Integral] from [dbo].[Member_Information] where [InformationID] = '{textBox4.Text}'");
+                    skinLabel14.Text = DbHelper.executeScalar($@"select [Fold_rate] from [dbo].[Member_Information] as a
+                    join [dbo].[Member] as b on a.Membership_Level = b.memberID
+                    where [InformationID] = '{textBox4.Text}'");
+
+                    double Should = 0.00;
+                    double Preferential = 0.00;
+
+                    foreach (DataGridViewRow row in skinDataGridView1.Rows)
+                    {
+                        row.Cells["Column4"].Value = skinLabel14.Text;
+                        row.Cells["Column5"].Value = (Convert.ToDouble(row.Cells["Column3"].Value) * Convert.ToDouble(row.Cells["Column4"].Value)).ToString("0.00");
+                        row.Cells["Column6"].Value = (Convert.ToDouble(row.Cells["Column3"].Value) - Convert.ToDouble(row.Cells["Column5"].Value)).ToString("0.00");
+                        row.Cells["Column8"].Value = (Convert.ToDouble(row.Cells["Column5"].Value) * Convert.ToDouble(row.Cells["Column7"].Value)).ToString("0.00");
+
+                        Should += Convert.ToDouble(row.Cells["Column8"].Value);
+                        Preferential += Convert.ToDouble(row.Cells["Column6"].Value);
+                    }
+
+                    Should -= Convert.ToDouble(skinLabel18.Text);
+
+                    skinLabel16.Text = Should.ToString();
+                    skinLabel20.Text = Preferential.ToString();
+                    textBox2.Text = Should.ToString();
+                    textBox1.Text = Should.ToString();
+
+                    textBox4.ReadOnly = true;
+                    return;
+                }
+
+                textBox4.Text = "普通宾客";
+                MessageBox.Show("该会员不存在","系统提示",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }
+
+        private void skinCheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            Free_Chargeback();
+        }
+
+        private void skinCheckBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            Free_Chargeback();
+        }
+
+        private void Free_Chargeback()
+        {
+            if (string.IsNullOrEmpty(tmp))
+            {
+                tmp = textBox2.Text;
+            }
+
+            if (skinCheckBox1.Checked && skinCheckBox1.Checked)
+            {
+                textBox1.Text = "0.00";
+                textBox2.Text = "0.00";
+
+                textBox1.ReadOnly = true;
+                return;
+            }
+
+            textBox1.ReadOnly = false;
+            textBox2.Text = tmp;
         }
     }
 }
