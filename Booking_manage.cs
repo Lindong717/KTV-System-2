@@ -84,6 +84,7 @@ namespace KTV_management_system
             if (MessageBox.Show("该操作不可恢复，是否删除？", "系统提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 DbHelper.executeNonQuery($"delete from [dbo].[Appointment_management] where [Customer_number] = '{skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column10"].Value}'");
+                DbHelper.executeNonQuery($"update [dbo].[Private_rooms] set [Private_room_status] = '0' where [Private_rooms_ID] = '{skinDataGridView1.Rows[skinDataGridView1.CurrentCell.RowIndex].Cells["Column5"].Value}'");
                 flushed();
             }
         }

@@ -39,6 +39,7 @@ namespace KTV_management_system
             skinDataGridView2.Focus();
             skinDataGridView1.RowHeadersVisible = false;
             skinDataGridView2.RowHeadersVisible = false;
+            metroTabControl1.SelectedTab = metroTabPage1;
 
             DbHelper.exchangeTree(skinTreeView1, "select [CommodityTypeID],[TypeName] from [dbo].[commodityType]");
 

@@ -82,6 +82,12 @@ namespace KTV_management_system
                 }
             }
 
+            if (textBox2.Text.Length != 11)
+            {
+                MessageBox.Show("联系电话必须等于11位", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (textBox4.Visible)
             {
                 if (string.IsNullOrEmpty(textBox4.Text))

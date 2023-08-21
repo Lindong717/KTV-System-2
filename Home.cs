@@ -185,7 +185,7 @@ namespace KTV_management_system
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "系统提示",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }
@@ -304,17 +304,33 @@ namespace KTV_management_system
 
         private void 包间状态ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Modify_the_status modify_The_Status = new Modify_the_status();
+            revise_state();
+        }
 
-            modify_The_Status.Room_number = skinListView1.SelectedItems[0].SubItems[0].Text;
-            modify_The_Status.state = skinListView1.SelectedItems[0].SubItems[1].Text;
+        private void revise_state()
+        {
+            if(skinListView1.SelectedItems.Count > 0)
+            {
+                Modify_the_status modify_The_Status = new Modify_the_status();
 
-            modify_The_Status.ShowDialog();
+                modify_The_Status.Room_number = skinListView1.SelectedItems[0].SubItems[0].Text;
+                modify_The_Status.state = skinListView1.SelectedItems[0].SubItems[1].Text;
 
-            Inquire();
+                modify_The_Status.ShowDialog();
+
+                Inquire();
+                return;
+            }
+
+            MessageBox.Show("请选择包间后在修改状态", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void toolStripButton11_Click(object sender, EventArgs e)
+        {
+            system_settings();
+        }
+
+        private void system_settings()
         {
             System_settings system_Settings = new System_settings();
             system_Settings.ShowDialog();
@@ -455,13 +471,24 @@ namespace KTV_management_system
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            if (skinListView1.SelectedItems[0].SubItems[1].Text == "占用")
+            Billings();
+        }
+
+        private void Billings()
+        {
+            if (skinListView1.SelectedItems.Count > 0)
             {
-                MessageBox.Show("该包间已被占用", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (skinListView1.SelectedItems[0].SubItems[1].Text == "占用")
+                {
+                    MessageBox.Show("该包间已被占用", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                Billing();
                 return;
             }
 
-            Billing();
+            MessageBox.Show("请选择包间后在开单", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void 增加消费ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -471,15 +498,18 @@ namespace KTV_management_system
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            skinListView1.Items[0].Selected = true;
-
-            if (skinListView1.SelectedItems.Count > 0 && skinListView1.SelectedItems[0].SubItems[1].Text != "占用")
+            if (skinListView1.SelectedItems.Count > 0)
             {
-                MessageBox.Show("不能对非占用包间进行该操作", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                if (skinListView1.SelectedItems.Count > 0 && skinListView1.SelectedItems[0].SubItems[1].Text != "占用")
+                {
+                    MessageBox.Show("不能对非占用包间进行该操作", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                Increase_consumption();
             }
 
-            Increase_consumption();
+            MessageBox.Show("请选择包间后在增加消费", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void skinButton2_Click(object sender, EventArgs e)
@@ -509,10 +539,34 @@ namespace KTV_management_system
 
         private void 宾客结账ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Checkout checkout = new Checkout();
-            checkout.Private_room_number = skinListView1.SelectedItems[0].SubItems[0].Text;
-            checkout.ShowDialog();
-            Inquire();
+            Checkout();
+        }
+
+        private void Checkout()
+        {
+            Checkout_method();
+        }
+
+        private void Checkout_method()
+        {
+            if (skinListView1.SelectedItems.Count > 0)
+            {
+
+                if (skinListView1.SelectedItems[0].SubItems[1].Text != "占用")
+                {
+                    MessageBox.Show("不能对非占用包间进行该操作", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                Checkout checkout = new Checkout();
+                checkout.Private_room_number = skinListView1.SelectedItems[0].SubItems[0].Text;
+                checkout.ShowDialog();
+
+                Inquire();
+                return;
+            }
+
+            MessageBox.Show("请选择要结账的包间", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void toolStripButton5_Click(object sender, EventArgs e)
@@ -533,6 +587,11 @@ namespace KTV_management_system
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            booking_manage();
+        }
+
+        private void booking_manage()
         {
             Booking_manage booking = new Booking_manage();
             booking.ShowDialog();
@@ -612,20 +671,107 @@ namespace KTV_management_system
 
         private void 更换包间ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Replacement replacement = new Replacement();
-            replacement.Private_room_number = skinListView1.SelectedItems[0].SubItems[0].Text;
-            replacement.ShowDialog();
+            replacement();
+        }
 
-            Inquire();
+        private void replacement()
+        {
+            if(skinListView1.SelectedItems.Count > 0)
+            {
+
+                if (skinListView1.SelectedItems[0].SubItems[1].Text != "占用")
+                {
+                    MessageBox.Show("不能对非占用包间进行该操作", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                Replacement replacement = new Replacement();
+                replacement.Private_room_number = skinListView1.SelectedItems[0].SubItems[0].Text;
+                replacement.ShowDialog();
+
+                Inquire();
+                return;
+            }
+
+            MessageBox.Show("请选择要更换的包间", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void 修改登记ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Revise_Recording revise = new Revise_Recording();
-            revise.Private_rooms_ID = skinListView1.SelectedItems[0].SubItems[0].Text;
-            revise.ShowDialog();
+            revise_Recording();
+        }
 
-            Inquire();
+        private void revise_Recording()
+        {
+            if(skinListView1.SelectedItems.Count > 0)
+            {
+
+                if (skinListView1.SelectedItems[0].SubItems[1].Text != "占用")
+                {
+                    MessageBox.Show("不能对非占用包间进行该操作", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                Revise_Recording revise = new Revise_Recording();
+                revise.Private_rooms_ID = skinListView1.SelectedItems[0].SubItems[0].Text;
+                revise.ShowDialog();
+
+                Inquire();
+                return;
+            }
+
+            MessageBox.Show("请选择要修改的包间", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            if (skinListView1.SelectedItems.Count > 0)
+            {
+                if (skinListView1.SelectedItems.Count > 0 && skinListView1.SelectedItems[0].SubItems[1].Text != "占用")
+                {
+                    MessageBox.Show("不能对非占用包间进行该操作", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                Checkout();
+            }
+
+            MessageBox.Show("请选择要结账的包间", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void 客户开单ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Billings();
+        }
+
+        private void 更换包间ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            replacement();
+        }
+
+        private void 修改登记ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            revise_Recording();
+        }
+
+        private void 包间状态ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            revise_state();
+        }
+
+        private void 预订管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            booking_manage();
+        }
+
+        private void 系统设置ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            system_settings();
+        }
+
+        private void 宾客结单ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Checkout_method();
         }
     }
 }

@@ -82,8 +82,6 @@ namespace KTV_management_system
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.skinCheckBox2 = new CCWin.SkinControl.SkinCheckBox();
-            this.skinCheckBox1 = new CCWin.SkinControl.SkinCheckBox();
             this.skinCaptionPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.skinDataGridView1)).BeginInit();
             this.skinPanel2.SuspendLayout();
@@ -388,7 +386,7 @@ namespace KTV_management_system
             this.skinLabel7.BorderColor = System.Drawing.Color.White;
             this.skinLabel7.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel7.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.skinLabel7.Location = new System.Drawing.Point(593, 16);
+            this.skinLabel7.Location = new System.Drawing.Point(605, 16);
             this.skinLabel7.Name = "skinLabel7";
             this.skinLabel7.Size = new System.Drawing.Size(31, 25);
             this.skinLabel7.TabIndex = 5;
@@ -401,7 +399,7 @@ namespace KTV_management_system
             this.skinLabel8.BorderColor = System.Drawing.Color.White;
             this.skinLabel8.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel8.ForeColor = System.Drawing.Color.Black;
-            this.skinLabel8.Location = new System.Drawing.Point(483, 16);
+            this.skinLabel8.Location = new System.Drawing.Point(495, 16);
             this.skinLabel8.Name = "skinLabel8";
             this.skinLabel8.Size = new System.Drawing.Size(107, 25);
             this.skinLabel8.TabIndex = 4;
@@ -505,7 +503,7 @@ namespace KTV_management_system
             this.skinLabel4.BorderColor = System.Drawing.Color.White;
             this.skinLabel4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel4.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.skinLabel4.Location = new System.Drawing.Point(373, 13);
+            this.skinLabel4.Location = new System.Drawing.Point(395, 13);
             this.skinLabel4.Name = "skinLabel4";
             this.skinLabel4.Size = new System.Drawing.Size(112, 27);
             this.skinLabel4.TabIndex = 2;
@@ -596,7 +594,7 @@ namespace KTV_management_system
             this.skinLabel3.BorderColor = System.Drawing.Color.White;
             this.skinLabel3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinLabel3.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.skinLabel3.Location = new System.Drawing.Point(491, 13);
+            this.skinLabel3.Location = new System.Drawing.Point(513, 13);
             this.skinLabel3.Name = "skinLabel3";
             this.skinLabel3.Size = new System.Drawing.Size(111, 27);
             this.skinLabel3.TabIndex = 3;
@@ -693,8 +691,6 @@ namespace KTV_management_system
             this.skinPanel3.Controls.Add(this.textBox3);
             this.skinPanel3.Controls.Add(this.textBox2);
             this.skinPanel3.Controls.Add(this.textBox1);
-            this.skinPanel3.Controls.Add(this.skinCheckBox2);
-            this.skinPanel3.Controls.Add(this.skinCheckBox1);
             this.skinPanel3.Controls.Add(this.skinButton5);
             this.skinPanel3.Controls.Add(this.skinButton2);
             this.skinPanel3.Controls.Add(this.skinLabel26);
@@ -739,46 +735,6 @@ namespace KTV_management_system
             this.textBox1.Size = new System.Drawing.Size(100, 25);
             this.textBox1.TabIndex = 29;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // skinCheckBox2
-            // 
-            this.skinCheckBox2.AutoSize = true;
-            this.skinCheckBox2.BackColor = System.Drawing.Color.Transparent;
-            this.skinCheckBox2.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinCheckBox2.DownBack = null;
-            this.skinCheckBox2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinCheckBox2.Location = new System.Drawing.Point(825, 66);
-            this.skinCheckBox2.MouseBack = null;
-            this.skinCheckBox2.Name = "skinCheckBox2";
-            this.skinCheckBox2.NormlBack = null;
-            this.skinCheckBox2.SelectedDownBack = null;
-            this.skinCheckBox2.SelectedMouseBack = null;
-            this.skinCheckBox2.SelectedNormlBack = null;
-            this.skinCheckBox2.Size = new System.Drawing.Size(61, 24);
-            this.skinCheckBox2.TabIndex = 28;
-            this.skinCheckBox2.Text = "退单";
-            this.skinCheckBox2.UseVisualStyleBackColor = false;
-            this.skinCheckBox2.CheckedChanged += new System.EventHandler(this.skinCheckBox2_CheckedChanged);
-            // 
-            // skinCheckBox1
-            // 
-            this.skinCheckBox1.AutoSize = true;
-            this.skinCheckBox1.BackColor = System.Drawing.Color.Transparent;
-            this.skinCheckBox1.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinCheckBox1.DownBack = null;
-            this.skinCheckBox1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinCheckBox1.Location = new System.Drawing.Point(825, 20);
-            this.skinCheckBox1.MouseBack = null;
-            this.skinCheckBox1.Name = "skinCheckBox1";
-            this.skinCheckBox1.NormlBack = null;
-            this.skinCheckBox1.SelectedDownBack = null;
-            this.skinCheckBox1.SelectedMouseBack = null;
-            this.skinCheckBox1.SelectedNormlBack = null;
-            this.skinCheckBox1.Size = new System.Drawing.Size(61, 24);
-            this.skinCheckBox1.TabIndex = 27;
-            this.skinCheckBox1.Text = "免单";
-            this.skinCheckBox1.UseVisualStyleBackColor = false;
-            this.skinCheckBox1.CheckedChanged += new System.EventHandler(this.skinCheckBox1_CheckedChanged);
             // 
             // Checkout
             // 
@@ -841,8 +797,6 @@ namespace KTV_management_system
         private CCWin.SkinControl.SkinLabel skinLabel16;
         private CCWin.SkinControl.SkinLabel skinLabel17;
         private CCWin.SkinControl.SkinPanel skinPanel3;
-        private CCWin.SkinControl.SkinCheckBox skinCheckBox2;
-        private CCWin.SkinControl.SkinCheckBox skinCheckBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

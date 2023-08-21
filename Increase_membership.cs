@@ -81,7 +81,7 @@ namespace KTV_management_system
             }
 
             DbHelper.executeNonQuery($@"insert into [dbo].[Member_Information]([memberName], [memberSex], [Card_type], [Card_balance], [Membership_Level], [Integral], [Amount_spent], [birthday], [Phone], [enroll_date], [state], [remark], [password])
-            values('{textBox2.Text}','{skinComboBox1.SelectedIndex}','{skinComboBox3.SelectedIndex}','0.00','{skinComboBox4.SelectedValue}','{textBox4.Text}','0.00','{dateTimePicker1.Value}','{textBox3.Text}',GETDATE(),'{skinComboBox2.SelectedIndex}','*','{(skinCheckBox1.Checked ? textBox7.Text : "NULL")}')");
+            values('{textBox2.Text}','{skinComboBox1.SelectedIndex}','{skinComboBox3.SelectedIndex}','0.00','{skinComboBox4.SelectedValue}','{textBox4.Text}','0.00','{dateTimePicker1.Value}','{textBox3.Text}',GETDATE(),'{skinComboBox2.SelectedIndex}','{textBox5.Text}','{(skinCheckBox1.Checked ? textBox7.Text : null)}')");
             Close();
         }
 

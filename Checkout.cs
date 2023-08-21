@@ -116,7 +116,7 @@ namespace KTV_management_system
         {
             if (e.KeyCode == Keys.Enter && textBox4.Focus())
             {
-                if (DbHelper.executeScalar($"select count(*) from [dbo].[Member_Information] where [InformationID] = '{textBox4.Text}'") == "1")
+                if (DbHelper.executeScalar($"select count(*) from [dbo].[Member_Information] where [InformationID] = '{textBox4.Text}' and [state] = '0'") == "1")
                 {
                     skinLabel9.Text = DbHelper.executeScalar($"select [memberName] from [dbo].[Member_Information] where [InformationID] = '{textBox4.Text}'");
                     skinLabel7.Text = DbHelper.executeScalar($@"select [TypeName] from [dbo].[Member_Information] as a
@@ -153,38 +153,8 @@ namespace KTV_management_system
                 }
 
                 textBox4.Text = "普通宾客";
-                MessageBox.Show("该会员不存在","系统提示",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("该会员不存在或者已被停用","系统提示",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
-        }
-
-        private void skinCheckBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            Free_Chargeback();
-        }
-
-        private void skinCheckBox2_CheckedChanged(object sender, EventArgs e)
-        {
-            Free_Chargeback();
-        }
-
-        private void Free_Chargeback()
-        {
-            if (string.IsNullOrEmpty(tmp))
-            {
-                tmp = textBox2.Text;
-            }
-
-            if (skinCheckBox1.Checked && skinCheckBox1.Checked)
-            {
-                textBox1.Text = "0.00";
-                textBox2.Text = "0.00";
-
-                textBox1.ReadOnly = true;
-                return;
-            }
-
-            textBox1.ReadOnly = false;
-            textBox2.Text = tmp;
         }
     }
 }

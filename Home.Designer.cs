@@ -35,35 +35,17 @@ namespace KTV_management_system
             this.skinMenuStrip1 = new CCWin.SkinControl.SkinMenuStrip();
             this.来宾登记ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.客户开单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.吧台销售ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.更换包间ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.修改登记ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.包间状态ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.预订管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.电子提示ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.退出系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.收银结算ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.宾客结单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.已挂账单结账ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.宾客消费明细ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.宾客消费明细ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.宾客消费查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.代金卷管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.系统维护ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.修改当前操作员密码ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.系统设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.数据库压缩备份ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.数据库备份恢复ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.经销商设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.访问主页ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.技术支持ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.用户反馈信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.软件帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.关于本软件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.skinToolStrip1 = new CCWin.SkinControl.SkinToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
@@ -71,7 +53,6 @@ namespace KTV_management_system
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
             this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
@@ -125,7 +106,6 @@ namespace KTV_management_system
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel6 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripLabel7 = new System.Windows.Forms.ToolStripLabel();
             this.skinPanel3 = new CCWin.SkinControl.SkinPanel();
             this.skinCaptionPanel6 = new CCWin.SkinControl.SkinCaptionPanel();
             this.skinListView2 = new CCWin.SkinControl.SkinListView();
@@ -284,13 +264,11 @@ namespace KTV_management_system
             // 
             this.来宾登记ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.客户开单ToolStripMenuItem,
-            this.吧台销售ToolStripMenuItem,
             this.更换包间ToolStripMenuItem,
             this.修改登记ToolStripMenuItem,
             this.包间状态ToolStripMenuItem,
             this.toolStripSeparator1,
             this.预订管理ToolStripMenuItem,
-            this.电子提示ToolStripMenuItem,
             this.toolStripSeparator2,
             this.退出系统ToolStripMenuItem});
             this.来宾登记ToolStripMenuItem.Name = "来宾登记ToolStripMenuItem";
@@ -304,13 +282,7 @@ namespace KTV_management_system
             this.客户开单ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.G)));
             this.客户开单ToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.客户开单ToolStripMenuItem.Text = "客户开单";
-            // 
-            // 吧台销售ToolStripMenuItem
-            // 
-            this.吧台销售ToolStripMenuItem.Name = "吧台销售ToolStripMenuItem";
-            this.吧台销售ToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F7;
-            this.吧台销售ToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
-            this.吧台销售ToolStripMenuItem.Text = "吧台销售";
+            this.客户开单ToolStripMenuItem.Click += new System.EventHandler(this.客户开单ToolStripMenuItem_Click);
             // 
             // 更换包间ToolStripMenuItem
             // 
@@ -318,6 +290,7 @@ namespace KTV_management_system
             this.更换包间ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.A)));
             this.更换包间ToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.更换包间ToolStripMenuItem.Text = "更换包间";
+            this.更换包间ToolStripMenuItem.Click += new System.EventHandler(this.更换包间ToolStripMenuItem_Click);
             // 
             // 修改登记ToolStripMenuItem
             // 
@@ -325,6 +298,7 @@ namespace KTV_management_system
             this.修改登记ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.I)));
             this.修改登记ToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.修改登记ToolStripMenuItem.Text = "修改登记";
+            this.修改登记ToolStripMenuItem.Click += new System.EventHandler(this.修改登记ToolStripMenuItem_Click);
             // 
             // 包间状态ToolStripMenuItem
             // 
@@ -332,6 +306,7 @@ namespace KTV_management_system
             this.包间状态ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Z)));
             this.包间状态ToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.包间状态ToolStripMenuItem.Text = "包间状态";
+            this.包间状态ToolStripMenuItem.Click += new System.EventHandler(this.包间状态ToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -344,13 +319,7 @@ namespace KTV_management_system
             this.预订管理ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.T)));
             this.预订管理ToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.预订管理ToolStripMenuItem.Text = "预订管理";
-            // 
-            // 电子提示ToolStripMenuItem
-            // 
-            this.电子提示ToolStripMenuItem.Name = "电子提示ToolStripMenuItem";
-            this.电子提示ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.L)));
-            this.电子提示ToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
-            this.电子提示ToolStripMenuItem.Text = "电子提示";
+            this.预订管理ToolStripMenuItem.Click += new System.EventHandler(this.预订管理ToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -368,11 +337,7 @@ namespace KTV_management_system
             // 收银结算ToolStripMenuItem
             // 
             this.收银结算ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.宾客结单ToolStripMenuItem,
-            this.toolStripSeparator3,
-            this.已挂账单结账ToolStripMenuItem,
-            this.宾客消费明细ToolStripMenuItem,
-            this.代金卷管理ToolStripMenuItem});
+            this.宾客结单ToolStripMenuItem});
             this.收银结算ToolStripMenuItem.Name = "收银结算ToolStripMenuItem";
             this.收银结算ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
             this.收银结算ToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
@@ -382,153 +347,27 @@ namespace KTV_management_system
             // 
             this.宾客结单ToolStripMenuItem.Name = "宾客结单ToolStripMenuItem";
             this.宾客结单ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
-            this.宾客结单ToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
+            this.宾客结单ToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
             this.宾客结单ToolStripMenuItem.Text = "宾客结账";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(236, 6);
-            // 
-            // 已挂账单结账ToolStripMenuItem
-            // 
-            this.已挂账单结账ToolStripMenuItem.Name = "已挂账单结账ToolStripMenuItem";
-            this.已挂账单结账ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
-            this.已挂账单结账ToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
-            this.已挂账单结账ToolStripMenuItem.Text = "已挂账单结账";
-            // 
-            // 宾客消费明细ToolStripMenuItem
-            // 
-            this.宾客消费明细ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.宾客消费明细ToolStripMenuItem1,
-            this.宾客消费查询ToolStripMenuItem});
-            this.宾客消费明细ToolStripMenuItem.Name = "宾客消费明细ToolStripMenuItem";
-            this.宾客消费明细ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.K)));
-            this.宾客消费明细ToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
-            this.宾客消费明细ToolStripMenuItem.Text = "宾客消费明细";
-            // 
-            // 宾客消费明细ToolStripMenuItem1
-            // 
-            this.宾客消费明细ToolStripMenuItem1.Name = "宾客消费明细ToolStripMenuItem1";
-            this.宾客消费明细ToolStripMenuItem1.Size = new System.Drawing.Size(182, 26);
-            this.宾客消费明细ToolStripMenuItem1.Text = "宾客消费明细";
-            // 
-            // 宾客消费查询ToolStripMenuItem
-            // 
-            this.宾客消费查询ToolStripMenuItem.Name = "宾客消费查询ToolStripMenuItem";
-            this.宾客消费查询ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
-            this.宾客消费查询ToolStripMenuItem.Text = "宾客消费查询";
-            // 
-            // 代金卷管理ToolStripMenuItem
-            // 
-            this.代金卷管理ToolStripMenuItem.Name = "代金卷管理ToolStripMenuItem";
-            this.代金卷管理ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.J)));
-            this.代金卷管理ToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
-            this.代金卷管理ToolStripMenuItem.Text = "代金卷管理";
+            this.宾客结单ToolStripMenuItem.Click += new System.EventHandler(this.宾客结单ToolStripMenuItem_Click);
             // 
             // 系统维护ToolStripMenuItem
             // 
             this.系统维护ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.修改当前操作员密码ToolStripMenuItem,
-            this.系统设置ToolStripMenuItem,
-            this.数据库压缩备份ToolStripMenuItem,
-            this.数据库备份恢复ToolStripMenuItem,
-            this.toolStripSeparator4,
-            this.经销商设置ToolStripMenuItem,
-            this.访问主页ToolStripMenuItem,
-            this.技术支持ToolStripMenuItem,
-            this.用户反馈信息ToolStripMenuItem,
-            this.软件帮助ToolStripMenuItem,
-            this.关于本软件ToolStripMenuItem});
+            this.系统设置ToolStripMenuItem});
             this.系统维护ToolStripMenuItem.Name = "系统维护ToolStripMenuItem";
             this.系统维护ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.W)));
             this.系统维护ToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
             this.系统维护ToolStripMenuItem.Text = "系统维护";
-            // 
-            // 修改当前操作员密码ToolStripMenuItem
-            // 
-            this.修改当前操作员密码ToolStripMenuItem.Name = "修改当前操作员密码ToolStripMenuItem";
-            this.修改当前操作员密码ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.G)));
-            this.修改当前操作员密码ToolStripMenuItem.Size = new System.Drawing.Size(328, 26);
-            this.修改当前操作员密码ToolStripMenuItem.Text = "修改当前操作员密码";
             // 
             // 系统设置ToolStripMenuItem
             // 
             this.系统设置ToolStripMenuItem.Name = "系统设置ToolStripMenuItem";
             this.系统设置ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.X)));
-            this.系统设置ToolStripMenuItem.Size = new System.Drawing.Size(328, 26);
+            this.系统设置ToolStripMenuItem.Size = new System.Drawing.Size(252, 26);
             this.系统设置ToolStripMenuItem.Text = "系统设置";
-            // 
-            // 数据库压缩备份ToolStripMenuItem
-            // 
-            this.数据库压缩备份ToolStripMenuItem.Name = "数据库压缩备份ToolStripMenuItem";
-            this.数据库压缩备份ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.R)));
-            this.数据库压缩备份ToolStripMenuItem.Size = new System.Drawing.Size(328, 26);
-            this.数据库压缩备份ToolStripMenuItem.Text = "数据库压缩/修复";
-            // 
-            // 数据库备份恢复ToolStripMenuItem
-            // 
-            this.数据库备份恢复ToolStripMenuItem.Name = "数据库备份恢复ToolStripMenuItem";
-            this.数据库备份恢复ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.X)));
-            this.数据库备份恢复ToolStripMenuItem.Size = new System.Drawing.Size(328, 26);
-            this.数据库备份恢复ToolStripMenuItem.Text = "数据库备份/恢复";
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(325, 6);
-            // 
-            // 经销商设置ToolStripMenuItem
-            // 
-            this.经销商设置ToolStripMenuItem.Name = "经销商设置ToolStripMenuItem";
-            this.经销商设置ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.D)));
-            this.经销商设置ToolStripMenuItem.Size = new System.Drawing.Size(328, 26);
-            this.经销商设置ToolStripMenuItem.Text = "经销商设置";
-            // 
-            // 访问主页ToolStripMenuItem
-            // 
-            this.访问主页ToolStripMenuItem.Name = "访问主页ToolStripMenuItem";
-            this.访问主页ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.E)));
-            this.访问主页ToolStripMenuItem.Size = new System.Drawing.Size(328, 26);
-            this.访问主页ToolStripMenuItem.Text = "访问主页";
-            // 
-            // 技术支持ToolStripMenuItem
-            // 
-            this.技术支持ToolStripMenuItem.Name = "技术支持ToolStripMenuItem";
-            this.技术支持ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.S)));
-            this.技术支持ToolStripMenuItem.Size = new System.Drawing.Size(328, 26);
-            this.技术支持ToolStripMenuItem.Text = "技术支持";
-            // 
-            // 用户反馈信息ToolStripMenuItem
-            // 
-            this.用户反馈信息ToolStripMenuItem.Name = "用户反馈信息ToolStripMenuItem";
-            this.用户反馈信息ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.K)));
-            this.用户反馈信息ToolStripMenuItem.Size = new System.Drawing.Size(328, 26);
-            this.用户反馈信息ToolStripMenuItem.Text = "用户反馈信息";
-            // 
-            // 软件帮助ToolStripMenuItem
-            // 
-            this.软件帮助ToolStripMenuItem.Name = "软件帮助ToolStripMenuItem";
-            this.软件帮助ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.H)));
-            this.软件帮助ToolStripMenuItem.Size = new System.Drawing.Size(328, 26);
-            this.软件帮助ToolStripMenuItem.Text = "软件帮助";
-            // 
-            // 关于本软件ToolStripMenuItem
-            // 
-            this.关于本软件ToolStripMenuItem.Name = "关于本软件ToolStripMenuItem";
-            this.关于本软件ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.A)));
-            this.关于本软件ToolStripMenuItem.Size = new System.Drawing.Size(328, 26);
-            this.关于本软件ToolStripMenuItem.Text = "关于本软件";
+            this.系统设置ToolStripMenuItem.Click += new System.EventHandler(this.系统设置ToolStripMenuItem_Click);
             // 
             // skinToolStrip1
             // 
@@ -575,13 +414,12 @@ namespace KTV_management_system
             this.toolStripButton4,
             this.toolStripButton5,
             this.toolStripButton6,
-            this.toolStripButton10,
             this.toolStripButton11,
             this.toolStripButton12});
             this.skinToolStrip1.Location = new System.Drawing.Point(0, 28);
             this.skinToolStrip1.Name = "skinToolStrip1";
             this.skinToolStrip1.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinToolStrip1.Size = new System.Drawing.Size(687, 47);
+            this.skinToolStrip1.Size = new System.Drawing.Size(614, 47);
             this.skinToolStrip1.SkinAllColor = true;
             this.skinToolStrip1.TabIndex = 1;
             this.skinToolStrip1.Text = "skinToolStrip1";
@@ -619,6 +457,7 @@ namespace KTV_management_system
             this.toolStripButton3.Size = new System.Drawing.Size(73, 44);
             this.toolStripButton3.Text = "宾客结账";
             this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolStripButton4
             // 
@@ -649,15 +488,6 @@ namespace KTV_management_system
             this.toolStripButton6.Text = "服务生管理";
             this.toolStripButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
-            // 
-            // toolStripButton10
-            // 
-            this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
-            this.toolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton10.Name = "toolStripButton10";
-            this.toolStripButton10.Size = new System.Drawing.Size(73, 44);
-            this.toolStripButton10.Text = "换班登录";
-            this.toolStripButton10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripButton11
             // 
@@ -1315,8 +1145,7 @@ namespace KTV_management_system
             this.toolStripLabel5,
             this.toolStripSeparator6,
             this.toolStripLabel6,
-            this.toolStripSeparator7,
-            this.toolStripLabel7});
+            this.toolStripSeparator7});
             this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.toolStrip1.Location = new System.Drawing.Point(4, 971);
             this.toolStrip1.Name = "toolStrip1";
@@ -1350,12 +1179,6 @@ namespace KTV_management_system
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
             this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripLabel7
-            // 
-            this.toolStripLabel7.Name = "toolStripLabel7";
-            this.toolStripLabel7.Size = new System.Drawing.Size(159, 22);
-            this.toolStripLabel7.Text = "当前操作员：Lindong";
             // 
             // skinPanel3
             // 
@@ -1607,7 +1430,7 @@ namespace KTV_management_system
             this.skinContextMenuStrip1.ItemSplitter = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
             this.skinContextMenuStrip1.Name = "skinContextMenuStrip1";
             this.skinContextMenuStrip1.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinContextMenuStrip1.Size = new System.Drawing.Size(211, 260);
+            this.skinContextMenuStrip1.Size = new System.Drawing.Size(139, 232);
             this.skinContextMenuStrip1.SkinAllColor = true;
             this.skinContextMenuStrip1.TitleAnamorphosis = true;
             this.skinContextMenuStrip1.TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(228)))), ((int)(((byte)(236)))));
@@ -1617,73 +1440,73 @@ namespace KTV_management_system
             // 宾客结账ToolStripMenuItem
             // 
             this.宾客结账ToolStripMenuItem.Name = "宾客结账ToolStripMenuItem";
-            this.宾客结账ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.宾客结账ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
             this.宾客结账ToolStripMenuItem.Text = "宾客结账";
             this.宾客结账ToolStripMenuItem.Click += new System.EventHandler(this.宾客结账ToolStripMenuItem_Click);
             // 
             // 增加消费ToolStripMenuItem
             // 
             this.增加消费ToolStripMenuItem.Name = "增加消费ToolStripMenuItem";
-            this.增加消费ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.增加消费ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
             this.增加消费ToolStripMenuItem.Text = "增加消费";
             this.增加消费ToolStripMenuItem.Click += new System.EventHandler(this.增加消费ToolStripMenuItem_Click);
             // 
             // 兑换商品ToolStripMenuItem
             // 
             this.兑换商品ToolStripMenuItem.Name = "兑换商品ToolStripMenuItem";
-            this.兑换商品ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.兑换商品ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
             this.兑换商品ToolStripMenuItem.Text = "兑换商品";
             this.兑换商品ToolStripMenuItem.Click += new System.EventHandler(this.兑换商品ToolStripMenuItem_Click);
             // 
             // 顾客开单ToolStripMenuItem
             // 
             this.顾客开单ToolStripMenuItem.Name = "顾客开单ToolStripMenuItem";
-            this.顾客开单ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.顾客开单ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
             this.顾客开单ToolStripMenuItem.Text = "顾客开单";
             this.顾客开单ToolStripMenuItem.Click += new System.EventHandler(this.顾客开单ToolStripMenuItem_Click);
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(207, 6);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(135, 6);
             // 
             // 修改登记ToolStripMenuItem1
             // 
             this.修改登记ToolStripMenuItem1.Name = "修改登记ToolStripMenuItem1";
-            this.修改登记ToolStripMenuItem1.Size = new System.Drawing.Size(210, 24);
+            this.修改登记ToolStripMenuItem1.Size = new System.Drawing.Size(138, 24);
             this.修改登记ToolStripMenuItem1.Text = "修改登记";
             this.修改登记ToolStripMenuItem1.Click += new System.EventHandler(this.修改登记ToolStripMenuItem1_Click);
             // 
             // 更换包间ToolStripMenuItem1
             // 
             this.更换包间ToolStripMenuItem1.Name = "更换包间ToolStripMenuItem1";
-            this.更换包间ToolStripMenuItem1.Size = new System.Drawing.Size(210, 24);
+            this.更换包间ToolStripMenuItem1.Size = new System.Drawing.Size(138, 24);
             this.更换包间ToolStripMenuItem1.Text = "更换包间";
             this.更换包间ToolStripMenuItem1.Click += new System.EventHandler(this.更换包间ToolStripMenuItem1_Click);
             // 
             // 包间状态ToolStripMenuItem1
             // 
             this.包间状态ToolStripMenuItem1.Name = "包间状态ToolStripMenuItem1";
-            this.包间状态ToolStripMenuItem1.Size = new System.Drawing.Size(210, 24);
+            this.包间状态ToolStripMenuItem1.Size = new System.Drawing.Size(138, 24);
             this.包间状态ToolStripMenuItem1.Text = "包间状态";
             this.包间状态ToolStripMenuItem1.Click += new System.EventHandler(this.包间状态ToolStripMenuItem1_Click);
             // 
             // toolStripSeparator10
             // 
             this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(207, 6);
+            this.toolStripSeparator10.Size = new System.Drawing.Size(135, 6);
             // 
             // 宾客预订ToolStripMenuItem
             // 
             this.宾客预订ToolStripMenuItem.Name = "宾客预订ToolStripMenuItem";
-            this.宾客预订ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.宾客预订ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
             this.宾客预订ToolStripMenuItem.Text = "宾客预订";
             this.宾客预订ToolStripMenuItem.Click += new System.EventHandler(this.宾客预订ToolStripMenuItem_Click);
             // 
             // Tool
             // 
             this.Tool.Name = "Tool";
-            this.Tool.Size = new System.Drawing.Size(210, 24);
+            this.Tool.Size = new System.Drawing.Size(138, 24);
             this.Tool.Text = "预订信息";
             this.Tool.Click += new System.EventHandler(this.Tool_Click);
             // 
@@ -2097,35 +1920,17 @@ namespace KTV_management_system
         private CCWin.SkinControl.SkinMenuStrip skinMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 来宾登记ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 客户开单ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 吧台销售ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 更换包间ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 修改登记ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 包间状态ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 预订管理ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 电子提示ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 退出系统ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 收银结算ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 系统维护ToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem 宾客结单ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 已挂账单结账ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 宾客消费明细ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 宾客消费明细ToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem 宾客消费查询ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 代金卷管理ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripMenuItem 修改当前操作员密码ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 系统设置ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 数据库压缩备份ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 数据库备份恢复ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripMenuItem 经销商设置ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 访问主页ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 技术支持ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 用户反馈信息ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 软件帮助ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 关于本软件ToolStripMenuItem;
         private CCWin.SkinControl.SkinToolStrip skinToolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
@@ -2133,7 +1938,6 @@ namespace KTV_management_system
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
-        private System.Windows.Forms.ToolStripButton toolStripButton10;
         private System.Windows.Forms.ToolStripButton toolStripButton11;
         private System.Windows.Forms.ToolStripButton toolStripButton12;
         private CCWin.SkinControl.SkinPanel skinPanel1;
@@ -2192,7 +1996,6 @@ namespace KTV_management_system
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripLabel toolStripLabel6;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel7;
         private System.Windows.Forms.ImageList imageMin;
         private CCWin.SkinControl.SkinContextMenuStrip skinContextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 宾客结账ToolStripMenuItem;
